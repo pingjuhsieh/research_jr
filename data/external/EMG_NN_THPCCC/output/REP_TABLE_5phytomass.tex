@@ -1,0 +1,30 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\toprule
+                    &\multicolumn{4}{c}{Indicator for the presence of conflict}     \\\cmidrule(lr){2-5}
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+                    &\multicolumn{1}{c}{\shortstack{ \\ UCDP \\ I(Any)}}&\multicolumn{1}{c}{\shortstack{ \\ UCDP \\ I(State)}}&\multicolumn{1}{c}{\shortstack{ \\ ACLED \\ I(Any)}}&\multicolumn{1}{c}{\shortstack{ \\ ACLED \\ I(Nonstate)}}\\
+\midrule
+\underline{\emph{Nearest Neighboring Ethnic Group}} \vspace{-0.4cm}&               &               &               &               \\
+                    &               &               &               &               \\
+\addlinespace
+\hspace{15pt} Phytomass&0.0001         &0.0001         &0.0003         &0.0004         \\
+                    &(0.0005)         &(0.0004)         &(0.0006)         &(0.0006)         \\
+\addlinespace
+\hspace{15pt} Phytomass $\times$ Transhumant Pastoral&-0.0043\sym{**} &-0.0041\sym{**} &-0.0085\sym{***}&-0.0086\sym{***}\\
+                    &(0.0018)         &(0.0016)         &(0.0018)         &(0.0018)         \\
+\midrule
+\\ \underline{\emph{Nearest Neighboring Ethnic Group: Additional Calculations}} &               &               &               &               \\
+[1em] Effect of 1 Std. Dev. Shock as $\%$ of Dep. Var. Mean:&               &               &               &               \\
+[1em] \hspace{15pt} Shock $\times$ Transhumant Pastoral&-37.95         &-50.73         &-32.09         &-32.70         \\
+\hspace{15pt} p-value&[     0.02]         &[     0.01]         &[     0.00]         &[     0.00]         \\
+\hline \\ Dep. Var. Mean& 0.037         & 0.027         & 0.087         & 0.087         \\
+Cell FE             &   Yes         &   Yes         &   Yes         &   Yes         \\
+Country $\times$ Year FE&   Yes         &   Yes         &   Yes         &   Yes         \\
+Climate-Zone-Year Clusters&   280         &   280         &   294         &   294         \\
+Cell Clusters       & 7,722         & 7,722         & 7,722         & 7,722         \\
+Observations        &154,440         &154,440         &162,162         &162,162         \\
+\bottomrule
+\end{tabular}
+}

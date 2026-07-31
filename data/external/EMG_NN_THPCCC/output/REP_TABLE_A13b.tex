@@ -1,0 +1,36 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\toprule
+                    &\multicolumn{2}{c}{Wet Season UCDP Conflict}&\multicolumn{2}{c}{Dry Season UCDP Conflict}\\\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+                    &\multicolumn{1}{c}{\shortstack{ \\ Incidence \\ Year Equiv.}}&\multicolumn{1}{c}{\shortstack{ \\ No. Events \\ Year Equiv.}}&\multicolumn{1}{c}{\shortstack{ \\ Incidence \\ Year Equiv.}}&\multicolumn{1}{c}{\shortstack{ \\ No. Events \\ Year Equiv.}}\\
+\midrule
+\underline{\emph{Nearest Neighboring Ethnic Group}} \vspace{-0.4cm}&               &               &               &               \\
+                    &               &               &               &               \\
+\addlinespace
+\hspace{15pt} Wet Season Phytomass&0.0006         &-0.0000         &               &               \\
+                    &(0.0012)         &(0.0036)         &               &               \\
+\addlinespace
+\hspace{15pt} Wet Season Phytomass $\times$ Transhumant Pastoral&-0.0064\sym{**} &-0.0218\sym{*}  &               &               \\
+                    &(0.0032)         &(0.0128)         &               &               \\
+\addlinespace
+\hspace{15pt} Dry Season Phytomass&               &               &0.0006         &-0.0006         \\
+                    &               &               &(0.0012)         &(0.0056)         \\
+\addlinespace
+\hspace{15pt} Dry Season Phytomass $\times$ Transhumant Pastoral&               &               &-0.0030         &-0.0301         \\
+                    &               &               &(0.0042)         &(0.0223)         \\
+\midrule
+\\ \underline{\emph{Nearest Neighboring Ethnic Group: Additional Calculations}} &               &               &               &               \\
+[1em] Effect of 1 Std. Dev. Phytomass Shock as $\%$ of Dep. Var. Mean:&               &               &               &               \\
+[1em] \hspace{15pt} Phytomass $\times$ Transhumant Pastoral&-32.56         &-57.92         &-12.40         &-65.71         \\
+\hspace{15pt} p-value&[     0.05]         &[     0.09]         &[     0.48]         &[     0.18]         \\
+\hline \\ Dep. Var. Mean& 0.096         & 0.182         & 0.106         & 0.200         \\
+Cell FE             &   Yes         &   Yes         &   Yes         &   Yes         \\
+Country $\times$ Month FE&   Yes         &   Yes         &   Yes         &   Yes         \\
+Climate-Zone-Year Clusters&   280         &   280         &   280         &   280         \\
+Cell Clusters       & 4,632         & 4,632         & 4,632         & 4,632         \\
+Observations        &92,640         &92,640         &92,640         &92,640         \\
+\bottomrule
+\end{tabular}
+}

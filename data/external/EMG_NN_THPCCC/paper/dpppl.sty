@@ -1,0 +1,201 @@
+% ========================================================================
+%% dpppl.sty
+%% LaTeX2e style file for font setup built around Palatino
+%% by Diego Puga
+%
+%% Requires mathpazo.sty
+%
+%% Available options, with defaults first (then alternative):
+%% noosf                        use standard numerals
+%% stdeqnum                     with [osf], use standard numerals for equation numbers
+%% slantedGreek (uprightGreek)  slanted uppercase Greek
+%% noBBpl                       do not use Pazo as (partial) \mathbb font
+%% noT1enc                      change default encoding to T1
+%% noexpert                     do not use extra fonts
+% ========================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{dpppl}[2008/01/04]
+% ------------------------------------------------------------------------
+% Options for mathpazo.sty
+% ------------------------------------------------------------------------
+\newif\ifdpppl@osf \dpppl@osftrue
+\newif\ifdpppl@osfeqnnum \dpppl@osfeqnnumtrue
+\newif\ifdpppl@slGreek \dpppl@slGreektrue
+\newif\ifdpppl@BB \dpppl@BBtrue
+\newif\ifdpppl@Toneenc \dpppl@Toneenctrue
+\newif\ifdpppl@noexpert \dpppl@noexpertfalse
+%
+\DeclareOption{noosf}{\dpppl@osffalse}
+\DeclareOption{stdeqnnum}{\dpppl@osfeqnnumfalse}
+\DeclareOption{uprightGreek}{\dpppl@slGreekfalse}
+\DeclareOption{noBBpl}{\dpppl@BBfalse}
+\DeclareOption{noT1enc}{\dpppl@Toneencfalse}
+\DeclareOption{noexpert}{\dpppl@noexperttrue}
+\ProcessOptions\relax
+% Local options
+\newif\ifthisisdp@ \thisisdp@false
+\InputIfFileExists{dpcheck.cfg}{}{}
+\ifthisisdp@\else\dpppl@noexperttrue\fi
+%
+% Check consistency of options
+\newif\ifdp@osf
+%\ifdpppl@noexpert\dpppl@osffalse\fi% noexpert no longer forces noosf mod. 2008/01/04
+\ifdpppl@osf\dp@osftrue\else\dpppl@osfeqnnumfalse\dp@osffalse\fi% stdeqnnum only with osf
+
+%
+% Pass options to mathpazo.sty
+\ifdp@osf
+  \PassOptionsToPackage{osf}{mathpazo}
+\fi
+\ifdpppl@noexpert\else
+  \PassOptionsToPackage{sc}{mathpazo}
+\fi
+\ifdpppl@slGreek
+  \PassOptionsToPackage{slantedGreek}{mathpazo}
+\fi
+\ifdpppl@BB\else
+  \PassOptionsToPackage{noBBpl}{mathpazo}
+\fi
+%
+% ------------------------------------------------------------------------
+% Encoding
+% ------------------------------------------------------------------------
+% Option: T1 encoding
+\ifdpppl@Toneenc
+  \usepackage[T1]{fontenc}
+  \usepackage{textcomp}
+  \ifdpppl@noexpert
+    \RequirePackage{ae}
+  \else
+		\RequirePackage{dpemtt}
+  \fi
+\fi
+%
+% ------------------------------------------------------------------------
+% mathpazo.sty
+% ------------------------------------------------------------------------
+% Load mathpazo.sty
+\RequirePackage{mathpazo}
+%
+% ------------------------------------------------------------------------
+% Text fonts
+% ------------------------------------------------------------------------
+% Set sfdefault
+\ifdpppl@noexpert
+  \RequirePackage[scaled=.95]{helvet}
+\else
+  \renewcommand{\sfdefault}{pmy}
+  \newcommand{\pmyeuro}{{\fontencoding{TS1}\fontfamily{pmy}\selectfont \char"BF}}
+\fi
+%
+\ifdpppl@noexpert
+  \providecommand{\textlt}[1]{#1}%
+  \providecommand{\textmb}[1]{#1}%
+  \providecommand{\textsb}[1]{\textbf{#1}}%
+  \providecommand{\texteb}[1]{#1}%
+\else
+  % Command: \textlt for light
+  \newcommand\ltdefault{l}
+  \DeclareRobustCommand\ltseries
+          {\not@math@alphabet\ltseries\mathnormal
+           \fontseries\ltdefault\selectfont}
+  \DeclareTextFontCommand{\textlt}{\ltseries}
+  % Command: \textmb for semibold
+  \newcommand\mbdefault{mb}
+  \DeclareRobustCommand\mbseries
+          {\not@math@alphabet\mbseries\mathnormal
+           \fontseries\mbdefault\selectfont}
+  \DeclareTextFontCommand{\textmb}{\mbseries}
+  \DeclareTextFontCommand{\textsb}{\mbseries}
+  % Command: \texteb for extrabold
+  \newcommand\ebdefault{eb}
+  \DeclareRobustCommand\ebseries
+          {\not@math@alphabet\ebseries\mathbf
+           \fontseries\ebdefault\selectfont}
+  \DeclareTextFontCommand{\texteb}{\ebseries}
+\fi
+%
+% Command: \pplosf makes Palatino with old style figures rmdefault
+\newcommand{\pplosf}{\renewcommand{\rmdefault}{pplj}\normalfont\dp@osftrue}
+% Command: \pplnoosf makes Palatino with conventional figures rmdefault
+\ifdpppl@noexpert
+  \newcommand{\pplnoosf}{\renewcommand{\rmdefault}{ppl}\normalfont\dp@osffalse}
+\else
+  \newcommand{\pplnoosf}{\renewcommand{\rmdefault}{pplx}\normalfont\dp@osffalse}
+\fi
+% Command: \osfrmdefault, \noosfrmdefault, \osfusefont
+\newcommand{\osfrmdefault}{\pplosf}
+\newcommand{\noosfrmdefault}{\pplnoosf}
+\newcommand{\osfusefont}{\fontfamily{pplj}\selectfont}
+%
+% Set Palatino rmdefault
+\ifdp@osf\pplosf\else\pplnoosf\fi
+%
+% ------------------------------------------------------------------------
+% Math fonts
+% ------------------------------------------------------------------------
+% Suppress info about math fonts being redefined
+\let\s@ved@info\@font@info
+\let\@font@info\@gobble
+%
+% Redefine \mathsf
+\DeclareMathAlphabet{\mathsf}  {OT1}{\sfdefault}{m}{n}
+\SetMathAlphabet{\mathsf}{bold}{OT1}{\sfdefault}{b}{n}
+%
+\ifdpppl@noexpert
+  % Pazo Math fonts mod. 2008/01/04
+  \DeclareSymbolFont{letters}{OML}{zplmx}{m}{it}
+  % Pazo Math bold fonts mod. 2008/01/04
+  \SetSymbolFont{letters}{bold}{OML}{zplmx}{b}{it}
+  % Usual math alphabets mod. 2008/01/04
+  \DeclareMathAlphabet{\mathbold}{OML}{zplmx}{b}{it}
+	%
+  % \mathup
+  \DeclareSymbolFontAlphabet{\mathup}{upright}
+  %
+  % Set \mathcript = \mathcal
+  \let\mathscr\mathcal
+\else
+  % Pazo Math fonts
+  %\DeclareSymbolFont{operators}   {OT1}{pplx}{m}{n}
+  \DeclareSymbolFont{upright}     {OT1}{zplmx}{m}{n}
+  \DeclareSymbolFont{letters}{OML}{zplmx}{m}{it}
+  \DeclareSymbolFont{symbols}     {OMS}{zplmx}{m}{n}
+  \DeclareSymbolFont{largesymbols}{OMX}{zplmx}{m}{n}
+  % Pazo Math bold fonts
+  %\SetSymbolFont{operators}{bold}   {OT1}{pplx}{b}{n}
+  \SetSymbolFont{upright}{bold}     {OT1}{zplmx}{b}{n}
+  \SetSymbolFont{letters}{bold}{OML}{zplmx}{b}{it}
+  \SetSymbolFont{symbols}{bold}     {OMS}{zplmx}{b}{n}
+  \SetSymbolFont{largesymbols}{bold}{OMX}{zplmx}{m}{n}
+  % Usual math alphabets
+  %\DeclareMathAlphabet{\mathit}  {OT1}{pplx}{m}{it}
+  %\SetMathAlphabet{\mathit}{bold}{OT1}{pplx}{b}{it}
+  \DeclareMathAlphabet{\mathbf}  {OT1}{zplmx}{b}{n}
+  \DeclareMathAlphabet{\mathbold}{OML}{zplmx}{b}{it}
+  %
+  % \mathup
+  \DeclareSymbolFontAlphabet{\mathup}{upright}
+  %
+  % Set Ralph Smith's Fancy Script as \mathscr
+	\DeclareSymbolFont{rsfs}{U}{rsfs}{m}{n}
+	\DeclareSymbolFontAlphabet{\mathscr}{rsfs}
+  %
+  % Set scaled-down Lucida Blackletter as \mathfrak font
+  \AtBeginDocument{
+    \let\mathfrak\relax
+    \DeclareMathAlphabet\LucFrak{\encodingdefault}{hlcfp}{m}{n}
+    \newcommand{\mathfrak}{\LucFrak}
+  }
+\fi
+%
+% Restore font info
+\let\@font@info\s@ved@info
+%
+% Obsolete option
+\ifdpppl@noexpert\else
+	\ifdpppl@osfeqnnum\else
+		\renewcommand{\theequation}{{\fontfamily{pplx}\selectfont\@arabic\c@equation}}
+	\fi
+\fi
+\endinput

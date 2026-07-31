@@ -1,0 +1,32 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\toprule
+                    &\multicolumn{4}{c}{Indicator for presence of conflict}                                 \\\cmidrule(lr){2-5}
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+                    &\multicolumn{1}{c}{\shortstack{ \\ UCDP \\ I(Any)}}&\multicolumn{1}{c}{\shortstack{ \\ UCDP \\ I(State)}}&\multicolumn{1}{c}{\shortstack{ \\ ACLED \\ I(Any)}}&\multicolumn{1}{c}{\shortstack{ \\ ACLED \\ I(Nonstate)}}\\
+\midrule
+\underline{\emph{Nearest Neighboring Ethnic Group}} \vspace{-0.1cm}&                     &                     &                     &                     \\
+                    &                     &                     &                     &                     \\
+\addlinespace
+\hspace{15pt} Rain $\times$ Transhumant Pastoral&     -0.0158\sym{**} &     -0.0151\sym{***}&     -0.0513\sym{***}&     -0.0513\sym{***}\\
+                    &    (0.0062)         &    (0.0054)         &    (0.0091)         &    (0.0091)         \\
+\addlinespace
+\hspace{15pt} Rain $\times$ Transhumant Pastoral $\times$ THP Power Share&      0.0458\sym{**} &      0.0367\sym{*}  &      0.1834\sym{***}&      0.1824\sym{***}\\
+                    &    (0.0231)         &    (0.0211)         &    (0.0392)         &    (0.0393)         \\
+\midrule
+\\ \underline{\emph{Nearest Neighboring Ethnic Group: Additional Calculations}} &                     &                     &                     &                     \\
+\\  Effect of 1 Std. Dev. Rain Shock as $\%$ of Dep. Var. Mean:&                     &                     &                     &                     \\
+[1em] \hspace{15pt} Rain $\times$ Transhumant Pastoral when THP Power at 10th pctile&       -58.1         &       -74.0         &       -81.7         &       -82.1         \\
+\hspace{25pt} p-value& [     0.01]         & [     0.01]         & [     0.00]         & [     0.00]         \\
+[1em]\hspace{15pt} Rain $\times$ Transhumant Pastoral when THP Power at 90th pctile&        -7.2         &       -19.4         &         6.8         &         6.3         \\
+\hspace{25pt} p-value& [     0.64]         & [     0.32]         & [     0.52]         & [     0.56]         \\
+\hline \\ Dep. Var. Mean&       0.033         &       0.024         &       0.075         &       0.075         \\
+Cell FE             &         Yes         &         Yes         &         Yes         &         Yes         \\
+Country $\times$ Year FE&         Yes         &         Yes         &         Yes         &         Yes         \\
+Climate-Zone-Years  &         406         &         406         &         308         &         308         \\
+Cells               &       7,018         &       7,018         &       7,015         &       7,015         \\
+Observations        &     195,975         &     195,975         &     149,290         &     149,290         \\
+\bottomrule
+\end{tabular}
+}

@@ -1,0 +1,160 @@
+% ========================================================================
+%% dpaer.sty
+%% LaTeX2e style file for AER final version
+%% by Diego Puga
+%
+% Required manual edits:
+% - issue leqno option
+% - title, byline, first footnote, abstract (issue \raggedright after this)
+% - replace \footnote by \endnote except in tables
+%
+% See AER 90(4): 888--908 for style clues
+% ========================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{dpaer}[2001/03/27]
+% Margins
+\lettermarginstblr{25mm}{25mm}{25mm}{25mm}
+% Double-spacing everywhere
+\fulldoublespacing
+% Footnotes as endnotes
+\RequirePackage{endnotes}
+\def\enoteformat{%\rightskip\z@ % raggedright endnotes
+	\leftskip\z@ \parindent=1.8em
+     \leavevmode\llap{\hbox{$^{\@theenmark}$}}}% Default theorem style
+\newtheoremstyle{plain}
+  {}%      								Space above, empty = `usual value'
+  {}%      								Space below
+  {\itshape}% 						Body font
+  {}%         						Indent amount (empty = no indent, \parindent = para indent)
+  {}%											Thm head font
+  {:}%        						Punctuation after thm head
+  {\thm@headsep}%					Space after thm head: " " = normal interword space;\newline = linebreak
+  {%
+  \thmname{\MakeUppercase{#1}}\thmnumber{\@ifnotempty{#1}{ }\@upn{#2}}%
+  \thmnote{ {\the\thm@notefont #3}}}% 	Thm head spec
+% Subtheorem style
+\newtheoremstyle{subthm}% name
+  {}%
+  {}%
+  {}%
+  {}%
+  {}%
+  {:}%
+  {\thm@headsep}%
+  {\emph{\MakeUppercase{#1}\ #2 #3}}%
+% Proof environment
+\renewenvironment{proof}[1]{\noindent\MakeUppercase{\proofname}:\par #1}{\bigskip\bigskip}
+% No QED symbol
+\let\qed\relax
+% Section numbering
+\def\thepart{\Roman{part}}
+\def\thesection {\Roman{section}}
+\def\thesubsection {\textup{\Alph{subsection}}}
+\def\thesubsubsection {\alph{subsubsection}}
+\def\theparagraph {\thesubsubsection.\arabic{paragraph}}
+\def\thesubparagraph {\theparagraph.\arabic{subparagraph}}
+% Centre section headings
+% Dot after subsection as well as section counter but colon after appendix
+\newif\ifappendix@dpaer \appendix@dpaerfalse
+\def\@sect#1#2#3#4#5#6[#7]#8{%
+	 \ifnum #2>\c@secnumdepth\let\@svsec\@empty%
+	 \else% modification is in following 4 lines
+			\ifnum #2=\@ne\refstepcounter{#1}%
+				 \protected@edef\@svsec{\csname the#1\endcsname\ifappendix@dpaer:\else.\fi\hskip .5em }
+			\else\refstepcounter{#1}%
+				 \protected@edef\@svsec{\csname the#1\endcsname.\hskip .5em }\fi
+	 \fi
+	 \@tempskipa #5\relax
+		\ifdim \@tempskipa>\z@
+			\begingroup #6\relax
+				\@hangfrom{\hskip #3\relax\@svsec}%
+									{\interlinepenalty \@M #8\par}%
+			\endgroup
+		 \csname #1mark\endcsname{#7}\addcontentsline
+			 {toc}{#1}{\ifnum #2>\c@secnumdepth \else
+										\protect\numberline{\csname the#1\endcsname}\fi
+									#7}\else
+			\def\@svsechd{#6\hskip #3\relax  %%
+								 \@svsec #8\csname #1mark\endcsname
+										{#7}\addcontentsline
+												 {toc}{#1}{\ifnum #2>\c@secnumdepth \else
+												 \protect\numberline{\csname the#1\endcsname}%
+																	 \fi
+										 #7}}\fi
+	 \@xsect{#5}}
+\renewcommand{\section}{\@startsection {section}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\hfil\reset@font\large\bfseries\hfil}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\hfil\reset@font\normalsize\hfil}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {-1em}%
+                                     {\hfil\reset@font\normalsize\itshape\hfil}}
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\z@}%
+                                    {3.25ex \@plus1ex \@minus.2ex}%
+                                    {-1em}%
+                                    {\reset@font\normalsize\titlefnt@dp\itshape}}
+\renewcommand{\subparagraph}{\@startsection{subparagraph}{5}{\parindent}%
+                                       {3.25ex \@plus1ex \@minus .2ex}%
+                                       {-1em}%
+                                      {\reset@font\normalsize\titlefnt@dp\bfseries}}%
+% Appendices
+\renewcommand\appendices{\par
+	\appendix@dpaertrue%
+	\dp@appcommon%
+	\dp@appseqnnum%
+	\renewcommand{\section}{\setcounter{equation}{0}\@startsection {section}{1}{\z@}%
+																		 {-3.5ex \@plus -1ex \@minus -.2ex}%
+																		 {2.3ex \@plus.2ex}%
+																		 {\hfil\reset@font\large\scshape\hfil}}}
+\renewcommand\restoreapp{%
+	\setcounter{section}{\value{dp@preappsections}}%
+	\setcounter{equation}{\value{dp@preappequations}}%
+	\renewcommand{\section}{\@startsection {section}{1}{\z@}%
+															 {-3.5ex \@plus -1ex \@minus -.2ex}%
+															 {2.3ex \@plus.2ex}%
+															 {\hfil\reset@font\large\hfil}}}
+% References
+\renewcommand\bibsection{\section*{\MakeUppercase{\refname}}}
+\bibpunct[, ]{(}{)}{;}{a}{,}{,} % Separate multiple citations with ;
+% Notes
+\renewcommand{\notesname}{FOOTNOTES}
+% Captions (for tables)
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{\textsc{#1---#2}}%
+  \ifdim \wd\@tempboxa >\hsize
+    \textsc{#1---#2}\par
+  \else
+    \global \@minipagefalse
+    \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}
+% Table and figure bookmarks
+\def\toclevel@figure{1}
+\def\toclevel@table{1}
+% Acronyms without small caps
+\renewcommand{\acronymac}[1]{%
+\expandafter\ifx\csname fn@#1\endcsname\relax%
+ \textbf{\MakeUppercase{\textup{#1!}}}%
+ \PackageWarning{dpugatex}{Acronym `#1' is not defined}%
+ \expandafter\gdef\csname fn@#1\endcsname{%
+ \textbf{\MakeUppercase{\textup{#1!}}}}
+\else%
+ \MakeUppercase{#1}%
+\fi}
+\renewcommand{\acronymboth}[1]{%
+  \expandafter\ifx\csname ac@#1\endcsname\relax%
+  {\csname fn@#1\endcsname{} (\MakeUppercase{%
+  \acronymac{#1}})}%
+ \expandafter\gdef\csname ac@#1\endcsname{x}%
+\else%
+ {\csname fn@#1\endcsname{} (\MakeUppercase{%
+  \acronymac{#1}})}%
+\fi}
+% Insertion command
+\newcommand{\InsertHere}[1]{\begin{center}\framebox{\framebox{Insert #1 Here}}\end{center}}

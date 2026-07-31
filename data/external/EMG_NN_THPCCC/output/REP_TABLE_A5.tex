@@ -1,0 +1,52 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\toprule
+                    &\multicolumn{6}{c}{Indicator for the presence of conflict}                                     \\\cmidrule(lr){2-7}
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}\\
+                    &\multicolumn{1}{c}{\shortstack{ \\ UCDP \\ I(Any)}}&\multicolumn{1}{c}{\shortstack{ \\ UCDP \\ I(State)}}&\multicolumn{1}{c}{\shortstack{ \\ UCDP \\ I(Nonstate)}}&\multicolumn{1}{c}{\shortstack{ \\ ACLED \\ I(Any)}}&\multicolumn{1}{c}{\shortstack{ \\ ACLED \\ I(State)}}&\multicolumn{1}{c}{\shortstack{ \\ ACLED \\ I(Nonstate)}}\\
+\midrule
+\underline{\emph{Nearest Neighboring Ethnic Group}} \vspace{-0.4cm}&               &               &               &               &               &               \\
+                    &               &               &               &               &               &               \\
+\addlinespace
+\hspace{15pt} Rain [$\gamma^{s}_{0}$]&-0.0005         &0.0002         &-0.0006         &-0.0005         &0.0005         &-0.0007         \\
+                    &(0.0006)         &(0.0006)         &(0.0005)         &(0.0011)         &(0.0009)         &(0.0011)         \\
+\addlinespace
+\hspace{15pt} Rain $\times$ Transhumant Pastoral [$\gamma^{s}_{1}$]&-0.0082\sym{***}&-0.0105\sym{***}&0.0008         &-0.0093\sym{**} &-0.0081\sym{**} &-0.0094\sym{**} \\
+                    &(0.0031)         &(0.0028)         &(0.0019)         &(0.0037)         &(0.0036)         &(0.0037)         \\
+\addlinespace
+\underline{\emph{Own Ethnic Group}} \vspace{-0.4cm}&               &               &               &               &               &               \\
+                    &               &               &               &               &               &               \\
+\addlinespace
+\hspace{15pt} Rain [$\gamma^{s}_{2}$]&0.0003         &0.0016\sym{*}  &-0.0001         &0.0008         &0.0015         &0.0006         \\
+                    &(0.0010)         &(0.0009)         &(0.0007)         &(0.0014)         &(0.0011)         &(0.0014)         \\
+\addlinespace
+\hspace{15pt} Rain $\times$ Transhumant Pastoral [$\gamma^{s}_{3}$]&-0.0050         &-0.0065         &-0.0009         &-0.0028         &-0.0080         &-0.0013         \\
+                    &(0.0042)         &(0.0042)         &(0.0035)         &(0.0062)         &(0.0057)         &(0.0062)         \\
+\addlinespace
+\underline{\emph{Own Cell}} \vspace{-0.4cm}&               &               &               &               &               &               \\
+                    &               &               &               &               &               &               \\
+\addlinespace
+\hspace{15pt} Rain [$\gamma^{s}_{4}$]&-0.0004         &-0.0006         &-0.0002         &-0.0005         &-0.0008         &-0.0003         \\
+                    &(0.0007)         &(0.0006)         &(0.0005)         &(0.0010)         &(0.0009)         &(0.0010)         \\
+\addlinespace
+\hspace{15pt} Rain $\times$ Transhumant Pastoral [$\gamma^{s}_{5}$]&0.0049         &0.0062\sym{**} &0.0001         &0.0054         &0.0056         &0.0041         \\
+                    &(0.0033)         &(0.0030)         &(0.0024)         &(0.0048)         &(0.0039)         &(0.0048)         \\
+\midrule
+\\ \underline{\emph{Nearest Neighboring Ethnic Group: Additional Calculations}} &               &               &               &               &               &               \\
+[1em] Effect of 1 Std. Dev. Rain Shock as $\%$ of Dep. Var. Mean:&               &               &               &               &               &               \\
+\hspace{15pt} Rain  & -1.82         &  1.03         & -4.13         & -0.77         &  1.01         & -0.95         \\
+\hspace{15pt} p-value&[     0.41]         &[     0.70]         &[     0.29]         &[     0.61]         &[     0.61]         &[     0.54]         \\
+[1em] \hspace{15pt} Rain $\times$ Transhumant Pastoral&-27.95         &-49.97         &  6.15         &-13.27         &-17.70         &-13.36         \\
+\hspace{15pt} p-value&[     0.01]         &[     0.00]         &[     0.67]         &[     0.01]         &[     0.02]         &[     0.01]         \\
+[1em]  \hspace{15pt} Rain $+$ Rain $\times$ Transhumant Pastoral&-29.77         &-48.95         &  2.01         &-14.04         &-16.69         &-14.31         \\
+\hspace{15pt} p-value&[     0.00]         &[     0.00]         &[     0.89]         &[     0.01]         &[     0.03]         &[     0.01]         \\
+\hline \\ Dep. Var. Mean& 0.035         & 0.025         & 0.016         & 0.085         & 0.055         & 0.084         \\
+Cell FE             &   Yes         &   Yes         &   Yes         &   Yes         &   Yes         &   Yes         \\
+Country $\times$ Year FE&   Yes         &   Yes         &   Yes         &   Yes         &   Yes         &   Yes         \\
+Climate-Zone-Year Clusters&   420         &   420         &   420         &   322         &   322         &   322         \\
+Cell Clusters       & 7,722         & 7,722         & 7,722         & 7,722         & 7,722         & 7,722         \\
+Observations        &231,660         &231,660         &231,660         &177,606         &177,606         &177,606         \\
+\bottomrule
+\end{tabular}
+}

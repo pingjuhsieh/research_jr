@@ -1,0 +1,22 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\toprule
+                    &\multicolumn{3}{c}{UCDP}                                         &\multicolumn{3}{c}{ACLED}                                        \\\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}\\
+                    &\multicolumn{1}{c}{I(Any)}&\multicolumn{1}{c}{I(State)}&\multicolumn{1}{c}{I(Nonstate)}&\multicolumn{1}{c}{I(Any)}&\multicolumn{1}{c}{I(State)}&\multicolumn{1}{c}{I(Nonstate)}\\
+\midrule
+Neighbor Transhumant Pastoral [$\gamma_{1}$]&      0.0301\sym{***}&      0.0288\sym{***}&      0.0050\sym{**} &      0.0671\sym{***}&      0.0534\sym{***}&      0.0667\sym{***}\\
+                    &    (0.0053)         &    (0.0049)         &    (0.0023)         &    (0.0089)         &    (0.0074)         &    (0.0089)         \\
+\addlinespace
+Transhumant Pastoral [$\gamma_{2}$]&      0.0076         &      0.0058         &      0.0012         &      0.0188\sym{**} &      0.0126\sym{*}  &      0.0181\sym{*}  \\
+                    &    (0.0054)         &    (0.0044)         &    (0.0026)         &    (0.0093)         &    (0.0074)         &    (0.0093)         \\
+\midrule
+\\ Dep. Var. Mean   &       0.035         &       0.025         &       0.016         &       0.085         &       0.055         &       0.085         \\
+Year FE             &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+Climate-Zone-Year Clusters&         420         &         420         &         420         &         336         &         336         &         336         \\
+Cell Clusters       &       7,690         &       7,690         &       7,690         &       7,690         &       7,690         &       7,690         \\
+Observations        &     230,700         &     230,700         &     230,700         &     184,560         &     184,560         &     184,560         \\
+\bottomrule
+\end{tabular}
+}

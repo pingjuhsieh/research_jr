@@ -1,0 +1,24 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\toprule
+                    &\multicolumn{4}{c}{Panel E: Het by THP Political Power}                                \\\cmidrule(lr){2-5}
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+                    &\multicolumn{1}{c}{\shortstack{ \\ UCDP \\ I(Any)}}&\multicolumn{1}{c}{\shortstack{ \\ UCDP \\ I(State)}}&\multicolumn{1}{c}{\shortstack{ \\ ACLED \\ I(Any)}}&\multicolumn{1}{c}{\shortstack{ \\ ACLED \\ I(Nonstate)}}\\
+\midrule
+\underline{\emph{Nearest Neighboring Ethnic Group}} \vspace{-0.4cm}&                     &                     &                     &                     \\
+                    &                     &                     &                     &                     \\
+\addlinespace
+\hspace{15pt} Rain $\times$ Transhumant Pastoral $\times$ THP Power Share&      0.0954\sym{**} &      0.0762\sym{**} &      0.2811\sym{***}&      0.2810\sym{***}\\
+                    &    (0.0380)         &    (0.0348)         &    (0.0755)         &    (0.0756)         \\
+\midrule
+Cell FE             &         Yes         &         Yes         &         Yes         &         Yes         \\
+Country $\times$ Year FE&         Yes         &         Yes         &         Yes         &         Yes         \\
+Rain $\times$ Transhumant Pastoralism $\times$ Country FE&         Yes         &         Yes         &         Yes         &         Yes         \\
+Rain $\times$ Country FE&         Yes         &         Yes         &         Yes         &         Yes         \\
+Rain $\times$ Transhumant Pastoralism $\times$ Year FE&         Yes         &         Yes         &         Yes         &         Yes         \\
+Rain $\times$ Year FE&         Yes         &         Yes         &         Yes         &         Yes         \\
+Transhumant Pastoralism $\times$ Year FE&         Yes         &         Yes         &         Yes         &         Yes         \\
+\bottomrule
+\end{tabular}
+}

@@ -1,0 +1,29 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\toprule
+                    &\multicolumn{4}{c}{Indicator for presence of conflict}                                 \\\cmidrule(lr){2-5}
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+                    &\multicolumn{1}{c}{\shortstack{ \\ UCDP \\ I(Any)}}&\multicolumn{1}{c}{\shortstack{ \\ UCDP \\ I(State)}}&\multicolumn{1}{c}{\shortstack{ \\ ACLED \\ I(Any)}}&\multicolumn{1}{c}{\shortstack{ \\ ACLED \\ I(Nonstate)}}\\
+\midrule
+\underline{\emph{Nearest Neighboring Ethnic Group}} \vspace{-0.4cm}&                     &                     &                     &                     \\
+                    &                     &                     &                     &                     \\
+\addlinespace
+\hspace{15pt} Rain $\times$ Transhumant Pastoral&     -0.0129\sym{***}&     -0.0122\sym{***}&     -0.0038         &     -0.0036         \\
+                    &    (0.0038)         &    (0.0035)         &    (0.0039)         &    (0.0039)         \\
+\addlinespace
+\hspace{15pt} Rain $\times$ Transhumant Pastoral $\times$ Total Agriculture Aid&     -0.0059         &     -0.0068         &     -0.0113         &     -0.0117         \\
+                    &    (0.0064)         &    (0.0055)         &    (0.0074)         &    (0.0075)         \\
+\addlinespace
+\hspace{15pt} Rain $\times$ Transhumant Pastoral $\times$ Total Non-Agriculture Aid&      0.0004         &      0.0004         &      0.0005         &      0.0005         \\
+                    &    (0.0004)         &    (0.0004)         &    (0.0005)         &    (0.0005)         \\
+\midrule
+\\ Dep. Var. Mean   &       0.032         &       0.024         &       0.068         &       0.068         \\
+Cell FE             &         Yes         &         Yes         &         Yes         &         Yes         \\
+Country $\times$ Year FE&         Yes         &         Yes         &         Yes         &         Yes         \\
+Climate-Zone-Year Clusters&         364         &         364         &         252         &         252         \\
+Cell Clusters       &       7,722         &       7,722         &       7,722         &       7,722         \\
+Observations        &     200,772         &     200,772         &     138,996         &     138,996         \\
+\bottomrule
+\end{tabular}
+}

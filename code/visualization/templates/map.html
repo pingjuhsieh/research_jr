@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cross-Group Joking Relationships — Africa</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<style>
+__MAP_CSS__
+</style>
+</head>
+<body>
+<div id="hdr">
+  <div id="ttl"><h2>Cross-Group Joking Relationships</h2><div class="sub">__STATS_LINE__ · <span id="map-ui-build">ui-cross-detail-v1</span></div></div>
+  <div id="fwrap">
+    <button class="rbtn murdock" id="b-murdock" onclick="toggleLayer('murdock')">&#9632; Murdock</button>
+    <button class="rbtn greg" id="b-greg" onclick="toggleLayer('greg')">&#9632; GREG</button>
+    <button class="rbtn geopr" id="b-geopr" onclick="toggleLayer('geopr')">&#9632; GeoEPR</button>
+    <button class="rbtn joking on" id="b-joking" onclick="toggleLayer('joking')">&#9632; JR Highlights</button>
+    <div id="sw">
+      <input id="search" type="text" placeholder="Search Murdock / GREG / GeoEPR / JR…" autocomplete="off">
+      <div id="ac"></div>
+    </div>
+  </div>
+</div>
+<div id="wrap">
+  <div id="map"></div>
+  <div id="infobox"><div class="n" id="ib-name"></div><div class="m" id="ib-meta"></div></div>
+  <div id="side-panel">
+    <div id="sp-header">
+      <div id="sp-name-area">
+        <div id="sp-title-row"></div>
+        <div id="sp-counts"></div>
+        <button type="button" id="sp-copy" title="Copy group name (UPPERCASE) — or press C" aria-label="Copy group name uppercase">Copy name</button>
+      </div>
+      <span id="sp-close" onclick="clearJokingSelection()">&#x2715;</span>
+    </div>
+    <div id="sp-tabs">
+      <button class="sp-tab" id="tab-btn-kin"   onclick="showTab('kin')">Within-kin</button>
+      <button class="sp-tab" id="tab-btn-group" onclick="showTab('group')">Within-group</button>
+      <button class="sp-tab" id="tab-btn-cross" onclick="showTab('cross')">Cross-group</button>
+    </div>
+    <div id="sp-body">
+      <table id="partner-table">
+        <thead><tr><th id="col-left">Entity A</th><th id="col-right">Entity B</th></tr></thead>
+        <tbody id="partner-tbody"></tbody>
+      </table>
+      <div id="sp-hint">Click a row to view source, reasoning, and quote</div>
+    </div>
+    <div id="sp-ref-body"></div>
+  </div>
+  <div id="jr-detail-panel" aria-hidden="true">
+    <div id="jrd-header">
+      <div id="jrd-title">Joking relationship</div>
+      <button id="jrd-close" type="button" onclick="closeJrDetail()" aria-label="Close">&#x2715;</button>
+    </div>
+    <div id="jrd-body"></div>
+  </div>
+  <div id="legend">
+    <div id="legend-header">
+      <h3>JR Intensity</h3>
+      <button id="intensity-clear-all" type="button" onclick="clearIntensityFilters()" aria-label="Clear intensity filters" title="Clear all intensity filters">Clean all &#x2715;</button>
+    </div>
+    __INTENSITY_LEGEND__
+  </div>
+</div>
+<script>
+__MAP_JS__
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\toprule
+                    &\multicolumn{4}{c}{Panel B: Clustering by Country and Climate-Zone}\\\cmidrule(lr){2-5}
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+                    &\multicolumn{1}{c}{\shortstack{ \\ UCDP \\ I(Any)}}&\multicolumn{1}{c}{\shortstack{ \\ UCDP \\ I(State)}}&\multicolumn{1}{c}{\shortstack{ \\ ACLED \\ I(Any)}}&\multicolumn{1}{c}{\shortstack{ \\ ACLED \\ I(Nonstate)}}\\
+\midrule
+\underline{\emph{Nearest Neighboring Ethnic Group}} \vspace{-0.4cm}&               &               &               &               \\
+                    &               &               &               &               \\
+\addlinespace
+\hspace{15pt} Rain  &-0.0005         &0.0001         &-0.0007         &-0.0008         \\
+                    &(0.0006)         &(0.0005)         &(0.0010)         &(0.0010)         \\
+\addlinespace
+\hspace{15pt} Rain $\times$ Transhumant Pastoral&-0.0110\sym{***}&-0.0121\sym{***}&-0.0096\sym{***}&-0.0096\sym{***}\\
+                    &(0.0033)         &(0.0028)         &(0.0014)         &(0.0015)         \\
+\midrule
+Country Clusters    &    49         &    49         &    49         &    49         \\
+Climate-Zone Clusters&    14         &    14         &    14         &    14         \\
+\bottomrule
+\end{tabular}
+}

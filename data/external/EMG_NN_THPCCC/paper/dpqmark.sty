@@ -1,0 +1,24 @@
+% ========================================================================
+%% dpqmark.sty
+%% LaTeX2e style file for enabling question mark as a math accent
+%% by Diego Puga
+% ========================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{dpqmark}[1999/11/27]
+% ------------------------------------------------------------------------
+% ? as an accent
+%
+% use \?{character}
+% (or \?{character}{super and subscripts} for portability)
+% ------------------------------------------------------------------------
+\AtBeginDocument{%
+  \@ifpackageloaded{mathpazo}{
+    \input{ufplm.fd}
+    \DeclareSymbolFont{Pazo}{U}{fplm}{m}{n}
+    \DeclareMathAccent{\?}{\mathord}{Pazo}{"3F}
+  }{%
+	  \let\?\relax
+		\newcommand{\?}[1]{\overset{?}{#1}}
+  }%
+}
+\endinput

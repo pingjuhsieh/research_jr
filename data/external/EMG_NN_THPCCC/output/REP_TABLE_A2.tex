@@ -1,0 +1,29 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{3}{c}}
+\toprule
+                    &\multicolumn{3}{c}{Phytomass}                  \\\cmidrule(lr){2-4}
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         \\
+\midrule
+Rain                &0.4151\sym{***}&               &0.4092\sym{***}\\
+                    &(0.0357)         &               &(0.0350)         \\
+\addlinespace
+Temp                &               &-0.2223\sym{***}&-0.2018\sym{***}\\
+                    &               &(0.0400)         &(0.0383)         \\
+\midrule
+\\ Share of RSS explained by  \\ weather variable(s) (in \%)&  3.63         &  0.61         &  4.13         \\
+[1em] F statistic   &135.55         & 30.84         & 75.07         \\
+\hline \\  Effect of 1 Std. Dev. Shock \\ as $\%$ of Dep. Var. Mean:&               &               &               \\
+\\ Rain             &  1.63         &               &  1.61         \\
+p-value             &[     0.00]         &               &[     0.00]         \\
+[1em] Temp          &               & -0.58         & -0.53         \\
+p-value             &               &[     0.00]         &[     0.00]         \\
+\hline \\ Dep. Var. Mean& 30.57         & 30.57         & 30.57         \\
+Cell FE             &   Yes         &   Yes         &   Yes         \\
+Country $\times$ Year FE&   Yes         &   Yes         &   Yes         \\
+Climate-Zone-Years  &   224         &   224         &   224         \\
+Cells               & 9,691         & 9,691         & 9,691         \\
+Observations        &155,032         &155,032         &155,032         \\
+\bottomrule
+\end{tabular}
+}

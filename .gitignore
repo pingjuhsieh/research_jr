@@ -1,0 +1,21 @@
+# Environment
+.env
+.venv/
+
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+.Rhistory
+
+# Regenerable / large pipeline outputs
+output/llm_ehraf/markdown_raw/
+output/llm_ehraf/markdown_clean/
+output/llm_ehraf/logs/
+output/llm_ehraf/*.sqlite
+output/jr_database/merge_cross_assertions.csv
+
+# Over GitHub 100MB hard limit (keep local / Dropbox copy)
+data/external/EMG_NN_THPCCC/data/EMG_NN_THPCCC_replication_data.dta

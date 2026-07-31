@@ -1,0 +1,385 @@
+\documentclass[pdf,letterpaper,11pt]{article}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{lscape, pdflscape}
+\usepackage{rotating}
+\usepackage{amsmath, amsthm}
+\usepackage{dpugatex}
+\usepackage{dpppl}
+\usepackage{subfig}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{booktabs, multicol, multirow}
+\usepackage[export]{adjustbox}
+\usepackage{fancyhdr}
+\usepackage{gensymb}
+\usepackage{sectsty}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+\usepackage{pst-text}
+\usepackage{pstricks-add}
+\usepackage{pst-pdf}
+\usepackage{pdftricks}
+\usepackage[export]{adjustbox}
+\usepackage{threeparttable}
+\begin{psinputs}
+   \usepackage{pstricks}
+   \usepackage{multido}
+\end{psinputs}
+\newcommand{\Figtext}[1]{%
+ \begin{tablenotes}[para,flushleft]
+ \hspace{1pt}
+ \hangindent=1.54em
+ #1
+ \end{tablenotes}
+}
+\newcommand{\Fignote}[1]{\Figtext{\emph{Note:~}~#1}}
+\newcommand{\Figsource}[1]{\Figtext{\emph{Source:~}~#1}}
+\usepackage{comment}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{minipage}{\textwidth}
+\begin{center}%
+%
+\vspace{1mm} {\LARGE\textsb{Replication Output for \\ ``Transhumant Pastoralism, Climate Change and Conflict in Africa''}}\\[6ex]
+
+{\Large\textsb{Eoin F. McGuirk}\footnote[1]{Tufts University. Address: Department of Economics, Tufts University, 177 College Avenue, Medford, MA, 02155, USA. (email: \emailhref{eoin.mcguirk@tufts.edu}; website: \urlhref{https://eoinmcguirk.com}).}}\\[1mm]
+{\large\textit{Tufts University} and \textit{NBER}}\\[2ex]
+
+{\Large\textsb{Nathan Nunn}\footnote[2]{Vancouver School of Economics,
+University of British Columbia, 6000 Iona Drive, Vancouver, BC
+V6T 2E8, Canada (e-mail: \emailhref{nnunn@fas.harvard.edu}; website:
+\urlhref{https://nathannunn.arts.ubc.ca}).}}\\[1mm]
+{\large\textit{University of British Columbia} and \textit{CIFAR}}\\[2ex]
+%
+\today \vspace{0.5ex} \\
+%
+\end{center}
+%
+\end{minipage}
+\end{titlepage}
+
+\onehalfspacing
+
+%-------------------
+\section{Summary Statistics}
+%-------------------
+
+\begin{table}  [H]  \centering
+   \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table A3: Descriptive Statistics}
+ \input{../output/REP_TABLE_A2a}
+ \input{../output/REP_TABLE_A2b}
+ \input{../output/REP_TABLE_A2c}
+ \input{../output/REP_TABLE_A2d}
+    \end{threeparttable}
+       \end{scriptsize}
+\end{table}
+
+\begin{table}  [H]  \centering
+   \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table A4: Balance Table}
+ \input{../output/REP_TABLE_A3a}
+ \input{../output/REP_TABLE_A3b}
+ \input{../output/REP_TABLE_A3c}
+ \input{../output/REP_TABLE_A3d}
+    \end{threeparttable}
+       \end{scriptsize}
+\end{table}
+
+\begin{table}  [H]  \centering
+   \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table A16: Descriptive Statistics for Country-Year Level Variables}
+ \input{../output/REP_TABLE_A16}
+   \end{threeparttable}
+      \end{scriptsize}
+\end{table}
+
+%-------------------
+\section{Main Tables}
+%-------------------
+
+\begin{table}  [H]  \centering
+   \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table 1: Cross-Sectional Evidence of Conflict Spillover from Nearest Neighboring THP Territory: Cell Level}
+ \input{../output/REP_TABLE_1_n12}
+ \input{../output/REP_TABLE_1_n1234}
+   \end{threeparttable}
+      \end{scriptsize}
+\end{table}
+
+\begin{table} [H] \centering
+   \begin{scriptsize}
+\makebox[\textwidth]{\begin{threeparttable}
+\caption*{Table 2: Effect of Rain Shock in Nearest Neighboring THP Territory on Conflict in a Cell: Narrow Definition of Transhumance}
+ \input{../output/REP_TABLE_2}
+   \end{threeparttable}}
+      \end{scriptsize}
+\end{table}
+
+\begin{table} [H]  \centering
+   \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table 3: Robustness to Controlling for the Components of Transhumant Pastoralism}
+ \input{../output/REP_TABLE_3}
+   \end{threeparttable}
+      \end{scriptsize}
+\end{table}
+
+\begin{table} [H] \centering
+   \begin{scriptsize}
+\makebox[\textwidth]{\begin{threeparttable}
+\caption*{Table 4: Effect of Rain in Nearest Neighboring THP Territory on Conflict in Agricultural and Non-Agricultural Cells} 
+ \input{../output/REP_TABLE_4}
+   \end{threeparttable}}
+      \end{scriptsize}
+\end{table}
+
+\begin{table} [H]  \centering
+   \begin{scriptsize}
+\makebox[\textwidth]{\begin{threeparttable}
+\caption*{Table 5: Estimates Using Phytomass and Temperature Rather than Rainfall}
+ \input{../output/REP_TABLE_5phytomass}
+ \input{../output/REP_TABLE_5temp}
+   \end{threeparttable}}
+      \end{scriptsize}
+\end{table}
+
+ \begin{table}[H]  \centering
+  \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table 6: Effects of Neighbor's Rainfall on Conflict during the Wet and Dry Seasons}
+ \input{../output/REP_TABLE_6a}
+ \input{../output/REP_TABLE_6b}
+   \end{threeparttable}
+    \end{scriptsize}
+\end{table}
+
+\begin{table} [H]  \centering
+   \begin{scriptsize}
+\makebox[\textwidth]{\begin{threeparttable}
+\caption*{Table 7: Jihadist Violence}
+ \input{../output/REP_TABLE_7}
+   \end{threeparttable}}
+      \end{scriptsize}
+\end{table}
+
+\begin{table} [H]  \centering
+   \begin{scriptsize}
+\makebox[\textwidth]{\begin{threeparttable}
+\caption*{Table 8: Heterogeneity by the Presence of International Aid Projects}
+ \input{../output/REP_TABLE_8}
+   \end{threeparttable}}
+      \end{scriptsize}
+\end{table}
+
+
+\begin{table} [H]  \centering
+   \begin{scriptsize}
+\makebox[\textwidth]{\begin{threeparttable}
+\caption*{Table 9: Heterogeneity by the Share of Conservation Lands in a Country}
+ \input{../output/REP_TABLE_9}
+   \end{threeparttable}}
+      \end{scriptsize}
+\end{table}
+
+
+\begin{table} [H]  \centering
+   \begin{scriptsize}
+\makebox[\textwidth]{\begin{threeparttable}
+\caption*{Table 10: Heterogeneity by Share of Political Power Held by Transhumant Pastoral Groups}
+ \input{../output/REP_TABLE_10}
+   \end{threeparttable}}
+      \end{scriptsize}
+\end{table}
+
+
+%-------------------
+\section{Rest of Appendix Tables}
+%-------------------
+
+\begin{table} [H]  \centering
+   \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table A2: The Determinants of Phytomass Growth}
+ \input{../output/REP_TABLE_A2}
+   \end{threeparttable}
+     \end{scriptsize}
+\end{table}
+
+
+\begin{table} [H]  \centering
+   \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table A5: Effect of Rain Shock in Nearest Neighboring THP Territory on Conflict in a Cell: Broad Definition of Transhumance}
+ \input{../output/REP_TABLE_A5}
+   \end{threeparttable}
+     \end{scriptsize}
+\end{table}
+
+
+\begin{table} [H]  \centering
+   \begin{scriptsize}
+\makebox[\textwidth]{\begin{threeparttable}
+\caption*{Table A6: Robustness to Additional Controls for Ethnicity-Level Characteristics}
+ \input{../output/REP_TABLE_A6}
+   \end{threeparttable}}
+      \end{scriptsize}
+\end{table}
+
+
+\begin{table} [H]  \centering
+  \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table A7: Robustness to Additional Controls for Ethnicity-Level Average Rainfall}
+ \input{../output/REP_TABLE_A7}
+   \end{threeparttable}
+    \end{scriptsize}
+\end{table}
+
+
+\begin{table} [H]  \centering
+  \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table A8: Robustness to Additional Controls for Time-Varying Characteristics}
+ \input{../output/REP_TABLE_A8}
+   \end{threeparttable}
+    \end{scriptsize}
+\end{table}
+
+
+\begin{table} [H]  \centering
+ \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table A9: Robustness to Various Inference Procedures}
+ \input{../output/REP_TABLE_A9a}
+ \input{../output/REP_TABLE_A9b}
+ \input{../output/REP_TABLE_A9c}
+   \end{threeparttable}
+    \end{scriptsize}
+\end{table}
+
+
+\begin{table} [H]  \centering
+  \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table A10: Phytomass Suitability Index (Predicted by Rain)}
+ \input{../output/REP_TABLE_A10}
+   \end{threeparttable}
+    \end{scriptsize}
+\end{table}
+
+
+\begin{table} [H]  \centering
+  \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table A11: Phytomass Suitability Index (Predicted by Rain and Rain Squared)}
+ \input{../output/REP_TABLE_A11}
+   \end{threeparttable}
+    \end{scriptsize}
+\end{table}
+
+
+ \begin{table}[H]  \centering
+  \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table A12: Allowing for Rainfall and Temperature in the Same Specification}
+ \input{../output/REP_TABLE_A12}
+   \end{threeparttable}
+    \end{scriptsize}
+\end{table}
+
+ \begin{table}[H]  \centering
+  \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table A13: Effects of Neighbor's Phytomass on Conflict during the Wet and Dry Seasons}
+ \input{../output/REP_TABLE_A13a}
+ \input{../output/REP_TABLE_A13b}
+   \end{threeparttable}
+    \end{scriptsize}
+\end{table}
+
+ \begin{table}[H]  \centering
+  \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table A14 Panel A: Summary of Seasonal Regressions, Agricultural Cells Only, Rain}
+ \input{../output/REP_TABLE_A14A1}
+ \input{../output/REP_TABLE_A14A2}
+   \end{threeparttable}
+    \end{scriptsize}
+\end{table}
+
+ \begin{table}[H]  \centering
+  \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table A14 Panel B: Summary of Seasonal Regressions, Agricultural Cells Only, Phytomass}
+ \input{../output/REP_TABLE_A14B1}
+ \input{../output/REP_TABLE_A14B2}
+   \end{threeparttable}
+    \end{scriptsize}
+\end{table}
+
+ \begin{table}[H]  \centering
+  \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table A15 Panel A: Summary of Seasonal Regressions, Non-Agricultural Cells Only, Rain}
+ \input{../output/REP_TABLE_A15A1}
+ \input{../output/REP_TABLE_A15A2}
+   \end{threeparttable}
+    \end{scriptsize}
+\end{table}
+
+ \begin{table}[H]  \centering
+  \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table A15 Panel B: Summary of Seasonal Regressions, Non-Agricultural Cells Only, Phytomass}
+ \input{../output/REP_TABLE_A15B1}
+ \input{../output/REP_TABLE_A15B2}
+   \end{threeparttable}
+    \end{scriptsize}
+\end{table}
+
+ \begin{table}[H]  \centering
+   \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table A17: Heterogeneity by the Presence of International Aid Projects: Sub-Categories}
+ \input{../output/REP_TABLE_A17}
+   \end{threeparttable}
+      \end{scriptsize}
+\end{table}
+
+
+\begin{table} [tbp]  \centering
+   \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table A18: Heterogeneous Treatment Effects, Controlling for Country FE and Year FE interacted with Main Interaction of Interest }
+ \input{../output/REP_TABLE_A18a}
+ \input{../output/REP_TABLE_A18b}
+ \input{../output/REP_TABLE_A18c}
+ \input{../output/REP_TABLE_A18d}
+ \input{../output/REP_TABLE_A18e}
+   \end{threeparttable}
+      \end{scriptsize}
+\end{table}
+
+
+ \begin{table}[H]  \centering
+   \begin{scriptsize}
+\begin{threeparttable}
+\caption*{Table A19: Heterogeneity by the Presence of Conservation Lands Using Subnational Variation}
+ \input{../output/REP_TABLE_A19}
+   \end{threeparttable}
+      \end{scriptsize}
+\end{table}
+
+
+\end{document}

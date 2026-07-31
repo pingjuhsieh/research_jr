@@ -1,0 +1,47 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\toprule
+                    &\multicolumn{4}{c}{Indicator for the presence of conflict}     \\\cmidrule(lr){2-5}
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+                    &\multicolumn{1}{c}{\shortstack{ \\ UCDP \\ I(Any)}}&\multicolumn{1}{c}{\shortstack{ \\ UCDP \\ I(State)}}&\multicolumn{1}{c}{\shortstack{ \\ ACLED \\ I(Any)}}&\multicolumn{1}{c}{\shortstack{ \\ ACLED \\ I(Nonstate)}}\\
+\midrule
+\underline{\emph{Nearest Neighboring Ethnic Group}} \vspace{-0.4cm}&               &               &               &               \\
+                    &               &               &               &               \\
+\addlinespace
+\hspace{15pt} Rain  &-0.0004         &0.0002         &-0.0002         &-0.0004         \\
+                    &(0.0007)         &(0.0006)         &(0.0011)         &(0.0012)         \\
+\addlinespace
+\hspace{15pt} Rain $\times$ Transhumant Pastoral&-0.0116\sym{***}&-0.0125\sym{***}&-0.0071\sym{**} &-0.0075\sym{**} \\
+                    &(0.0035)         &(0.0033)         &(0.0036)         &(0.0035)         \\
+\addlinespace
+\hspace{15pt} Temperature&0.0020         &0.0029\sym{**} &0.0028         &0.0026         \\
+                    &(0.0016)         &(0.0013)         &(0.0027)         &(0.0027)         \\
+\addlinespace
+\hspace{15pt} Temperature $\times$ Transhumant Pastoral&0.0017         &0.0040         &0.0026         &0.0026         \\
+                    &(0.0037)         &(0.0035)         &(0.0045)         &(0.0044)         \\
+\midrule
+\\ \underline{\emph{Nearest Neighboring Ethnic Group: Additional Calculations}} &               &               &               &               \\
+[1em] Effect of 1 Std. Dev. Rain Shock as $\%$ of Dep. Var. Mean:&               &               &               &               \\
+\hspace{15pt} Rain  & -1.66         &  1.18         & -0.41         & -0.72         \\
+\hspace{15pt} p-value&[     0.50]         &[     0.68]         &[     0.84]         &[     0.72]         \\
+[1em] \hspace{15pt} Rain $\times$ Transhumant Pastoral&-42.99         &-63.49         &-12.53         &-13.18         \\
+\hspace{15pt} p-value&[     0.00]         &[     0.00]         &[     0.05]         &[     0.03]         \\
+[1em]  \hspace{15pt} Rain $+$ Rain $\times$ Transhumant Pastoral&-44.65         &-62.31         &-12.94         &-13.90         \\
+\hspace{15pt} p-value&[     0.00]         &[     0.00]         &[     0.03]         &[     0.02]         \\
+\\ [1em] Effect of 1 Std. Dev. Temp Shock as $\%$ of Dep. Var. Mean:&               &               &               &               \\
+\hspace{15pt} Temp  &  7.24         & 14.83         &  4.87         &  4.65         \\
+\hspace{15pt} p-value&[     0.23]         &[     0.03]         &[     0.30]         &[     0.33]         \\
+[1em] \hspace{15pt} Temp $\times$ Transhumant Pastoral&  6.23         & 20.28         &  4.62         &  4.51         \\
+\hspace{15pt} p-value&[     0.65]         &[     0.25]         &[     0.56]         &[     0.56]         \\
+[1em]  \hspace{15pt} Temp $+$ Temp $\times$ Transhumant Pastoral& 13.47         & 35.11         &  9.49         &  9.17         \\
+\hspace{15pt} p-value&[     0.32]         &[     0.05]         &[     0.17]         &[     0.17]         \\
+\hline \\ Dep. Var. Mean& 0.032         & 0.024         & 0.068         & 0.068         \\
+Cell FE             &   Yes         &   Yes         &   Yes         &   Yes         \\
+Country $\times$ Year FE&   Yes         &   Yes         &   Yes         &   Yes         \\
+Climate-Zone-Year Clusters&   364         &   364         &   252         &   252         \\
+Cell Clusters       & 7,722         & 7,722         & 7,722         & 7,722         \\
+Observations        &200,728         &200,728         &138,968         &138,968         \\
+\bottomrule
+\end{tabular}
+}

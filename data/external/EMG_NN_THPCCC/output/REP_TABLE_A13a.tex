@@ -1,0 +1,30 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\toprule
+                    &\multicolumn{2}{c}{Wet Season UCDP Conflict}&\multicolumn{2}{c}{Dry Season UCDP Conflict}\\\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+                    &\multicolumn{1}{c}{\shortstack{ \\ Incidence \\ Year Equiv.}}&\multicolumn{1}{c}{\shortstack{ \\ No. Events \\ Year Equiv.}}&\multicolumn{1}{c}{\shortstack{ \\ Incidence \\ Year Equiv.}}&\multicolumn{1}{c}{\shortstack{ \\ No. Events \\ Year Equiv.}}\\
+\midrule
+\underline{\emph{Nearest Neighboring Ethnic Group}} \vspace{-0.4cm}&               &               &               &               \\
+                    &               &               &               &               \\
+\addlinespace
+\hspace{15pt} Annual Phytomass&0.0009         &0.0037         &0.0009         &0.0034         \\
+                    &(0.0015)         &(0.0035)         &(0.0015)         &(0.0033)         \\
+\addlinespace
+\hspace{15pt} Annual Phytomass $\times$ Transhumant Pastoral&-0.0089\sym{**} &-0.0385\sym{*}  &-0.0009         &-0.0155         \\
+                    &(0.0041)         &(0.0219)         &(0.0044)         &(0.0175)         \\
+\midrule
+\\ \underline{\emph{Nearest Neighboring Ethnic Group: Additional Calculations}} &               &               &               &               \\
+[1em] Effect of 1 Std. Dev. Phytomass Shock as $\%$ of Dep. Var. Mean:&               &               &               &               \\
+[1em] \hspace{15pt} Phytomass $\times$ Transhumant Pastoral&-30.71         &-70.21         & -2.87         &-25.72         \\
+\hspace{15pt} p-value&[     0.03]         &[     0.08]         &[     0.84]         &[     0.37]         \\
+\hline \\ Dep. Var. Mean& 0.096         & 0.182         & 0.106         & 0.200         \\
+Cell FE             &   Yes         &   Yes         &   Yes         &   Yes         \\
+Country $\times$ Month FE&   Yes         &   Yes         &   Yes         &   Yes         \\
+Climate-Zone-Year Clusters&   280         &   280         &   280         &   280         \\
+Cell Clusters       & 4,632         & 4,632         & 4,632         & 4,632         \\
+Observations        &92,640         &92,640         &92,640         &92,640         \\
+\bottomrule
+\end{tabular}
+}

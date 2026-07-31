@@ -1,0 +1,54 @@
+% ========================================================================
+%% dpqje.sty
+%% LaTeX2e style file for QJE final version
+%% by Diego Puga
+%
+% Required manual edits:
+% ========================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{dpqje}[2005/06/02]
+% Margins
+\afourmarginstblr{20mm}{37mm}{21mm}{21mm}
+%
+% Double-spacing everywhere
+%\fulldoublespacing
+%
+% \@makefnmark itself not superscripted
+\def\@makefnmark{\hbox{\normalfont\@thefnmark}}
+% Instead modify \@footnotemark from latex.ltx
+% to superscript footnote number in main text
+\def\@footnotemark{%
+  \leavevmode
+  \ifhmode\edef\@x@sf{\the\spacefactor}\nobreak\fi
+  \@textsuperscript{\@makefnmark}
+  \ifhmode\spacefactor\@x@sf\fi
+  \relax}
+% Also modify \@makefntext from article.cls
+% to insert period and separation after number in footnote itself
+\renewcommand\@makefntext[1]{%
+    \parindent 1em%
+    \noindent
+    \hb@xt@1.8em{\hss\@makefnmark.\hskip .5em}#1}
+%
+% Section numbering
+\def\thesection{\textsc{\roman{section}}}
+\def\thesubsection{\thesection\Alph{subsection}}
+% Centre section headings
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+																	 {-3.5ex \@plus -1ex \@minus -.2ex}%
+																	 {2.3ex \@plus.2ex}%
+																	 {\centering\normalfont\large\titlefnt@dp\bfseries}}
+%
+% Tables and figures
+\def\thefigure{\textsc{\roman{figure}}}
+\def\thetable{\textsc{\roman{table}}}
+\long\def\@makecaption#1#2{%
+	\vskip\abovecaptionskip
+		\osfrmdefault\centering\small\textsc{#1} \\ #2\noosfrmdefault
+	\vskip\belowcaptionskip}%
+%
+% Citation punctuation
+\bibpunct{[}{]}{,}{a}{}{,}
+%
+% Insertion command
+\newcommand{\InsertHere}[1]{\begin{center}\framebox{\framebox{Insert #1 Here}}\end{center}}

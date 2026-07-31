@@ -1,0 +1,49 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\toprule
+                    &\multicolumn{4}{c}{Indicator for the presence of conflict}     \\\cmidrule(lr){2-5}
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+                    &\multicolumn{1}{c}{\shortstack{ \\ UCDP \\ I(Any)}}&\multicolumn{1}{c}{\shortstack{ \\ UCDP \\ I(State)}}&\multicolumn{1}{c}{\shortstack{ \\ ACLED \\ I(Any)}}&\multicolumn{1}{c}{\shortstack{ \\ ACLED \\ I(Nonstate)}}\\
+\midrule
+\underline{\emph{Nearest Neighboring Ethnic Group}} \vspace{-0.4cm}&               &               &               &               \\
+                    &               &               &               &               \\
+\addlinespace
+\hspace{15pt} Rain  &-0.0006         &0.0001         &-0.0007         &-0.0009         \\
+                    &(0.0006)         &(0.0006)         &(0.0011)         &(0.0011)         \\
+\addlinespace
+\hspace{15pt} Rain $\times$ Transhumant Pastoral&-0.0114\sym{***}&-0.0126\sym{***}&-0.0095\sym{***}&-0.0094\sym{***}\\
+                    &(0.0034)         &(0.0031)         &(0.0036)         &(0.0036)         \\
+\addlinespace
+\hspace{15pt} Year $\times$ Transhumant Pastoral&-0.0005         &-0.0003         &-0.0064\sym{***}&-0.0064\sym{***}\\
+                    &(0.0006)         &(0.0006)         &(0.0018)         &(0.0017)         \\
+\addlinespace
+\hspace{15pt} Price Index: Energy  $\times$ Transhumant Pastoral&0.0006\sym{***}&0.0004\sym{**} &0.0005\sym{**} &0.0005\sym{**} \\
+                    &(0.0002)         &(0.0002)         &(0.0002)         &(0.0002)         \\
+\addlinespace
+\hspace{15pt} Price Index: Metals and Minerals  $\times$ Transhumant Pastoral&0.0001         &0.0003         &-0.0004         &-0.0004         \\
+                    &(0.0002)         &(0.0002)         &(0.0003)         &(0.0003)         \\
+\addlinespace
+\hspace{15pt} Price Index: Precious Metals  $\times$ Transhumant Pastoral&-0.0004         &-0.0005\sym{*}  &0.0005         &0.0005         \\
+                    &(0.0003)         &(0.0002)         &(0.0005)         &(0.0005)         \\
+\addlinespace
+\hspace{15pt} Price Index: Agriculture  $\times$ Transhumant Pastoral&-0.0001         &0.0001         &0.0006         &0.0006         \\
+                    &(0.0005)         &(0.0004)         &(0.0007)         &(0.0007)         \\
+\midrule
+\\ \underline{\emph{Nearest Neighboring Ethnic Group: Additional Calculations}} &               &               &               &               \\
+[1em] Effect of 1 Std. Dev. Rain Shock as $\%$ of Dep. Var. Mean:&               &               &               &               \\
+\hspace{15pt} Rain  & -1.90         &  0.61         & -1.04         & -1.22         \\
+\hspace{15pt} p-value&[     0.39]         &[     0.82]         &[     0.49]         &[     0.42]         \\
+[1em] \hspace{15pt} Rain $\times$ Transhumant Pastoral&-39.14         &-59.85         &-13.46         &-13.45         \\
+\hspace{15pt} p-value&[     0.00]         &[     0.00]         &[     0.01]         &[     0.01]         \\
+[1em]  \hspace{15pt} Rain $+$ Rain $\times$ Transhumant Pastoral&-41.04         &-59.25         &-14.50         &-14.67         \\
+\hspace{15pt} p-value&[     0.00]         &[     0.00]         &[     0.00]         &[     0.00]         \\
+\hline \\ Dep. Var. Mean&0.0351         &0.0253         &0.0845         &0.0842         \\
+Cell FE             &   Yes         &   Yes         &   Yes         &   Yes         \\
+Country $\times$ Year FE&   Yes         &   Yes         &   Yes         &   Yes         \\
+Climate-Zone-Year Clusters&   420         &   420         &   322         &   322         \\
+Cell Clusters       & 7,722         & 7,722         & 7,722         & 7,722         \\
+Observations        &231,660         &231,660         &177,606         &177,606         \\
+\bottomrule
+\end{tabular}
+}

@@ -1,0 +1,30 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\toprule
+                    &\multicolumn{2}{c}{Wet Season UCDP Conflict}&\multicolumn{2}{c}{Dry Season UCDP Conflict}\\\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+                    &\multicolumn{1}{c}{\shortstack{ \\ Incidence \\ Year Equiv.}}&\multicolumn{1}{c}{\shortstack{ \\ No. Events \\ Year Equiv.}}&\multicolumn{1}{c}{\shortstack{ \\ Incidence \\ Year Equiv.}}&\multicolumn{1}{c}{\shortstack{ \\ No. Events \\ Year Equiv.}}\\
+\midrule
+\underline{\emph{Nearest Neighboring Ethnic Group}} \vspace{-0.4cm}&               &               &               &               \\
+                    &               &               &               &               \\
+\addlinespace
+\hspace{15pt} Rain  &0.0005         &0.0042         &-0.0025         &-0.0034         \\
+                    &(0.0024)         &(0.0050)         &(0.0033)         &(0.0124)         \\
+\addlinespace
+\hspace{15pt} Rain $\times$ Transhumant Pastoral&-0.0361\sym{**} &-0.0918\sym{*}  &-0.0029         &-0.0262         \\
+                    &(0.0173)         &(0.0472)         &(0.0162)         &(0.0499)         \\
+\midrule
+\\ \underline{\emph{Nearest Neighboring Ethnic Group: Additional Calculations}} &               &               &               &               \\
+[1em] Effect of 1 Std. Dev. Rain Shock as $\%$ of Dep. Var. Mean:&               &               &               &               \\
+[1em] \hspace{15pt} Rain $\times$ Transhumant Pastoral&-49.64         &-72.94         & -3.56         &-18.14         \\
+\hspace{15pt} p-value&[     0.04]         &[     0.05]         &[     0.86]         &[     0.60]         \\
+\hline \\ Dep. Var. Mean& 0.087         & 0.151         & 0.098         & 0.174         \\
+Cell FE             &   Yes         &   Yes         &   Yes         &   Yes         \\
+Country $\times$ Month FE&   Yes         &   Yes         &   Yes         &   Yes         \\
+Climate-Zone-Year Clusters&   390         &   390         &   390         &   390         \\
+Cell Clusters       & 3,897         & 3,897         & 3,897         & 3,897         \\
+Observations        &116,910         &116,910         &116,910         &116,910         \\
+\bottomrule
+\end{tabular}
+}
