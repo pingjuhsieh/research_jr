@@ -73,6 +73,7 @@ def _base_row(**kwargs: Any) -> dict[str, Any]:
         "quote": "",
         "source_url": "",
         "source_citation": "",
+        "source_page": "",
         "doc_id": "",
         "relationship_row_id": "",
         "needs_review": 0,
@@ -81,14 +82,37 @@ def _base_row(**kwargs: Any) -> dict[str, Any]:
     return row
 
 
+def _read_llm_csv(path: Path) -> pd.DataFrame:
+    """Read LLM export; tolerate Numbers semicolon / broken-quote exports."""
+    raw = path.read_text(encoding="utf-8", errors="replace")
+    header = raw.splitlines()[0] if raw else ""
+    sep = ";" if header.count(";") > header.count(",") else ","
+    df = pd.read_csv(path, sep=sep, engine="python", on_bad_lines="warn")
+    if len(df.columns) == 1 and ";" in str(df.columns[0]):
+        df = pd.read_csv(path, sep=";", engine="python", on_bad_lines="warn")
+    # Rewrite a clean comma CSV when the on-disk file was ';' separated.
+    if sep == ";" or (";" in header and header.count(";") >= 10):
+        df.to_csv(path, index=False)
+    return df
+
+
 def load_llm_ehraf(path: Path = LLM_EHRAF_JR_CSV) -> list[dict[str, Any]]:
+    """Load LLM eHRAF assertions, keeping only cross-group scope.
+
+    Source is ``llm_ehraf_joking_relationships.csv`` (all scopes). Kinship /
+    within_group rows are ignored here — this pipeline is cross-group only.
+    Also accepts legacy ``between_groups`` as an alias of cross_group.
+    """
     if not path.is_file():
         raise FileNotFoundError(f"LLM eHRAF export not found: {path}")
-    df = pd.read_csv(path)
+    df = _read_llm_csv(path)
     rows: list[dict[str, Any]] = []
-    for _, r in df[df["scope_coded"] == "cross_group"].iterrows():
-        a_raw = _clean(r.get("entity_a"))
-        b_raw = _clean(r.get("entity_b"))
+    for _, r in df.iterrows():
+        scope = _clean(r.get("scope_coded")).casefold().replace("-", "_")
+        if scope not in {"cross_group", "between_groups"}:
+            continue
+        a_raw = _clean(r.get("entity_a")) or _clean(r.get("entity_a_canonical"))
+        b_raw = _clean(r.get("entity_b")) or _clean(r.get("entity_b_canonical"))
         a = canonicalize_entity_name(a_raw)
         b = canonicalize_entity_name(b_raw)
         if not a or not b or a == b:
@@ -106,23 +130,31 @@ def load_llm_ehraf(path: Path = LLM_EHRAF_JR_CSV) -> list[dict[str, Any]]:
                 ethnography_group=_clean(r.get("ethnography_group")),
                 relation_type=_clean(r.get("relation_type_coded")),
                 symmetry=_clean(r.get("symmetry_coded")),
-                notes=_clean(r.get("reasoning")),
+                notes=_clean(r.get("reasoning")) or _clean(r.get("notes")),
                 quote=_clean(r.get("supporting_quote_raw")),
-                doc_id=_clean(r.get("doc_id")),
-                relationship_row_id=_clean(r.get("relationship_row_id")),
+                doc_id=_clean(r.get("doc_id")) or _clean(r.get("source_docs")),
+                relationship_row_id=(
+                    _clean(r.get("relationship_row_id"))
+                    or _clean(r.get("relationship_id"))
+                ),
             )
         )
     return rows
 
 
 def load_keerthana(path: Path = KEERTHANA_CROSS_XLSX) -> list[dict[str, Any]]:
+    """Load Keerthana cross-group pairs.
+
+    Only ``joking_source=analysis`` is kept. ``og`` rows were dropped as
+    duplicates of the newer llm_ehraf stream.
+    """
     if not path.is_file():
         raise FileNotFoundError(f"Keerthana source not found: {path}")
     df = pd.read_excel(path)
     rows: list[dict[str, Any]] = []
     for _, r in df.iterrows():
         js = _clean(r.get("joking_source")).lower()
-        if js not in {"analysis", "og"}:
+        if js != "analysis":
             continue
         a_raw = _clean(r.get("entity_a"))
         b_raw = _clean(r.get("entity_b"))
@@ -132,7 +164,7 @@ def load_keerthana(path: Path = KEERTHANA_CROSS_XLSX) -> list[dict[str, Any]]:
             continue
         rows.append(
             _base_row(
-                source_dataset=f"keerthana_{js}",
+                source_dataset="keerthana_analysis",
                 entity_a_raw=a_raw,
                 entity_b_raw=b_raw,
                 entity_a=a,
@@ -173,13 +205,50 @@ def _parse_joking_partners(val: Any) -> list[str]:
     return out
 
 
+def load_icmid_jr_pair(path: Path = ICMID_MANUAL_XLSX) -> list[dict[str, Any]]:
+    """Load curated undirected pairs from sheet ``JR_pair`` (preferred over Sheet2)."""
+    if not path.is_file():
+        return []
+    try:
+        df = pd.read_excel(path, sheet_name="JR_pair")
+    except ValueError:
+        return []
+    df.columns = [str(c).strip() for c in df.columns]
+    rows: list[dict[str, Any]] = []
+    for _, r in df.iterrows():
+        a_raw = _clean(r.get("entity_a"))
+        b_raw = _clean(r.get("entity_b"))
+        a = canonicalize_entity_name(a_raw)
+        b = canonicalize_entity_name(b_raw)
+        if not a or not b or a.casefold() == b.casefold():
+            continue
+        notes = _clean(r.get("Notes"))
+        rows.append(
+            _base_row(
+                source_dataset="icmid_jr_pair",
+                entity_a_raw=a_raw,
+                entity_b_raw=b_raw,
+                entity_a=a,
+                entity_b=b,
+                region=_clean(r.get("Region")),
+                notes=notes,
+                quote=_clean(r.get("Source_Quote")),
+                source_url=_clean(r.get("Source_URL")) or _clean(r.get("Sources")),
+                source_citation=_clean(r.get("Source_Full_Citation")),
+                source_page=_clean(r.get("Source_Page")),
+                doc_id=_clean(r.get("Source_File")),
+                needs_review=1 if _clean(r.get("source_review")) else 0,
+            )
+        )
+    return rows
+
+
 def load_icmid_manual(path: Path = ICMID_MANUAL_XLSX) -> list[dict[str, Any]]:
     """Load ICMID manual Africa workbook.
 
     - Sheet1: small confirmed pairs (Ethnic Group ↔ Relation With)
-    - Sheet2: main coding — each row is a Murdock homeland; column F
-      ``Joking link`` lists comma-separated groups with cross-group JR.
-      Partners need not already be in the Murdock column (extra groups).
+    - ``JR_pair`` (preferred): curated one-row-per-undirected-pair with sources
+    - Sheet2 fallback: only if ``JR_pair`` is missing/empty
     - Sheet3: ignored
     """
     if not path.is_file():
@@ -207,6 +276,11 @@ def load_icmid_manual(path: Path = ICMID_MANUAL_XLSX) -> list[dict[str, Any]]:
             )
         )
 
+    jr_pair_rows = load_icmid_jr_pair(path)
+    if jr_pair_rows:
+        rows.extend(jr_pair_rows)
+        return rows
+
     s2 = pd.read_excel(path, sheet_name="Sheet2")
     f_col = "Joking link" if "Joking link" in s2.columns else s2.columns[5]
     for _, r in s2.iterrows():
@@ -220,6 +294,7 @@ def load_icmid_manual(path: Path = ICMID_MANUAL_XLSX) -> list[dict[str, Any]]:
         region = _clean(r.get("Region"))
         url = _clean(r.get("Source_URL")) or _clean(r.get("Sources"))
         cite = _clean(r.get("Source_Full_Citation"))
+        page = _clean(r.get("Source_Page"))
         quote = _clean(r.get("Source_Quote"))
         notes = _clean(r.get("Notes"))
         for b_raw in partners:
@@ -238,6 +313,7 @@ def load_icmid_manual(path: Path = ICMID_MANUAL_XLSX) -> list[dict[str, Any]]:
                     quote=quote,
                     source_url=url,
                     source_citation=cite,
+                    source_page=page,
                     needs_review=0,
                 )
             )

@@ -46,7 +46,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .td-partner{cursor:pointer;color:#1a73e8;width:50%}
 .td-partner:hover{text-decoration:underline;color:#0d47a1}
 .etype-hint{display:block;font-size:10px;font-weight:400;color:#999;margin-top:2px;line-height:1.3;text-transform:lowercase}
-#legend{position:absolute;bottom:24px;left:16px;z-index:1000;background:rgba(255,255,255,.96);border:1px solid #ddd;border-radius:8px;padding:10px 14px;font-size:11px;box-shadow:0 2px 8px rgba(0,0,0,.1);min-width:185px}
+#legend{position:absolute;bottom:24px;left:16px;z-index:1000;background:rgba(255,255,255,.96);border:1px solid #ddd;border-radius:8px;padding:8px 10px;font-size:11px;box-shadow:0 2px 8px rgba(0,0,0,.1);min-width:0;max-width:168px;width:max-content}
 #legend h3{font-size:11px;font-weight:700;color:#777;margin-bottom:7px;text-transform:uppercase;letter-spacing:.5px}
 .lr{display:flex;align-items:center;gap:7px;margin-bottom:5px}
 .ls{width:13px;height:13px;border-radius:3px;flex-shrink:0;border:1px solid rgba(0,0,0,.15)}
@@ -79,9 +79,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .jrd-nav{display:flex;gap:6px;margin-top:10px;align-items:center;font-size:11px;color:#64748b}
 .jrd-nav button{border:1px solid #cbd5e1;background:#fff;border-radius:6px;padding:3px 10px;font-size:11px;cursor:pointer}
 .jrd-nav button:disabled{opacity:.4;cursor:default}
-#legend .lr-filter{cursor:pointer;border-radius:6px;padding:3px 6px;margin-left:-6px;margin-right:-6px;transition:background .15s}
-#legend .lr-filter:hover{background:#f1f5f9}
-#legend .lr-filter.active{background:#dbeafe;outline:1px solid #93c5fd;font-weight:600}
+#legend .lr-type-filter{cursor:pointer;border-radius:6px;padding:2px 4px;margin-left:-4px;margin-right:-4px;user-select:none;gap:5px}
+#legend .lr-type-filter span{line-height:1.25}
+#legend .lr-type-filter:hover{background:#f1f5f9}
+#legend .lr-type-filter.active{background:#dbeafe;outline:1px solid #93c5fd;font-weight:600}
+#legend .type-filter-cb{width:14px;height:14px;margin:0;flex-shrink:0;accent-color:#2563eb;cursor:pointer}
 #legend .intensity-hint{margin-top:4px;font-size:10px;color:#2563eb;font-style:italic;min-height:14px}
 #legend-header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:7px}
 #legend-header h3{margin-bottom:0}

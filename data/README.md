@@ -15,7 +15,7 @@ data/
 ├── sources/                    # Original JR coding workbooks
 │   ├── keerthana_cross_group.xlsx
 │   ├── keerthana_ethnics.xlsx
-│   └── icmid_manual_africa.xlsx
+│   └── ICMID- Africa.xlsx
 ├── lookup/                     # Editable entity ↔ polygon matching only
 │   ├── ethnic_entity_index.xlsx      # cumulative manual homeland store (+ resolve_source)
 │   ├── polygon_group_registry.xlsx   # auto-synced for maps; usually ignore

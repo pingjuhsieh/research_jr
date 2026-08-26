@@ -8,7 +8,7 @@
 | `code/llm_ehraf/` | eHRAF → LLM JR extraction |
 | `code/jr_database/` | Consolidate sources + homeland map |
 | `output/llm_ehraf/` | LLM intermediates |
-| `output/jr_database/` | Merge intermediates / unmatched |
+| `output/jr_database/` | Merge intermediates + `RA_workpack.xlsx` |
 | `output/result/` | **Final clean files** |
 
 ## A. LLM eHRAF
@@ -26,8 +26,8 @@ Writes `output/llm_ehraf/export/llm_ehraf_joking_relationships.csv` (and cross /
 Sources:
 
 1. LLM eHRAF (`scope=cross_group`)
-2. Keerthana `data/sources/keerthana_cross_group.xlsx` (`analysis` / `og`)
-3. ICMID manual `data/sources/icmid_manual_africa.xlsx`
+2. Keerthana `data/sources/keerthana_cross_group.xlsx` (`analysis` only)
+3. ICMID manual `data/sources/ICMID- Africa.xlsx`
    (Sheet2 main: Murdock row × column F comma-separated JR partners; Sheet1 confirmed; Sheet3 ignored)
 
 ```bash
@@ -35,14 +35,15 @@ uv run python -B code/jr_database/build_cross_group.py
 ```
 
 - Assertions (full provenance): `output/jr_database/merge_cross_assertions.csv`
-- Unmatched entities: `output/jr_database/unmatched_entities.xlsx`
+- **RA work queue:** `output/jr_database/RA_workpack.xlsx` (regen with `export_ra_workpack.py`)
 - **Result:** `output/result/cross_group.xlsx`
 
 Fill `polygon_source`, `polygon_id`, and `resolve_source` (wiki URL etc.) on
-unmatched rows — optionally `aliases` — then:
+`RA_workpack.xlsx` sheet `1_unmatched_entities` — optionally `aliases` — then:
 
 ```bash
 uv run python -B code/jr_database/build_cross_group.py --apply-unmatched
+uv run python -B code/jr_database/export_ra_workpack.py
 ```
 
 ## C. Map (optional)

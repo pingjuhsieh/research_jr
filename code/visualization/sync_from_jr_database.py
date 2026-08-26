@@ -24,9 +24,11 @@ if str(_VIS_DIR) not in sys.path:
 
 from config import (  # noqa: E402
     BETWEEN_GROUP_JOKING_XLSX,
+    DOC_LEVEL_JR_CSV,
     JR_RECORDS_JSON,
     OUTPUT_DIR,
     PIPELINE_ROOT,
+    WITHIN_GROUPS_CSV,
 )
 
 ASSERTIONS_CSV = PIPELINE_ROOT / "output" / "jr_database" / "merge_cross_assertions.csv"
@@ -38,6 +40,7 @@ _SOURCE_LABEL = {
     "keerthana_og": "Keerthana",
     "icmid_sheet1": "ICMID",
     "icmid_sheet2": "ICMID",
+    "icmid_jr_pair": "ICMID",
 }
 
 _ILLEGAL_XLSX_RE = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f]")
@@ -85,6 +88,7 @@ def build_jr_records(assertions: pd.DataFrame) -> dict[str, dict]:
             "source_pdf": f"{doc_id.strip('/').replace('/', '_')}.pdf" if doc_id else "",
             "source_url": _clean(row.get("source_url")),
             "source_citation": _clean(row.get("source_citation")),
+            "source_page": _clean(row.get("source_page")),
             "ethnography_group": _clean(row.get("ethnography_group")),
             "region": _clean(row.get("region")),
             "entity_a": _clean(row.get("entity_a")),
@@ -102,6 +106,105 @@ def build_jr_records(assertions: pd.DataFrame) -> dict[str, dict]:
             "confidence": 0.0,
             "joking_source": src_ds,
         }
+    return records
+
+
+def _norm_rid(val) -> str:
+    rid = _clean(val)
+    if not rid:
+        return ""
+    try:
+        f = float(rid)
+        if f == int(f):
+            return str(int(f))
+    except ValueError:
+        pass
+    return rid
+
+
+def build_within_jr_records() -> dict[str, dict]:
+    """Kinship / within-group detail rows for the map panel (from eHRAF + within CSV)."""
+    records: dict[str, dict] = {}
+
+    if DOC_LEVEL_JR_CSV.is_file():
+        df = pd.read_csv(DOC_LEVEL_JR_CSV)
+        for _, row in df.iterrows():
+            scope = _clean(row.get("scope_coded")).casefold().replace("-", "_")
+            if scope not in {"kinship", "within_group"}:
+                continue
+            rid = _norm_rid(row.get("relationship_row_id"))
+            if not rid:
+                continue
+            doc_id = _clean(row.get("doc_id"))
+            notes = _clean(row.get("notes"))
+            reasoning = _clean(row.get("reasoning")) or notes
+            records[rid] = {
+                "id": rid,
+                "source": "eHRAF",
+                "doc_id": doc_id,
+                "source_pdf": f"{doc_id.strip('/').replace('/', '_')}.pdf" if doc_id else "",
+                "source_url": "",
+                "source_citation": "",
+                "source_page": "",
+                "ethnography_group": _clean(row.get("ethnography_group")),
+                "region": _clean(row.get("region")),
+                "entity_a": _clean(row.get("entity_a")),
+                "entity_b": _clean(row.get("entity_b")),
+                "entity_a_type": _clean(row.get("entity_a_type")),
+                "entity_b_type": _clean(row.get("entity_b_type")),
+                "scope_coded": scope,
+                "reasoning": reasoning,
+                "notes": notes or reasoning,
+                "quote": _clean(row.get("supporting_quote_raw")),
+                "relation_label": _clean(row.get("relation_label_raw")),
+                "local_term": _clean(row.get("local_term_raw")),
+                "symmetry": _clean(row.get("symmetry_coded")),
+                "relation_type": _clean(row.get("relation_type_coded")),
+                "confidence": float(row.get("confidence") or 0.0),
+                "joking_source": "llm_ehraf",
+            }
+
+    # Fill gaps from the visualization within_group.csv (IDs the map already links).
+    if WITHIN_GROUPS_CSV.is_file():
+        wdf = pd.read_csv(WITHIN_GROUPS_CSV)
+        wdf.columns = [c.strip().lower().replace(" ", "_") for c in wdf.columns]
+        for _, row in wdf.iterrows():
+            rid = _norm_rid(row.get("relationship_id") or row.get("relationship_row_id"))
+            if not rid or rid in records:
+                continue
+            doc_id = _clean(row.get("source_docs") or row.get("doc_id"))
+            quote = _clean(row.get("supporting_quote_raw") or row.get("quote"))
+            scope = _clean(row.get("scope_coded")).casefold().replace("-", "_") or "within_group"
+            a_type = _clean(row.get("entity_a_type")).lower()
+            b_type = _clean(row.get("entity_b_type")).lower()
+            if scope == "within_group" and ("kin" in a_type or "kin" in b_type):
+                scope = "kinship"
+            records[rid] = {
+                "id": rid,
+                "source": "eHRAF",
+                "doc_id": doc_id,
+                "source_pdf": f"{doc_id.strip('/').replace('/', '_')}.pdf" if doc_id else "",
+                "source_url": "",
+                "source_citation": "",
+                "source_page": "",
+                "ethnography_group": _clean(row.get("ethnography_group")),
+                "region": _clean(row.get("region")),
+                "entity_a": _clean(row.get("entity_a")),
+                "entity_b": _clean(row.get("entity_b")),
+                "entity_a_type": _clean(row.get("entity_a_type")),
+                "entity_b_type": _clean(row.get("entity_b_type")),
+                "scope_coded": scope,
+                "reasoning": _clean(row.get("relation_labels")),
+                "notes": _clean(row.get("relation_labels")),
+                "quote": quote,
+                "relation_label": _clean(row.get("relation_labels")),
+                "local_term": _clean(row.get("local_terms")),
+                "symmetry": _clean(row.get("symmetry_coded")),
+                "relation_type": _clean(row.get("relation_type_coded")),
+                "confidence": float(row.get("confidence_mean") or 0.0),
+                "joking_source": _clean(row.get("joking_source")) or "ehraf_v2",
+            }
+
     return records
 
 
@@ -183,6 +286,10 @@ def main() -> None:
     print(f"Assertions: {len(assertions)}  pairs: {len(pairs)}")
 
     records = build_jr_records(assertions)
+    within_records = build_within_jr_records()
+    # Cross-group IDs win on collision (should be rare / empty).
+    for rid, rec in within_records.items():
+        records.setdefault(rid, rec)
     joking = build_joking_table(assertions, pairs)
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -191,7 +298,9 @@ def main() -> None:
     joking.to_excel(BETWEEN_GROUP_JOKING_XLSX, index=False, sheet_name="between_group")
 
     n_src = pd.Series([r.get("source") for r in records.values()]).value_counts().to_dict()
+    n_scope = pd.Series([r.get("scope_coded") for r in records.values()]).value_counts().to_dict()
     print(f"  → {JR_RECORDS_JSON}  ({len(records)} records · {n_src})")
+    print(f"     scopes: {n_scope}")
     print(f"  → {BETWEEN_GROUP_JOKING_XLSX}  ({len(joking)} rows)")
     print("Next: uv run python -B code/visualization/build_cross_group_map.py")
 

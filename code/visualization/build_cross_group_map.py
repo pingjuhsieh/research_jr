@@ -765,20 +765,23 @@ def build_map(input_path: Path, output_path: Path) -> None:
 
     _apply_registry_map_placement(entity_meta, registry_df, resolver)
 
-    int_labels = {
-        0: "No JR", 1: "Within kin only", 2: "Within-group",
-        3: "Cross-group only", 4: "2 types", 5: "All 3 types",
-    }
+    type_labels = [
+        ("kin", "Kinship (within-kin)", INTENSITY_COLORS[1]),
+        ("within", "Within-group", INTENSITY_COLORS[2]),
+        ("cross", "Cross-group", INTENSITY_COLORS[3]),
+    ]
     intensity_legend = "\n".join(
-        f'<div class="lr lr-filter" data-intensity="{i}" role="button" tabindex="0" '
-        f'onclick="toggleIntensityFilter({i})" title="Click to toggle (multi-select)">'
-        f'<div class="ls" style="background:{INTENSITY_COLORS[i]}"></div>{int_labels[i]}</div>'
-        for i in range(6)
+        f'<label class="lr lr-type-filter" data-type="{key}">'
+        f'<input type="checkbox" class="type-filter-cb" value="{key}" '
+        f'onchange="toggleTypeFilter(\'{key}\', this.checked)">'
+        f'<div class="ls" style="background:{color}"></div>'
+        f'<span>{label}</span></label>'
+        for key, label, color in type_labels
     )
     intensity_legend += (
         '\n<div id="intensity-filter-hint" class="intensity-hint"></div>'
-        '\n<div class="lr" style="margin-top:6px;color:#999;font-size:10px;font-style:italic">'
-        'Click legend to filter · click a group, then a JR row for details</div>'
+        '\n<div class="lr" style="margin-top:4px;color:#999;font-size:9px;font-style:italic;line-height:1.3">'
+        'Checked = must have</div>'
     )
 
     html = _render_map_html(

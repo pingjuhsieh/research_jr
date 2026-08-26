@@ -9,7 +9,62 @@ const INTENSITY_COLORS  = __INTENSITY_COLORS__; // "0"-"5" → hex color
 const WITHIN_GROUP_MAP  = __WITHIN_GROUP_MAP__; // group_key_UPPER → {type_i:[{a,b}], type_ii:[{a,b}]}
 const GROUP_INTENSITY   = __GROUP_INTENSITY__;  // group_key_UPPER → {n_i,n_ii,n_iii,intensity,color}
 
-let INTENSITY_FILTERS = new Set();  // empty = show all; otherwise show matching levels
+let TYPE_FILTERS = new Set();  // empty = show all; else require these types: kin|within|cross
+
+function _groupTypeFlags(gKey) {
+  const gInt = GROUP_INTENSITY[gKey] || {};
+  return {
+    kin: (gInt.n_i || 0) > 0,
+    within: (gInt.n_ii || 0) > 0,
+    cross: (gInt.n_iii || 0) > 0,
+  };
+}
+
+function passesIntensityFilter(gKey) {
+  // name kept for call sites; filters by JR type checkboxes
+  if (!TYPE_FILTERS.size || !gKey) return true;
+  const flags = _groupTypeFlags(gKey);
+  for (const t of TYPE_FILTERS) {
+    if (!flags[t]) return false;
+  }
+  return true;
+}
+
+function _syncIntensityFilterUI() {
+  document.querySelectorAll('#legend .type-filter-cb').forEach(el => {
+    el.checked = TYPE_FILTERS.has(el.value);
+    const row = el.closest('.lr-type-filter');
+    if (row) row.classList.toggle('active', el.checked);
+  });
+  const hint = document.getElementById('intensity-filter-hint');
+  if (hint) {
+    if (!TYPE_FILTERS.size) {
+      hint.textContent = '';
+    } else {
+      const labels = {kin: 'Kinship', within: 'Within-group', cross: 'Cross-group'};
+      hint.textContent = 'Must have: ' + [...TYPE_FILTERS].map(t => labels[t] || t).join(' + ');
+    }
+  }
+  const clearBtn = document.getElementById('intensity-clear-all');
+  if (clearBtn) clearBtn.style.display = TYPE_FILTERS.size ? 'flex' : 'none';
+}
+
+function toggleTypeFilter(type, checked) {
+  if (checked) TYPE_FILTERS.add(type);
+  else TYPE_FILTERS.delete(type);
+  _syncIntensityFilterUI();
+  if (state.joking) applyIntensityVisibility();
+}
+
+function clearTypeFilters() {
+  TYPE_FILTERS.clear();
+  _syncIntensityFilterUI();
+  if (state.joking) applyIntensityVisibility();
+}
+
+// Back-compat aliases if old HTML onclick remains
+function toggleIntensityFilter() {}
+function clearIntensityFilters() { clearTypeFilters(); }
 
 const map = L.map('map', {center:[5,20], zoom:4});
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png',
@@ -153,37 +208,61 @@ function _groupIntensityLevel(gKey) {
   return gInt.intensity != null ? gInt.intensity : 0;
 }
 
-function passesIntensityFilter(gKey) {
-  if (!INTENSITY_FILTERS.size || !gKey) return true;
-  return INTENSITY_FILTERS.has(_groupIntensityLevel(gKey));
-}
-
-function _syncIntensityFilterUI() {
-  document.querySelectorAll('#legend .lr-filter').forEach(el => {
-    const lv = parseInt(el.dataset.intensity, 10);
-    el.classList.toggle('active', INTENSITY_FILTERS.has(lv));
+/** Style-only type filter — avoids full GeoJSON rebuild (less stutter). */
+function applyIntensityVisibility() {
+  const polyShown = new WeakMap();
+  Object.keys(jokingViz).forEach(name => {
+    const info = ENTITY_INFO[name] || {};
+    const gKey = _bestKey(info, name);
+    const show = passesIntensityFilter(gKey);
+    const viz = jokingViz[name];
+    if (!viz) return;
+    (viz.polys || []).forEach(lyr => {
+      if (polyShown.has(lyr) && polyShown.get(lyr)) return;
+      polyShown.set(lyr, show || polyShown.get(lyr) || false);
+      try {
+        lyr.setStyle({
+          fillOpacity: show ? 0.88 : 0.04,
+          opacity: show ? 1 : 0.15,
+          weight: show ? 1.5 : 0.4,
+        });
+        if (lyr._path) lyr._path.style.pointerEvents = show ? '' : 'none';
+      } catch (e) {}
+    });
+    (viz.circles || []).forEach(lyr => {
+      try {
+        lyr.setStyle({
+          fillOpacity: show ? 0.9 : 0.05,
+          opacity: show ? 1 : 0.15,
+        });
+        if (lyr._path) lyr._path.style.pointerEvents = show ? '' : 'none';
+      } catch (e) {}
+    });
+    if (viz.labelMarker) {
+      try {
+        const el = viz.labelMarker.getElement && viz.labelMarker.getElement();
+        if (el) el.style.display = show ? '' : 'none';
+        else if (!show && map.hasLayer(viz.labelMarker)) map.removeLayer(viz.labelMarker);
+        else if (show && state.joking && !map.hasLayer(viz.labelMarker)) viz.labelMarker.addTo(layers.joking);
+      } catch (e) {}
+    }
   });
-  const hint = document.getElementById('intensity-filter-hint');
-  if (hint) {
-    hint.textContent = INTENSITY_FILTERS.size
-      ? `Showing: ${[...INTENSITY_FILTERS].sort((a, b) => a - b).join(', ')}`
-      : '';
-  }
-  const clearBtn = document.getElementById('intensity-clear-all');
-  if (clearBtn) clearBtn.style.display = INTENSITY_FILTERS.size ? 'flex' : 'none';
-}
-
-function toggleIntensityFilter(level) {
-  if (INTENSITY_FILTERS.has(level)) INTENSITY_FILTERS.delete(level);
-  else INTENSITY_FILTERS.add(level);
-  _syncIntensityFilterUI();
-  if (state.joking) buildJoking();
-}
-
-function clearIntensityFilters() {
-  INTENSITY_FILTERS.clear();
-  _syncIntensityFilterUI();
-  if (state.joking) buildJoking();
+  // Second pass: if any entity in a shared poly is shown, keep poly visible
+  Object.keys(jokingViz).forEach(name => {
+    const viz = jokingViz[name];
+    if (!viz) return;
+    (viz.polys || []).forEach(lyr => {
+      if (!polyShown.get(lyr)) return;
+      const info = ENTITY_INFO[name] || {};
+      const show = passesIntensityFilter(_bestKey(info, name));
+      if (show) {
+        try {
+          lyr.setStyle({ fillOpacity: 0.88, opacity: 1, weight: 1.5 });
+          if (lyr._path) lyr._path.style.pointerEvents = '';
+        } catch (e) {}
+      }
+    });
+  });
 }
 
 // ── Side panel state ──────────────────────────────────────────────────────────
@@ -228,22 +307,59 @@ function showGroupPanel(entities, displayName) {
   ];
 
   // ── 2. Build cross-group pairs from PARTNER_MAP ────────────────────────────
-  const seenPairs = new Set();
+  // Dedupe by homeland polygon (NYAMWEZI / Nyamwezi / Wa-Nyamwezi → one row)
+  function _homelandKey(name) {
+    const info = ENTITY_INFO[name] || {};
+    const k = (info.polygon_group_id || info.murdock_name || info.greg_name || name || '')
+      .toString().trim().toUpperCase();
+    return k || String(name || '').trim().toUpperCase();
+  }
+  function _preferEntitySpelling(a, b) {
+    const score = (name) => {
+      const info = ENTITY_INFO[name] || {};
+      const id = (info.murdock_name || info.polygon_group_id || '').toUpperCase();
+      let s = 0;
+      if (id && String(name).toUpperCase() === id) s += 10;
+      if (String(name) === String(name).toUpperCase()) s += 2;
+      if (!/^wa-/i.test(name) && !/-/.test(name)) s += 2;
+      s -= Math.abs(String(name).length - (id || name).length) * 0.01;
+      return s;
+    };
+    return score(a) >= score(b) ? a : b;
+  }
+
+  const crossByKey = new Map();
+  const selfHomeland = new Set(entities.map(_homelandKey));
   _sp.cross = [];
   entities.forEach(entity => {
     (PARTNER_MAP[entity] || []).forEach(p => {
-      const pairKey = [entity, p].sort().join('|||');
-      if (seenPairs.has(pairKey)) return;
-      seenPairs.add(pairKey);
-      const types = CROSS_PAIR_TYPES[pairKey] || {};
-      _sp.cross.push({
-        entity,
-        partner: p,
-        entityType: types[entity] || '',
-        partnerType: types[p] || '',
+      const pk = _homelandKey(p);
+      if (!pk || selfHomeland.has(pk)) return;
+      const pairKey = [_homelandKey(entity), pk].sort().join('|||');
+      const typeKey = [entity, p].sort().join('|||');
+      const types = CROSS_PAIR_TYPES[typeKey] || {};
+      const prev = crossByKey.get(pairKey);
+      if (!prev) {
+        crossByKey.set(pairKey, {
+          entity,
+          partner: p,
+          entityType: types[entity] || '',
+          partnerType: types[p] || '',
+        });
+        return;
+      }
+      // Keep preferred spellings (Murdock id / non Wa- prefix)
+      const betterEntity = _preferEntitySpelling(prev.entity, entity);
+      const betterPartner = _preferEntitySpelling(prev.partner, p);
+      crossByKey.set(pairKey, {
+        entity: betterEntity,
+        partner: betterPartner,
+        entityType: types[betterEntity] || prev.entityType || '',
+        partnerType: types[betterPartner] || prev.partnerType || '',
       });
     });
   });
+  _sp.cross = [...crossByKey.values()];
 
   // ── 3. Compute accurate counts and intensity from actual data ──────────────
   const n_i   = _sp.within.filter(p => p.jr_type === 'kin').length;
@@ -322,12 +438,12 @@ function showTab(tab) {
     _sp.cross.forEach(({entity, partner, entityType, partnerType}) => {
       const tr = document.createElement('tr');
       const td1 = document.createElement('td'); td1.className = 'td-self';
-      const selfName = _sp.entities.length > 1 ? cleanName(entity) : _sp.displayName;
-      td1.innerHTML = selfName + entityTypeHint(entityType);
+      const selfRaw = _sp.entities.length > 1 ? cleanName(entity) : (_sp.displayName || cleanName(entity));
+      td1.innerHTML = toTitle(selfRaw) + entityTypeHint(entityType);
       const td2 = document.createElement('td'); td2.className = 'td-partner';
       const partnerAttr = String(partner).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
       td2.innerHTML =
-        `<span data-partner="${partnerAttr}">${cleanName(partner)}</span>`
+        `<span data-partner="${partnerAttr}">${toTitle(cleanName(partner))}</span>`
         + entityTypeHint(partnerType);
       tr.appendChild(td1); tr.appendChild(td2); tbody.appendChild(tr);
     });
@@ -451,6 +567,15 @@ function showRefPanel(name, sourceKey) {
 }
 
 function selectRefHomeland(name, sourceKey, lyr) {
+  // Same homeland with JR → always show JR partners (Murdock ref ≡ that homeland).
+  // Turn JR layer back on so the polygon also highlights.
+  const jrName = _findJrEntityForLabel(name);
+  if (jrName) {
+    if (!state.joking) toggleLayer('joking');
+    selectJokingEntity(jrName);
+    return;
+  }
+
   // Switching away from a JR selection
   if (selectedGroup) {
     selectedGroup = null;
@@ -527,6 +652,14 @@ function _boundsCenter(lyr) {
 }
 
 function pickSearch(h) {
+  // Prefer JR highlight when this homeland also has joking data
+  const jrName = _findJrEntityForLabel(h.name) || _findJrEntityForLabel(h.label);
+  if (jrName) {
+    if (!state.joking) toggleLayer('joking');
+    selectJokingEntity(jrName);
+    return;
+  }
+
   const layerKey = {Murdock:'murdock', GREG:'greg', GeoEPR:'geopr'}[h.src];
   if (layerKey && !state[layerKey]) toggleLayer(layerKey);
 
@@ -555,6 +688,38 @@ function pickSearch(h) {
     } catch (e) { /* fall through */ }
   }
   if (h.lat != null && h.lon != null) map.setView([h.lat, h.lon], 7);
+}
+
+/** Resolve a search/GIS label to a JR entity name when the homeland has JR. */
+function _findJrEntityForLabel(label) {
+  if (!label) return null;
+  const raw = String(label).trim();
+  if (!raw) return null;
+  if (entityGroupMap[raw]) return raw;
+  if (ENTITY_INFO[raw]) return raw;
+  const u = raw.toUpperCase();
+  for (const [name, info] of Object.entries(ENTITY_INFO)) {
+    if (!info) continue;
+    if (name.toUpperCase() === u) return name;
+    if ((info.murdock_name || '').toUpperCase() === u) return name;
+    if ((info.greg_name || '').toUpperCase() === u) return name;
+    if ((info.polygon_group_id || '').toUpperCase() === u) return name;
+    if ((info.display_name || '').toUpperCase() === u) return name;
+  }
+  for (const [name, grp] of Object.entries(entityGroupMap)) {
+    if (grp && (grp.displayName || '').toUpperCase() === u) return name;
+  }
+  return null;
+}
+
+function activateSearchHit(h) {
+  const jrName = _findJrEntityForLabel(h.name) || _findJrEntityForLabel(h.label);
+  if (jrName) {
+    if (!state.joking) toggleLayer('joking');
+    selectJokingEntity(jrName);
+    return;
+  }
+  pickSearch(h);
 }
 
 function mStyle(i) {
@@ -634,31 +799,23 @@ function buildJoking() {
   Object.keys(ENTITY_INFO).forEach(name => {
     const info = ENTITY_INFO[name];
     if (!info) return;
+    const gKey = _bestKey(info, name);
     if (info.source==='murdock' && info.murdock_name) {
-      const gKey = info.murdock_name.toUpperCase();
-      if (!passesIntensityFilter(gKey)) return;
-      const gInt = GROUP_INTENSITY[gKey];
+      const gInt = GROUP_INTENSITY[gKey] || GROUP_INTENSITY[info.murdock_name.toUpperCase()];
       const iColor = gInt ? gInt.color : info.color;
       const g = murdockGroup[info.murdock_name] = murdockGroup[info.murdock_name] || {entities:[], color: iColor};
       g.entities.push(name);
     } else if (info.source==='greg' && info.greg_name) {
-      const gKey = info.greg_name.toUpperCase();
-      if (!passesIntensityFilter(gKey)) return;
-      const gInt = GROUP_INTENSITY[gKey];
+      const gInt = GROUP_INTENSITY[gKey] || GROUP_INTENSITY[info.greg_name.toUpperCase()];
       const iColor = gInt ? gInt.color : info.color;
       const g = gregGroup[info.greg_name] = gregGroup[info.greg_name] || {entities:[], color: iColor};
       g.entities.push(name);
     } else if (info.source==='geopr' && info.greg_name) {
-      const gKey = info.greg_name.toUpperCase();
-      if (!passesIntensityFilter(gKey)) return;
-      const gInt = GROUP_INTENSITY[gKey];
+      const gInt = GROUP_INTENSITY[gKey] || GROUP_INTENSITY[info.greg_name.toUpperCase()];
       const iColor = gInt ? gInt.color : info.color;
       const g = eprGroup[info.greg_name] = eprGroup[info.greg_name] || {entities:[], color: iColor};
       g.entities.push(name);
     } else if (info.lat != null) {
-      const pg = (info.polygon_group_id || '').toUpperCase();
-      const gKey = pg || name.toUpperCase();
-      if (!passesIntensityFilter(gKey)) return;
       pointEntities.push(name);
     }
   });
@@ -810,25 +967,42 @@ function buildJoking() {
     marker.addTo(layers.joking);
     reg(name,'label',marker,info.color);
   });
+
+  if (TYPE_FILTERS.size) applyIntensityVisibility();
 }
 
 function _appendJrSearchHits() {
-  const seen = new Set(searchIdx.map(h => h.label.toUpperCase()));
+  // Prefer JR hits: attach jrName onto existing GIS entries, and add JR-only names
+  const byLabel = {};
+  searchIdx.forEach(h => { byLabel[h.label.toUpperCase()] = h; });
+
   Object.keys(ENTITY_INFO).forEach(name => {
     const info = ENTITY_INFO[name];
-    if (info.lat == null) return;
+    if (!info || info.lat == null) return;
     const disp = cleanName(name);
-    if (seen.has(disp.toUpperCase())) return;
-    seen.add(disp.toUpperCase());
+    const existing = byLabel[disp.toUpperCase()];
+    if (existing) {
+      existing.name = name;
+      existing.hasJr = true;
+      if (existing.src === 'Murdock' || existing.src === 'GREG' || existing.src === 'GeoEPR') {
+        existing.src = existing.src + '+JR';
+      }
+      return;
+    }
     const src = (info.source === 'joshua') ? 'Joshua' : 'JR';
     _pushSearch(disp, src, info.lat, info.lon, null, name);
   });
   Object.keys(entityGroupMap).forEach(name => {
     const grp = entityGroupMap[name];
-    if (!grp || seen.has(grp.displayName.toUpperCase())) return;
+    if (!grp) return;
     const info = ENTITY_INFO[name];
     if (!info || info.lat == null) return;
-    seen.add(grp.displayName.toUpperCase());
+    const existing = byLabel[(grp.displayName || '').toUpperCase()];
+    if (existing) {
+      existing.name = name;
+      existing.hasJr = true;
+      return;
+    }
     _pushSearch(grp.displayName, 'JR', info.lat, info.lon, null, name);
   });
 }
@@ -856,7 +1030,10 @@ let aList=[], aIdx=-1;
 function _runSearch(q) {
   aEl.innerHTML=''; aList=[]; aIdx=-1;
   if (q.length < 2) { aEl.style.display='none'; return; }
-  const hits=searchIdx.filter(x => x.label.toLowerCase().includes(q)).slice(0,60);
+  const hits=searchIdx
+    .filter(x => x.label.toLowerCase().includes(q))
+    .sort((a, b) => Number(!!b.hasJr) - Number(!!a.hasJr) || a.label.length - b.label.length)
+    .slice(0,60);
   aList=hits;
   if (!hits.length) { aEl.style.display='none'; return; }
   hits.forEach(h => {
@@ -867,8 +1044,7 @@ function _runSearch(q) {
       e.preventDefault();
       sEl.value=h.label;
       aEl.style.display='none';
-      if (entityGroupMap[h.name] || ENTITY_INFO[h.name]) selectJokingEntity(h.name || h.label);
-      else pickSearch(h);
+      activateSearchHit(h);
     });
     aEl.appendChild(d);
   });
@@ -882,8 +1058,7 @@ sEl.addEventListener('keydown', e => {
   else if (e.key==='ArrowUp') { aIdx=Math.max(aIdx-1,0); els.forEach((el,i)=>el.classList.toggle('sel',i===aIdx)); e.preventDefault(); }
   else if (e.key==='Enter' && aIdx>=0) {
     const h=aList[aIdx]; sEl.value=h.label; aEl.style.display='none';
-    if (entityGroupMap[h.name] || ENTITY_INFO[h.name]) selectJokingEntity(h.name || h.label);
-    else pickSearch(h);
+    activateSearchHit(h);
   }
   else if (e.key==='Escape') aEl.style.display='none';
 });

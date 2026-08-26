@@ -2,11 +2,12 @@
 """Build consolidated cross-group JR database with homeland mapping.
 
 Workflow (manual homeland fixes):
-  1. Run build → output/jr_database/unmatched_entities.xlsx
-  2. Fill polygon_source, polygon_id, resolve_source (and optional aliases)
+  1. export_ra_workpack.py → output/jr_database/RA_workpack.xlsx
+  2. Fill sheet 1_unmatched_entities (polygon_source, polygon_id, …)
   3. uv run python -B code/jr_database/build_cross_group.py --apply-unmatched
+  4. Re-run export_ra_workpack.py
 
-You normally only edit unmatched_entities.xlsx. That writes into
+You normally only edit RA_workpack.xlsx. Apply writes into
 ethnic_entity_index.xlsx (the cumulative manual store). polygon_group_registry
 is auto-synced — you do not need to maintain it for JR resolve.
 
@@ -44,13 +45,14 @@ from jr_database.config import (  # noqa: E402
     ETHNIC_ENTITY_INDEX_XLSX,
     MATCHED_LOG_XLSX,
     POLYGON_GROUP_REGISTRY_XLSX,
-    UNMATCHED_XLSX,
+    RA_UNMATCHED_SHEET,
+    RA_WORKPACK_XLSX,
     ensure_output_dirs,
 )
 from jr_database.resolve_homeland import VALID_HOMELAND, get_resolver  # noqa: E402
 from jr_database.sources import load_all_cross_assertions  # noqa: E402
 
-# Columns the reviewer fills in unmatched_entities.xlsx
+# Columns the reviewer fills in RA_workpack.xlsx / 1_unmatched_entities
 UNMATCHED_FILL_COLS = (
     "polygon_source",
     "polygon_id",
@@ -124,7 +126,7 @@ def _upsert_index_row(
             "polygon_id": pid,
             "resolve_source": resolve_source,
             "coder": coder,
-            "notes": notes or "filled via unmatched_entities",
+            "notes": notes or "filled via RA_workpack",
         }
     )
     return pd.concat([index, pd.DataFrame([row])], ignore_index=True)
@@ -189,13 +191,19 @@ def sync_registry_from_index(index: pd.DataFrame) -> int:
     return added
 
 
-def apply_unmatched(path: Path = UNMATCHED_XLSX) -> int:
+def apply_unmatched(
+    path: Path = RA_WORKPACK_XLSX,
+    sheet: str = RA_UNMATCHED_SHEET,
+) -> int:
     """Write filled unmatched rows into ethnic_entity_index.xlsx and sync registry."""
     if not path.is_file():
-        raise FileNotFoundError(f"No unmatched file: {path}")
-    um = pd.read_excel(path)
+        raise FileNotFoundError(f"No RA workpack: {path}")
+    try:
+        um = pd.read_excel(path, sheet_name=sheet)
+    except ValueError as exc:
+        raise FileNotFoundError(f"Missing sheet {sheet!r} in {path}") from exc
     if um.empty:
-        print("unmatched file empty — nothing to apply")
+        print("unmatched sheet empty — nothing to apply")
         return 0
 
     index = load_index() if ETHNIC_ENTITY_INDEX_XLSX.is_file() else pd.DataFrame(columns=INDEX_COLUMNS)
@@ -332,11 +340,17 @@ def build_pair_table(assertions: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def _load_previous_fills(path: Path) -> dict[str, dict[str, str]]:
-    """Preserve in-progress unmatched edits across rebuilds."""
+def _load_previous_fills(
+    path: Path = RA_WORKPACK_XLSX,
+    sheet: str = RA_UNMATCHED_SHEET,
+) -> dict[str, dict[str, str]]:
+    """Preserve in-progress unmatched edits across rebuilds (from RA_workpack)."""
     if not path.is_file():
         return {}
-    prev = pd.read_excel(path)
+    try:
+        prev = pd.read_excel(path, sheet_name=sheet)
+    except ValueError:
+        return {}
     out: dict[str, dict[str, str]] = {}
     for _, r in prev.iterrows():
         ent = _clean(r.get("entity"))
@@ -351,8 +365,38 @@ def _load_previous_fills(path: Path) -> dict[str, dict[str, str]]:
     return out
 
 
-def build_unmatched(pairs: pd.DataFrame) -> pd.DataFrame:
-    previous = _load_previous_fills(UNMATCHED_XLSX)
+_REGION_DISPLAY = {
+    "east africa": "East Africa",
+    "eastern africa": "East Africa",
+    "easternafrica": "East Africa",
+    "west africa": "West Africa",
+    "western africa": "West Africa",
+    "westernafrica": "West Africa",
+    "central africa": "Central Africa",
+    "centralafrica": "Central Africa",
+    "north africa": "North Africa",
+    "northern africa": "North Africa",
+    "northernafrica": "North Africa",
+    "south africa": "Southern Africa",
+    "southern africa": "Southern Africa",
+    "southernafrica": "Southern Africa",
+    "burkinafaso": "West Africa",
+    "burkina faso": "West Africa",
+}
+
+
+def _norm_region(val: str) -> str:
+    raw = _clean(val)
+    if not raw:
+        return ""
+    return _REGION_DISPLAY.get(raw.casefold().replace("_", " ").replace("-", " "), raw)
+
+
+def build_unmatched(
+    pairs: pd.DataFrame,
+    assertions: pd.DataFrame | None = None,
+) -> pd.DataFrame:
+    previous = _load_previous_fills()
     missing: dict[str, dict] = {}
     for _, r in pairs.iterrows():
         for side in ("a", "b"):
@@ -365,6 +409,7 @@ def build_unmatched(pairs: pd.DataFrame) -> pd.DataFrame:
                 fills = previous.get(key, {})
                 missing[key] = {
                     "entity": name,
+                    "region": set(),
                     "polygon_source": fills.get("polygon_source", ""),
                     "polygon_id": fills.get("polygon_id", ""),
                     "display_name": fills.get("display_name", ""),
@@ -377,15 +422,29 @@ def build_unmatched(pairs: pd.DataFrame) -> pd.DataFrame:
                     "source_flags_seen": set(),
                 }
             missing[key]["n_pairs"] += 1
+            reg = _norm_region(_clean(r.get("region")))
+            if reg:
+                missing[key]["region"].add(reg)
             for flag in _clean(r.get("source_flags")).split(";"):
                 if flag:
                     missing[key]["source_flags_seen"].add(flag)
+
+    if assertions is not None and not assertions.empty:
+        for _, ar in assertions.iterrows():
+            reg = _norm_region(_clean(ar.get("region")))
+            if not reg:
+                continue
+            for col in ("entity_a", "entity_b"):
+                key = _clean(ar.get(col)).casefold()
+                if key in missing:
+                    missing[key]["region"].add(reg)
 
     rows = []
     for m in missing.values():
         rows.append(
             {
                 "entity": m["entity"],
+                "region": "; ".join(sorted(m["region"])),
                 "polygon_source": m["polygon_source"],
                 "polygon_id": m["polygon_id"],
                 "display_name": m["display_name"],
@@ -400,6 +459,7 @@ def build_unmatched(pairs: pd.DataFrame) -> pd.DataFrame:
         )
     cols = [
         "entity",
+        "region",
         "polygon_source",
         "polygon_id",
         "display_name",
@@ -432,8 +492,7 @@ def run_build() -> None:
     complete_n = int(pairs["homeland_complete"].sum()) if len(pairs) else 0
     print(f"  unique pairs={len(pairs)}  homeland_complete={complete_n}")
 
-    unmatched = build_unmatched(pairs)
-    print(f"  unmatched entities={len(unmatched)}")
+    unmatched = build_unmatched(pairs, assertions)
 
     pairs_out = pairs.drop(columns=["pair_key"], errors="ignore")
     pairs_out.to_csv(CROSS_GROUP_CSV, index=False)
@@ -442,8 +501,11 @@ def run_build() -> None:
     print(f"  → {CROSS_GROUP_XLSX}")
     print(f"  → {CROSS_GROUP_CSV}")
 
-    unmatched.to_excel(UNMATCHED_XLSX, index=False, sheet_name="unmatched")
-    print(f"  → {UNMATCHED_XLSX}")
+    print(
+        f"  unmatched entities={len(unmatched)} "
+        f"(fill via RA_workpack.xlsx / {RA_UNMATCHED_SHEET}; "
+        "regen with export_ra_workpack.py)"
+    )
     print("Done.")
 
 
@@ -452,7 +514,7 @@ def main() -> None:
     parser.add_argument(
         "--apply-unmatched",
         action="store_true",
-        help="Write filled unmatched_entities.xlsx into ethnic_entity_index (+ sync registry), then rebuild",
+        help="Write filled RA_workpack 1_unmatched_entities into ethnic_entity_index (+ sync registry), then rebuild",
     )
     args = parser.parse_args()
     if args.apply_unmatched:

@@ -16,11 +16,15 @@ function _escapeHtml(s) {
 }
 
 function _crossPairKey(a, b) {
-  // Must match Python normalize_entity_for_pair → casefold keys in CROSS_PAIR_RECORDS
-  return [String(a || '').trim().toLowerCase(), String(b || '').trim().toLowerCase()]
-    .filter(Boolean)
-    .sort()
-    .join('|||');
+  // Align with Python normalize_entity_for_pair (canonicalize + casefold)
+  function norm(s) {
+    let t = String(s || '').trim();
+    t = t.replace(/^the\s+/i, '');
+    const key = t.toLowerCase();
+    if (key === 'wa-sukuma' || key === 'sukuma') return 'sukuma';
+    return key;
+  }
+  return [norm(a), norm(b)].filter(Boolean).sort().join('|||');
 }
 
 function _crossPairRecordIds(entity, partner) {
@@ -77,6 +81,55 @@ function showJrDetail(recordIds, rowEl) {
   panel.setAttribute('aria-hidden', 'false');
 }
 
+function _isHttpUrl(s) {
+  return /^https?:\/\//i.test(String(s || '').trim());
+}
+
+function _formatPageSuffix(page) {
+  const p = String(page || '').trim();
+  if (!p) return '';
+  // Already looks like "p. 12" / "pp. 12–14" / "page 12"
+  if (/^(pp?\.|pages?)\b/i.test(p)) return ` ${_escapeHtml(p)}`;
+  return ` p. ${_escapeHtml(p)}`;
+}
+
+function _formatSourceHtml(rec) {
+  // Prefer full citation → URL link → file. Append page when present.
+  const cite = String(rec.source_citation || '').trim();
+  const url = String(rec.source_url || '').trim();
+  const file = String(rec.source_pdf || rec.doc_id || '').trim()
+    .replace(/^\/+/, '');
+  const pageSuffix = _formatPageSuffix(rec.source_page);
+
+  if (cite) {
+    if (_isHttpUrl(cite)) {
+      return `<a href="${_escapeHtml(cite)}" target="_blank" rel="noopener noreferrer">${_escapeHtml(cite)}</a>${pageSuffix}`;
+    }
+    return _escapeHtml(cite) + pageSuffix;
+  }
+  if (url) {
+    if (_isHttpUrl(url)) {
+      return `<a href="${_escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${_escapeHtml(url)}</a>${pageSuffix}`;
+    }
+    return _escapeHtml(url) + pageSuffix;
+  }
+  if (file) return _escapeHtml(file) + pageSuffix;
+  if (pageSuffix) return pageSuffix.trim();
+  return '—';
+}
+
+function _formatReasoning(rec) {
+  const note = String(rec.notes || rec.reasoning || '').trim();
+  if (note) return _escapeHtml(note);
+  return 'see quote';
+}
+
+function _toTitleName(s) {
+  return String(s || '')
+    .toLowerCase()
+    .replace(/(?:^|[\s-])\S/g, c => c.toUpperCase());
+}
+
 function renderJrDetail() {
   const body = document.getElementById('jrd-body');
   const rid = _jrdActiveIds[_jrdIndex];
@@ -90,16 +143,15 @@ function renderJrDetail() {
     between_groups: 'Cross-group',
   }[rec.scope_coded] || rec.scope_coded || '—';
 
-  const reasoning = rec.reasoning || rec.notes || '—';
   const quote = rec.quote || '—';
-  const sourceLine = rec.source_pdf
-    ? `${rec.source || 'eHRAF'} · ${rec.source_pdf}`
-    : (rec.doc_id || (rec.source === 'Keerthana' ? 'Keerthana analysis / ethnography' : rec.source || '—'));
+  const isCross = ['cross_group', 'between_groups'].includes(rec.scope_coded);
+  const nameA = isCross ? _toTitleName(rec.entity_a) : rec.entity_a;
+  const nameB = isCross ? _toTitleName(rec.entity_b) : rec.entity_b;
 
   body.innerHTML = `
     <div class="jrd-section">
       <div class="jrd-label">Entities</div>
-      <div class="jrd-entities">${_escapeHtml(rec.entity_a)} <span style="color:#94a3b8;font-weight:400">↔</span> ${_escapeHtml(rec.entity_b)}</div>
+      <div class="jrd-entities">${_escapeHtml(nameA)} <span style="color:#94a3b8;font-weight:400">↔</span> ${_escapeHtml(nameB)}</div>
       <div class="jrd-meta">${_escapeHtml(rec.entity_a_type)} · ${_escapeHtml(rec.entity_b_type)}</div>
     </div>
     <div class="jrd-section">
@@ -108,12 +160,11 @@ function renderJrDetail() {
     </div>
     <div class="jrd-section">
       <div class="jrd-label">Source</div>
-      <div class="jrd-value">${_escapeHtml(sourceLine)}</div>
-      <div class="jrd-meta">${_escapeHtml(rec.ethnography_group || '')}${rec.region ? ' · ' + _escapeHtml(rec.region) : ''}</div>
+      <div class="jrd-value">${_formatSourceHtml(rec)}</div>
     </div>
     <div class="jrd-section">
       <div class="jrd-label">Reasoning</div>
-      <div class="jrd-value">${_escapeHtml(reasoning)}</div>
+      <div class="jrd-value">${_formatReasoning(rec)}</div>
     </div>
     <div class="jrd-section">
       <div class="jrd-label">Quote</div>

@@ -203,28 +203,59 @@ def save_index(df: pd.DataFrame, path: Path = ETHNIC_ENTITY_INDEX_XLSX) -> None:
     out.to_excel(path, index=False, sheet_name="entity_index")
 
 
+def _lookup_key(name: str) -> str:
+    """Case-insensitive index key (NGONI and Ngoni are the same)."""
+    return _clean(name).casefold()
+
+
 def build_lookup(df: pd.DataFrame) -> dict[str, pd.Series]:
-    """raw_value and canonical_name → index row."""
+    """raw_value and canonical_name → index row (case-insensitive).
+
+    When keys collide, prefer a row that already maps to a homeland polygon.
+    Otherwise an unresolved row like ``Wasili (Arabs)`` with
+    ``canonical_name=Wasili`` can shadow a later filled ``Wasili → SHUWA``.
+    """
     lookup: dict[str, pd.Series] = {}
     for _, row in df.iterrows():
-        for key in {_clean(row["raw_value"]), _clean(row["canonical_name"])}:
-            if key and key not in lookup:
+        for key in {_lookup_key(row["raw_value"]), _lookup_key(row["canonical_name"])}:
+            if not key:
+                continue
+            existing = lookup.get(key)
+            if existing is None:
+                lookup[key] = row
+                continue
+            if not compute_homeland_found(existing) and compute_homeland_found(row):
                 lookup[key] = row
     return lookup
 
 
 def lookup_row(lookup: dict[str, pd.Series], name: str) -> pd.Series | None:
-    key = name.strip()
+    key = _lookup_key(name)
     if not key:
         return None
     row = lookup.get(key)
+    if row is not None and compute_homeland_found(row):
+        return row
+
+    # Parenthetical fallback: "Azande (Agiti)" / "Wasili (Arabs)" → outer/inner
+    # Also try when the exact key hits an *unresolved* row, so a filled
+    # "Wasili → SHUWA" can still serve "Wasili (Arabs)".
+    raw = _clean(name)
+    m = re.search(r"\((.+?)\)", raw)
+    for candidate in (m.group(1).strip() if m else None, re.sub(r"\s*\(.*?\)", "", raw).strip()):
+        ck = _lookup_key(candidate or "")
+        if not ck or ck == key:
+            continue
+        crow = lookup.get(ck)
+        if crow is not None and compute_homeland_found(crow):
+            return crow
+
     if row is not None:
         return row
-    # Parenthetical fallback: "Azande (Agiti)" → try inner/outer
-    m = re.search(r"\((.+?)\)", key)
-    for candidate in (m.group(1).strip() if m else None, re.sub(r"\s*\(.*?\)", "", key).strip()):
-        if candidate and candidate in lookup:
-            return lookup[candidate]
+    for candidate in (m.group(1).strip() if m else None, re.sub(r"\s*\(.*?\)", "", raw).strip()):
+        ck = _lookup_key(candidate or "")
+        if ck and ck in lookup:
+            return lookup[ck]
     return None
 
 

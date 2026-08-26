@@ -1,61 +1,5 @@
 entity,entity_type,homeland_status
-Pygmies,ethnic group,unresolved
-Negroes,ethnic group,unresolved
-Mbuti,ethnic group,unresolved
-neighboring African village farmers,village,unresolved
-Bira villagers,village,unresolved
-"kpara and karé (""brothers of the knife"", village men with whom they had shared the nkumbi initiation)",group,unresolved
-Bulibuli lineage,lineage,unresolved
-villagers,ethnic group,unresolved
-villagers,village,unresolved
-Amhara students,group,unresolved
-foreign teachers,group,unresolved
-little boys,group,unresolved
-Begemidir,regional group,unresolved
-Shewa,regional group,unresolved
-Gojjam,regional group,unresolved
-Gonder,regional group,unresolved
-Gurag[unknown]e,regional group,unresolved
-Tigrai,regional group,resolved
-Arab traders,ethnic group,unresolved
-Orthodox Amhara women,group,unresolved
-Rindi of Moshi,village,unresolved
-Sina of Kibosho,village,unresolved
-esimbore singers,group,unresolved
-Kipsigis,ethnic group,unresolved
-Abasuba,ethnic group,unresolved
-Wa-Mbunga,ethnic group,unresolved
-Wa-Pogoro,ethnic group,unresolved
-Wa-Nyamwezi,ethnic group,unresolved
-Ngoni,ethnic group,resolved
 Okiek,ethnic group,resolved
-Maasai,ethnic group,unresolved
-pastoralists of the woodland,regional group,unresolved
-"Hawiyya tribes settled in the villages of the ""black land""",ethnic group,unresolved
-Hawiye,ethnic group,unresolved
-M[unknown]obil[unknown]en,clan,unresolved
-Dínl[unknown]a Mant[unknown]an,lineage,unresolved
-Barísä Mant[unknown]an,lineage,unresolved
-‘Áli ‘Êli,lineage,unresolved
-D[unknown]ar[unknown]od /Daarood/,ethnic group,unresolved
-Hawâdlä,clan,unresolved
-Abgâl ‘Ismân,ethnic group,unresolved
-other tribes,group,unresolved
-Gzennaya,regional group,unresolved
-students from the Jebala,regional group,unresolved
-Riffians,ethnic group,unresolved
-Senhajans,ethnic group,unresolved
-older Bedouin women,group,unresolved
-"some Bedouins from the cities (""followers of the model"")",regional group,unresolved
-Marabtin,ethnic group,resolved
-their employers,group,unresolved
-Europeans,ethnic group,resolved
-all Tuareg,ethnic group,unresolved
-Imeggedezen,ethnic group,unresolved
-farm Bushmen,ethnic group,unresolved
-Europeans,ethnic group,unresolved
-Sinafwala,village,unresolved
-Madonda,village,unresolved
 Nzima,ethnic group,unresolved
 Somono,ethnic group,unresolved
 Koulibali,patronym,unresolved
@@ -98,7 +42,7 @@ Kurdi,ethnic group,unresolved
 Monga,ethnic group,resolved
 Monga,ethnic group,unresolved
 B[unknown]adde,ethnic group,unresolved
-Wasili (Arabs),ethnic group,unresolved
+Wasili (Arabs),ethnic group,resolved
 certain villages,village,unresolved
 other certain villages,village,unresolved
 several other ethnic groups,ethnic group,unresolved
@@ -108,38 +52,26 @@ Samogho,ethnic group,unresolved
 Yarse,ethnic group,unresolved
 certain Nupe sections,regional group,unresolved
 other tribes,ethnic group,unresolved
+Yam(ə)l(ə)g,village,resolved
 Yam(ə)l(ə)g,village,unresolved
-Tongo,village,unresolved
 Nab(ə)rug,village,unresolved
 Wakii,village,unresolved
 T□nzugu,village,unresolved
 Sie,village,unresolved
 Jola,ethnic group,unresolved
-Wamangi,ethnic_group,resolved
-Okiek,ethnic_group,resolved
-Dukawa,ethnic_group,unresolved
-Chagga,ethnic_group,unresolved
-Ngoni,ethnic_group,resolved
-Nzema,ethnic_group,unresolved
-Ishaza,clan,unresolved
-Mbiriri,clan,unresolved
 Curama,ethnic_group,resolved
 Nankana,ethnic_group,unresolved
-Yana,ethnic_group,unresolved
 Zaose,ethnic_group,unresolved
-Djan,ethnic_group,unresolved
 Forgerons,ethnic_group,resolved
 Poéssé,place,unresolved
 Nankana,ethnic_group,resolved
+Zaose,ethnic_group,resolved
 Bella,ethnic_group,resolved
 Silmi-Mossi,ethnic_group,unresolved
 Forgerons,ethnic_group,unresolved
-Djan,ethnic_group,resolved
-Curama,ethnic_group,unresolved
 Maranse,ethnic_group,resolved
 Ninisi,ethnic_group,unresolved
 Ethnies du sud-ouest,ethnic_group,resolved
-Yana,ethnic_group,resolved
 Bani,ethnic_group,unresolved
 Saaba,ethnic_group,unresolved
 Yaoni,ethnic_group,unresolved
@@ -180,8 +112,6 @@ Da,ethnic_group,resolved
 Dibloni,ethnic_group,resolved
 Folma,ethnic_group,resolved
 Laye,ethnic_group,resolved
-Lorhon,ethnic_group,unresolved
-Lorhon,ethnic_group,resolved
 Pholma,ethnic_group,unresolved
 Gboro,ethnic_group,resolved
 Nyuo,ethnic_group,unresolved
@@ -229,268 +159,147 @@ Yile,ethnic_group,unresolved
 Thouni,ethnic_group,unresolved
 Woussè,ethnic_group,unresolved
 Tiwa,ethnic_group,resolved
-Zoaga,ethnic_group,unresolved
+Zoaga,ethnic_group,resolved
 Serers,ethnic_group,resolved
 Yorùbá,ethnic_group,unresolved
 Hausa-Fulani,ethnic_group,unresolved
 pastoralists and blacksmiths,ethnic_group,unresolved
 Dagaaba,ethnic_group,unresolved
+ABE,ethnic_group,resolved
+Dida,ethnic_group,resolved
+ADARAWA,ethnic_group,resolved
+Arewa,ethnic_group,unresolved
+AJUKRU,ethnic_group,resolved
+Alagya,ethnic_group,resolved
+AKPOSO,ethnic_group,resolved
+Kebu,ethnic_group,resolved
+ANTAISAKA,ethnic_group,resolved
+ANYI,ethnic_group,resolved
+Baule,ethnic_group,resolved
+Kulango,ethnic_group,resolved
+ARI,ethnic_group,resolved
+Nzimas,ethnic_group,unresolved
+ATTIE,ethnic_group,resolved
+Bakwe,ethnic_group,resolved
+Kroumen,ethnic_group,unresolved
+Mbatto,ethnic_group,unresolved
+AVIKAM,ethnic_group,resolved
+Abe,ethnic_group,resolved
+Abron,ethnic_group,unresolved
+KULANGO,ethnic_group,resolved
+Afo,ethnic_group,resolved
+Ahizi,ethnic_group,unresolved
+Akye,ethnic_group,unresolved
+DIDA,ethnic_group,resolved
+Ayizo,ethnic_group,unresolved
 BACHAMA,ethnic_group,resolved
 Chamba,ethnic_group,resolved
 Kona,ethnic_group,resolved
-ATTIE,ethnic_group,resolved
-Dida,ethnic_group,resolved
-Mbatto,ethnic_group,unresolved
-Kroumen,ethnic_group,unresolved
-Bakwe,ethnic_group,resolved
-Nzimas,ethnic_group,unresolved
-Hausa-Fulani,ethnic_group,resolved
-AKPOSO,ethnic_group,resolved
-Kebu,ethnic_group,resolved
-BAYA,ethnic_group,resolved
-Dii,ethnic_group,unresolved
-DAN,ethnic_group,resolved
-Guro,ethnic_group,resolved
-Tagbana,ethnic_group,unresolved
-Mahouka,ethnic_group,unresolved
-BURA,ethnic_group,unresolved
-Bornu,ethnic_group,resolved
-BURA,ethnic_group,resolved
-KONA,ethnic_group,nan
-Bachama,ethnic_group,nan
-Gonja(Guan),ethnic_group,unresolved
-LAMBYA,ethnic_group,resolved
-IRAMBA,ethnic_group,resolved
-Mbugwe,ethnic_group,resolved
-KIMBU,ethnic_group,resolved
-Kamba,ethnic_group,resolved
-Nankwila,ethnic_group,unresolved
-SHASHI,ethnic_group,resolved
-SEGEJU,ethnic_group,resolved
-Digo,ethnic_group,resolved
-HEHE,ethnic_group,resolved
-Ngoni,ethnic_group,unresolved
-SAGARA,ethnic_group,resolved
-Kwere,ethnic_group,resolved
-SAGARA,ethnic_group,unresolved
-Kaguru,ethnic_group,resolved
-Kami,ethnic_group,resolved
-Kutu,ethnic_group,resolved
-Swaka,ethnic_group,unresolved
-Lala,ethnic_group,resolved
-Sala,ethnic_group,unresolved
-Chokwe,ethnic_group,resolved
-Western Lunda,ethnic_group,unresolved
-Ambo,ethnic_group,resolved
-KIKUYU,ethnic_group,resolved
-Masaai,ethnic_group,unresolved
-DURUMA,ethnic_group,resolved
-Makonde,ethnic_group,resolved
-Rufiji,ethnic_group,unresolved
-Mawia,ethnic_group,resolved
-Kinga,ethnic_group,resolved
-Nyika,ethnic_group,unresolved
-Hehe,ethnic_group,resolved
-Sangu,ethnic_group,resolved
-Sagara,ethnic_group,resolved
-Vidunda,ethnic_group,unresolved
-and Zaramu,ethnic_group,resolved
-NYANGIYA,ethnic_group,unresolved
-Joking relations with people they encountered en route,ethnic_group,resolved
-NGURU,ethnic_group,unresolved
-NGURU,ethnic_group,resolved
-MERU,ethnic_group,resolved
-Potentially,ethnic_group,unresolved
-Langulu,ethnic_group,resolved
-Potola,ethnic_group,resolved
-SHAMBALA,ethnic_group,resolved
-Bondei,ethnic_group,resolved
-KARAMOJONG,ethnic_group,unresolved
-Familial,ethnic_group,resolved
-No intertribal utani,ethnic_group,unresolved
-KWERE,ethnic_group,unresolved
-KWERE,ethnic_group,resolved
-Nguru,ethnic_group,resolved
-UNGA,ethnic_group,resolved
-Pare,ethnic_group,resolved
-MAKONDE,ethnic_group,resolved
-MAKONDE,ethnic_group,nan
-MWERA,ethnic_group,resolved
-Zaramu,ethnic_group,unresolved
-PARE,ethnic_group,resolved
-SANGU,ethnic_group,resolved
-SANGU,ethnic_group,nan
-Wemba,ethnic_group,unresolved
-Ngindo,ethnic_group,resolved
-Mwera,ethnic_group,resolved
-Ha,ethnic_group,resolved
-Nyiramba,ethnic_group,unresolved
-Swahili,ethnic_group,resolved
-Chewa,ethnic_group,resolved
-BONDEI,ethnic_group,resolved
-DIGO,ethnic_group,resolved
-Vumba,ethnic_group,unresolved
-Kami,ethnic_group,unresolved
-DIGO,ethnic_group,unresolved
-and Luguru.,ethnic_group,resolved
-HA,ethnic_group,resolved
-KAMBA,ethnic_group,resolved
-KINGA,ethnic_group,resolved
-KINGA,ethnic_group,unresolved
-and Pangwa,ethnic_group,resolved
-KIPSIGI,ethnic_group,unresolved
-Intra-familial relations,ethnic_group,resolved
-KUNDA,ethnic_group,resolved
-Yawo,ethnic_group,unresolved
-LALA,ethnic_group,resolved
-Lala,ethnic_group,nan
-LUAPULA,ethnic_group,resolved
-LUNGU,ethnic_group,resolved
-Mambwe,ethnic_group,unresolved
-NGINDO,ethnic_group,nan
-NYASA,ethnic_group,resolved
-Tigania,ethnic_group,resolved
-Doe,ethnic_group,resolved
-Zaramu.,ethnic_group,resolved
-AHAGGAREN,ethnic_group,resolved
-Own ethnicity,ethnic_group,unresolved
-SOTHO,ethnic_group,resolved
-KGALAGADI,ethnic_group,resolved
-SAN,ethnic_group,resolved
-HURUTSHE,ethnic_group,unresolved
-Boers,ethnic_group,resolved
-MBUKUSHU,ethnic_group,unresolved
-maybe joking among family,ethnic_group,resolved
-HIECHWARE,ethnic_group,unresolved
-Bechuana,ethnic_group,resolved
-KWENA,ethnic_group,resolved
-Potential kinship,ethnic_group,unresolved
-TANNEKWE,ethnic_group,resolved
-Jola,ethnic_group,nan
-MANGA,ethnic_group,resolved
-Woɗaaɓe,ethnic_group,unresolved
-Karekare,ethnic_group,resolved
-Jukun,ethnic_group,resolved
-AFO,ethnic_group,resolved
-AJUKRU,ethnic_group,resolved
-AJUKRU,ethnic_group,unresolved
-Ahizi,ethnic_group,resolved
-Alagya,ethnic_group,resolved
-ALAGYA,ethnic_group,nan
-Ajukru,ethnic_group,nan
-ANYI,ethnic_group,resolved
-Baule,ethnic_group,resolved
-ARI,ethnic_group,resolved
-Abe,ethnic_group,resolved
-MBUM,ethnic_group,resolved
-Wute,ethnic_group,resolved
-WUTE,ethnic_group,nan
-Mbum,ethnic_group,nan
-REGA,ethnic_group,unresolved
-Bangubangu,ethnic_group,resolved
-ABE,ethnic_group,nan
-Ari,ethnic_group,nan
-ABE,ethnic_group,resolved
-MUNDANG,ethnic_group,resolved
-Mbum,ethnic_group,resolved
-VILI,ethnic_group,resolved
-Yombe,ethnic_group,resolved
-VILI,ethnic_group,unresolved
-Lumbu,ethnic_group,resolved
-Vingu,ethnic_group,unresolved
-Punu,ethnic_group,resolved
-Kugni,ethnic_group,resolved
-YOMBE,ethnic_group,nan
-Vili,ethnic_group,nan
-AVIKAM,ethnic_group,resolved
-BAKWE,ethnic_group,nan
-Attie,ethnic_group,nan
-BAKWE,ethnic_group,resolved
-Niabou,ethnic_group,unresolved
-Godie,ethnic_group,unresolved
-Jola,ethnic_group,unresolved
 Fula,ethnic_group,resolved
 BARGU,ethnic_group,resolved
 Nago,ethnic_group,unresolved
-Djerma of Songhai,ethnic_group,unresolved
 Shabe,ethnic_group,unresolved
-Kaobu,ethnic_group,unresolved
 BAULE,ethnic_group,resolved
-Bete,ethnic_group,resolved
-BAULE,ethnic_group,nan
-Anyi,ethnic_group,nan
+BAYA,ethnic_group,resolved
+KUNDA,ethnic_group,resolved
+LUAPULA,ethnic_group,resolved
+NGINDO,ethnic_group,resolved
+Kinga,ethnic_group,resolved
 BETE,ethnic_group,resolved
-Gagu,ethnic_group,resolved
-BETE,ethnic_group,nan
-Baule,ethnic_group,nan
+Ouby,ethnic_group,unresolved
 Guin,ethnic_group,resolved
+CHEWA,ethnic_group,resolved
 BUILSA,ethnic_group,resolved
 Sisala,ethnic_group,unresolved
-Gurunsi,ethnic_group,unresolved
+BURA,ethnic_group,resolved
+Bamana,ethnic_group,unresolved
+Bangubangu,ethnic_group,unresolved
+REGA,ethnic_group,resolved
+Baoule,ethnic_group,unresolved
+Bobo-Dioula,ethnic_group,unresolved
+Bornu,ethnic_group,unresolved
+Bwaba,ethnic_group,unresolved
+Pare,ethnic_group,resolved
 CHAKOSSI,ethnic_group,resolved
 Gonja,ethnic_group,unresolved
 Mamprusi,ethnic_group,resolved
-CHAMBA,ethnic_group,nan
-Bobo-Dioula,ethnic_group,resolved
-Bwaba,ethnic_group,resolved
+CYRENAICANS,ethnic_group,resolved
+Cham,ethnic_group,resolved
+JEN,ethnic_group,resolved
 DAKAKARI,ethnic_group,resolved
 Zamfara,ethnic_group,unresolved
-DENDI,ethnic_group,resolved
+DAN,ethnic_group,resolved
+Gagu,ethnic_group,resolved
+Guro,ethnic_group,resolved
+Mahouka,ethnic_group,unresolved
+Tagbana,ethnic_group,unresolved
 DIAN,ethnic_group,resolved
-DIDA,ethnic_group,nan
-DIDA,ethnic_group,resolved
+Godie,ethnic_group,unresolved
 Neyo,ethnic_group,unresolved
-Goude,ethnic_group,unresolved
-DIDA,ethnic_group,unresolved
-Akye,ethnic_group,resolved
-Abe,ethnic_group,nan
+DIGO,ethnic_group,resolved
 DOROSIE,ethnic_group,resolved
 Komono,ethnic_group,resolved
-Ayizo,ethnic_group,resolved
-GAGU,ethnic_group,nan
-Bete,ethnic_group,nan
-GUIN,ethnic_group,unresolved
-Yarse,ethnic_group,unresolved
-GURO,ethnic_group,unresolved
-Djimini,ethnic_group,resolved
+GUIN,ethnic_group,resolved
+Dakakari,ethnic_group,resolved
+Diula,ethnic_group,resolved
+Djimini,ethnic_group,unresolved
 GURO,ethnic_group,resolved
-Koyaka,ethnic_group,unresolved
-Guere,ethnic_group,resolved
-JEN,ethnic_group,resolved
-Cham,ethnic_group,resolved
+Doe,ethnic_group,unresolved
+Tem,ethnic_group,resolved
+Yarse,ethnic_group,unresolved
+Taywana,ethnic_group,unresolved
+Gourmantche,ethnic_group,unresolved
+TEM,ethnic_group,resolved
+Guere,ethnic_group,unresolved
+HA,ethnic_group,resolved
+HEHE,ethnic_group,resolved
+KINGA,ethnic_group,resolved
+Ha,ethnic_group,resolved
+Hehe,ethnic_group,resolved
+Hueda,ethnic_group,unresolved
+POPO,ethnic_group,resolved
+Mbugwe,ethnic_group,resolved
 Tsobo,ethnic_group,unresolved
 JUKUN,ethnic_group,resolved
-Tarok,ethnic_group,unresolved
 Munga Leelau,ethnic_group,unresolved
+Jukun,ethnic_group,resolved
 KABRE,ethnic_group,resolved
-KOMONO,ethnic_group,nan
-Dorosie,ethnic_group,nan
+KAMBA,ethnic_group,resolved
+Karekare,ethnic_group,resolved
+KIKUYU,ethnic_group,resolved
+Pangwa,ethnic_group,unresolved
 KONKOMBA,ethnic_group,resolved
-KONKOMBA,ethnic_group,unresolved
-Gonja,ethnic_group,resolved
-KULANGO,ethnic_group,resolved
-KULANGO,ethnic_group,unresolved
-Abron,ethnic_group,resolved
-Jula,ethnic_group,resolved
-MAGUZAWA,ethnic_group,unresolved
-Katsinawa,ethnic_group,resolved
-MAMPRUSI,ethnic_group,nan
-Chakossi,ethnic_group,nan
-MARGI,ethnic_group,resolved
-within family,ethnic_group,unresolved
-Tem,ethnic_group,resolved
-Gourmantche,ethnic_group,resolved
-MUMUYE,ethnic_group,unresolved
-Kwa,ethnic_group,resolved
-POPO,ethnic_group,unresolved
-Hueda,ethnic_group,resolved
-Mianka,ethnic_group,resolved
-Koyaka,ethnic_group,resolved
-Dan,ethnic_group,nan
-Yacouba,ethnic_group,unresolved
+KWERE,ethnic_group,resolved
+RANGI,ethnic_group,resolved
+Kaguru,ethnic_group,unresolved
+SAGARA,ethnic_group,resolved
+Katsinawa,ethnic_group,unresolved
+MAGUZAWA,ethnic_group,resolved
+Koyaka,ethnic_group,unresolved
+VILI,ethnic_group,resolved
+Kutu,ethnic_group,unresolved
+Kwa,ethnic_group,unresolved
+MUMUYE,ethnic_group,resolved
+LALA,ethnic_group,resolved
+LIPTAKO,ethnic_group,resolved
+LOMWE,ethnic_group,resolved
+MANGA,ethnic_group,resolved
+Woɗaaɓe,ethnic_group,unresolved
+Okiek,ethnic_group,unresolved
+MBUM,ethnic_group,resolved
+Wute,ethnic_group,resolved
+Nyika,ethnic_group,unresolved
+Rufiji,ethnic_group,unresolved
+Sangu,ethnic_group,resolved
+Vidunda,ethnic_group,unresolved
+MWERA,ethnic_group,resolved
+Mwera,ethnic_group,resolved
+Ngindo,ethnic_group,resolved
+NYASA,ethnic_group,resolved
+SANGU,ethnic_group,resolved
+PARE,ethnic_group,resolved
+Potola,ethnic_group,unresolved
+Sembla,ethnic_group,unresolved
 TANGALE,ethnic_group,resolved
 Waja,ethnic_group,unresolved
-TEM,ethnic_group,nan
-TEM,ethnic_group,unresolved
-Sembla,ethnic_group,resolved
-Bargu,ethnic_group,resolved
+Yombe,ethnic_group,resolved
