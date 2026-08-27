@@ -3,7 +3,7 @@
 Data preparation for the JR map pipeline.
 
 Subcommands:
-    data       Maintain ethnic_entity_index.xlsx + between_group_joking.xlsx
+    data       Maintain ethnic_entity_index.xlsx + cross_group_map.xlsx
     intensity  Compute ethnic_group_jr_summary.xlsx
     all        Run data then intensity (default)
 
@@ -24,7 +24,7 @@ if str(_VIS_DIR) not in sys.path:
 import pandas as pd
 
 from config import (
-    BETWEEN_GROUP_JOKING_XLSX,
+    CROSS_GROUP_MAP_XLSX,
     BETWEEN_GROUP_SOURCE_MERGED_XLSX,
     BETWEEN_GROUP_SOURCE_XLSX,
     DOC_LEVEL_JR_CSV,
@@ -37,8 +37,9 @@ from config import (
     REGION_ALIAS,
     REGION_COLORS,
     UNMATCHED_HOMELANDS_XLSX,
-    WITHIN_GROUPS_CSV,
+    WITHIN_GROUP_XLSX,
 )
+from jr_tables import load_cross_group_map, load_within_group, save_cross_group_map
 from entity_homeland import (
     classify_within_entity_types,
     compute_intensity,
@@ -97,7 +98,7 @@ def _joking_source_path() -> Path:
     return KEERTHANA_JOKING_XLSX
 
 
-def _prepare_between_group_joking(lookup: dict) -> pd.DataFrame:
+def _prepare_cross_group_map(lookup: dict) -> pd.DataFrame:
     src = _joking_source_path()
     raw = pd.read_excel(src)
     rows = []
@@ -144,7 +145,7 @@ def _prepare_between_group_joking(lookup: dict) -> pd.DataFrame:
 def cmd_data(import_keerthana: bool = False) -> None:
     LOOKUP_ROOT.mkdir(parents=True, exist_ok=True)
     BETWEEN_GROUP_SOURCE_XLSX.parent.mkdir(parents=True, exist_ok=True)
-    BETWEEN_GROUP_JOKING_XLSX.parent.mkdir(parents=True, exist_ok=True)
+    CROSS_GROUP_MAP_XLSX.parent.mkdir(parents=True, exist_ok=True)
 
     if import_keerthana:
         print(f"Importing entity index from {KEERTHANA_ETHNICS_XLSX.name}…")
@@ -190,7 +191,7 @@ def cmd_data(import_keerthana: bool = False) -> None:
     if n_pruned:
         print(f"  Pruned {n_pruned} non-indexable stub(s)")
 
-    candidates = collect_index_candidates(joking_path, WITHIN_GROUPS_CSV)
+    candidates = collect_index_candidates(joking_path, WITHIN_GROUP_XLSX)
     index_df, n_new = sync_new_entities(index_df, candidates)
     if n_new:
         print(f"  Added {n_new} new indexable entity stub(s)")
@@ -223,27 +224,26 @@ def cmd_data(import_keerthana: bool = False) -> None:
         print(f"Polygon registry: {len(registry_df)} groups")
 
     lookup = build_lookup(index_df)
-    print(f"Building between-group joking from {joking_path.name}…")
-    joking_df = _prepare_between_group_joking(lookup)
-    joking_df.to_excel(BETWEEN_GROUP_JOKING_XLSX, index=False, sheet_name="between_group")
+    print(f"Building cross_group_map from {joking_path.name}…")
+    joking_df = _prepare_cross_group_map(lookup)
+    save_cross_group_map(joking_df)
     n_bad = (
         joking_df["entity_a_homeland_status"].isin(("not_found", "not_in_index"))
         | joking_df["entity_b_homeland_status"].isin(("not_found", "not_in_index"))
     ).sum()
-    print(f"  → {BETWEEN_GROUP_JOKING_XLSX}  ({len(joking_df)} rows, {n_bad} unresolved endpoints)")
+    print(f"  → {CROSS_GROUP_MAP_XLSX}  ({len(joking_df)} rows, {n_bad} unresolved endpoints)")
 
 
 def cmd_intensity() -> None:
     JR_SUMMARY_XLSX.parent.mkdir(parents=True, exist_ok=True)
-    if not BETWEEN_GROUP_JOKING_XLSX.is_file():
-        print(f"Missing {BETWEEN_GROUP_JOKING_XLSX} — run: prepare.py data")
+    if not CROSS_GROUP_MAP_XLSX.is_file():
+        print(f"Missing {CROSS_GROUP_MAP_XLSX} — run: prepare.py data")
         sys.exit(1)
 
     print("Loading data sources…")
-    df_within = pd.read_csv(WITHIN_GROUPS_CSV)
-    df_within.columns = [c.strip().lower().replace(" ", "_") for c in df_within.columns]
+    df_within = load_within_group()
     df_within = df_within[df_within["ethnography_group"].fillna("").astype(str).str.strip() != ""]
-    df_between = pd.read_excel(BETWEEN_GROUP_JOKING_XLSX)
+    df_between = load_cross_group_map()
     lookup = build_lookup(pd.read_excel(ETHNIC_ENTITY_INDEX_XLSX))
 
     counts: dict[str, dict] = {}

@@ -490,22 +490,34 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Expand ICMID Sheet2 into JR pair rows")
     parser.add_argument("--src", type=Path, default=ICMID_MANUAL_XLSX)
     parser.add_argument("--sheet-name", default=PAIR_SHEET)
-    parser.add_argument("--out", type=Path, default=None)
+    parser.add_argument(
+        "--out",
+        type=Path,
+        default=None,
+        help="Optional standalone xlsx copy (canonical sheet is JR_pair on ICMID workbook)",
+    )
     parser.add_argument(
         "--no-write-src",
         action="store_true",
-        help="Do not modify the ICMID workbook; only write standalone copy",
+        help="Do not modify the ICMID workbook (requires --out)",
     )
     parser.add_argument(
         "--rebuild-all",
         action="store_true",
         help="Ignore audited rows and rebuild everything from Sheet2",
     )
+    parser.add_argument(
+        "--write-alias-report",
+        action="store_true",
+        help="Also write jr_pair_east_africa_alias_dups.xlsx when audited alias dups exist",
+    )
     args = parser.parse_args()
     ensure_output_dirs()
 
     if not args.src.is_file():
         raise SystemExit(f"Missing workbook: {args.src}")
+    if args.no_write_src and args.out is None:
+        raise SystemExit("--no-write-src requires --out")
 
     get_resolver.cache_clear()
     resolver = get_resolver()
@@ -537,11 +549,17 @@ def main() -> None:
         write_pairs_into_workbook(pairs, args.src, sheet_name=args.sheet_name)
         print(f"  → sheet {args.sheet_name!r} on {args.src}")
 
-    standalone = args.out or (RESULT_OUTPUT / "sheet2_jr_pairs.xlsx")
-    write_pairs_standalone(pairs, standalone, sheet_name=args.sheet_name)
-    print(f"  → {standalone}")
+    if args.out is not None:
+        write_pairs_standalone(pairs, args.out, sheet_name=args.sheet_name)
+        print(f"  → {args.out}")
 
-    if len(east_report):
+    # Remove stale standalone copy if we stopped writing it by default
+    stale = RESULT_OUTPUT / "sheet2_jr_pairs.xlsx"
+    if args.out is None and stale.is_file():
+        stale.unlink()
+        print(f"  removed duplicate {stale.name} (canonical: JR_pair sheet on ICMID workbook)")
+
+    if args.write_alias_report and len(east_report):
         report_path = RESULT_OUTPUT / "jr_pair_east_africa_alias_dups.xlsx"
         cols = [c for c in PAIR_COLS if c in east_report.columns] + ["_pair_key"]
         east_report[cols].to_excel(report_path, index=False)

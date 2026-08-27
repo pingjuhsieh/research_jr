@@ -5,7 +5,7 @@
 #   JR_Grid_Intensity_Map.png   — max JR intensity per cell (overlaps → highest)
 #   JR_Grid_CrossGroup_Binary_Map.png — cross-group JR yes/no per cell
 #
-# Prerequisite: output/visualization/group_intensity_summary.csv
+# Prerequisite: output/jr_database/group_intensity_summary.csv
 #               (from Visualization pipeline / run_map.sh)
 
 library(sf)
@@ -53,7 +53,7 @@ BINARY_COLORS <- c(
 grid_sf <- readRDS("data/ea/grid_sf.rds")
 st_crs(grid_sf) <- 4326
 
-intensity_df <- read.csv("output/visualization/group_intensity_summary.csv", stringsAsFactors = FALSE)
+intensity_df <- read.csv("output/jr_database/group_intensity_summary.csv", stringsAsFactors = FALSE)
 intensity_df$group_id <- toupper(trimws(intensity_df$group))
 
 aliases <- read.csv("data/lookup/jr_polygon_aliases.csv", stringsAsFactors = FALSE)

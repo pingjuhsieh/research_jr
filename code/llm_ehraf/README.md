@@ -22,4 +22,4 @@ uv run python -B code/llm_ehraf/run.py export
 | `ehraf_jr_doc.sqlite` | Extraction DB |
 | `markdown_raw/`, `markdown_clean/` | Converted documents |
 
-Downstream consolidation: `code/jr_database/` → `output/result/`.
+Downstream consolidation: `code/jr_database/` → `output/jr_database/`.

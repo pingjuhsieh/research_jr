@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
-"""Sync interactive-map inputs from the consolidated jr_database outputs.
+"""Sync map inputs from the consolidated jr_database outputs.
 
-Writes:
-  output/visualization/between_group_joking.xlsx
-  output/visualization/jr_records.json
-
-Then run:
-  uv run python -B code/visualization/build_cross_group_map.py
+Writes under ``output/jr_database/``:
+  cross_group_map.xlsx
+  jr_records.json
 """
 from __future__ import annotations
 
@@ -19,20 +16,21 @@ import pandas as pd
 
 _VIS_DIR = Path(__file__).resolve().parent
 _PIPELINE = _VIS_DIR.parent.parent
+_CODE = _VIS_DIR.parent
 if str(_VIS_DIR) not in sys.path:
     sys.path.insert(0, str(_VIS_DIR))
+if str(_CODE) not in sys.path:
+    sys.path.insert(0, str(_CODE))
 
 from config import (  # noqa: E402
-    BETWEEN_GROUP_JOKING_XLSX,
+    CROSS_GROUP_MAP_XLSX,
     DOC_LEVEL_JR_CSV,
     JR_RECORDS_JSON,
     OUTPUT_DIR,
-    PIPELINE_ROOT,
-    WITHIN_GROUPS_CSV,
+    WITHIN_GROUP_XLSX,
 )
-
-ASSERTIONS_CSV = PIPELINE_ROOT / "output" / "jr_database" / "merge_cross_assertions.csv"
-CROSS_GROUP_CSV = PIPELINE_ROOT / "output" / "result" / "cross_group.csv"
+from jr_tables import load_within_group, save_cross_group_map  # noqa: E402
+from jr_database.config import ASSERTIONS_CSV, CROSS_GROUP_XLSX  # noqa: E402
 
 _SOURCE_LABEL = {
     "llm_ehraf": "eHRAF",
@@ -164,10 +162,9 @@ def build_within_jr_records() -> dict[str, dict]:
                 "joking_source": "llm_ehraf",
             }
 
-    # Fill gaps from the visualization within_group.csv (IDs the map already links).
-    if WITHIN_GROUPS_CSV.is_file():
-        wdf = pd.read_csv(WITHIN_GROUPS_CSV)
-        wdf.columns = [c.strip().lower().replace(" ", "_") for c in wdf.columns]
+    # Fill gaps from within_group.xlsx (IDs the map already links).
+    if WITHIN_GROUP_XLSX.is_file() or WITHIN_GROUP_XLSX.with_suffix(".csv").is_file():
+        wdf = load_within_group()
         for _, row in wdf.iterrows():
             rid = _norm_rid(row.get("relationship_id") or row.get("relationship_row_id"))
             if not rid or rid in records:
@@ -277,12 +274,12 @@ def main() -> None:
         print(f"Missing {ASSERTIONS_CSV}")
         print("Run first: uv run python -B code/jr_database/build_cross_group.py")
         sys.exit(1)
-    if not CROSS_GROUP_CSV.is_file():
-        print(f"Missing {CROSS_GROUP_CSV}")
+    if not CROSS_GROUP_XLSX.is_file():
+        print(f"Missing {CROSS_GROUP_XLSX}")
         sys.exit(1)
 
     assertions = pd.read_csv(ASSERTIONS_CSV)
-    pairs = pd.read_csv(CROSS_GROUP_CSV)
+    pairs = pd.read_excel(CROSS_GROUP_XLSX)
     print(f"Assertions: {len(assertions)}  pairs: {len(pairs)}")
 
     records = build_jr_records(assertions)
@@ -295,13 +292,13 @@ def main() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with JR_RECORDS_JSON.open("w", encoding="utf-8") as handle:
         json.dump(records, handle, ensure_ascii=False, indent=2)
-    joking.to_excel(BETWEEN_GROUP_JOKING_XLSX, index=False, sheet_name="between_group")
+    save_cross_group_map(joking)
 
     n_src = pd.Series([r.get("source") for r in records.values()]).value_counts().to_dict()
     n_scope = pd.Series([r.get("scope_coded") for r in records.values()]).value_counts().to_dict()
     print(f"  → {JR_RECORDS_JSON}  ({len(records)} records · {n_src})")
     print(f"     scopes: {n_scope}")
-    print(f"  → {BETWEEN_GROUP_JOKING_XLSX}  ({len(joking)} rows)")
+    print(f"  → {CROSS_GROUP_MAP_XLSX}  ({len(joking)} rows)")
     print("Next: uv run python -B code/visualization/build_cross_group_map.py")
 
 

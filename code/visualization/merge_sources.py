@@ -31,8 +31,9 @@ from config import (
     JR_RECORDS_JSON,
     REGION_ALIAS,
     REGION_COLORS,
-    WITHIN_GROUPS_MERGED_CSV,
+    WITHIN_GROUP_XLSX,
 )
+from jr_tables import save_within_group
 
 _ILLEGAL_XLSX_RE = re.compile(r"[\000-\010]|[\013-\014]|[\016-\037]")
 _KEERTHANA_KEEP_SOURCES = frozenset({"analysis", "og"})
@@ -285,10 +286,10 @@ def write_merged_sources(
     keerthana_path: Path = BETWEEN_GROUP_SOURCE_XLSX,
     v2_path: Path = DOC_LEVEL_JR_CSV,
     cross_out: Path = BETWEEN_GROUP_SOURCE_MERGED_XLSX,
-    within_out: Path = WITHIN_GROUPS_MERGED_CSV,
+    within_out: Path = WITHIN_GROUP_XLSX,
     records_out: Path = JR_RECORDS_JSON,
 ) -> tuple[Path, Path]:
-    """Write merged cross-source xlsx, within csv, and jr_records.json."""
+    """Write merged cross-source xlsx, within_group.xlsx, and jr_records.json."""
     cross_out.parent.mkdir(parents=True, exist_ok=True)
     within_out.parent.mkdir(parents=True, exist_ok=True)
 
@@ -298,7 +299,7 @@ def write_merged_sources(
     print(f"  → {cross_out}  ({len(cross_df)} rows)")
 
     within_df = build_within_from_v2(v2_path)
-    within_df.to_csv(within_out, index=False)
+    save_within_group(within_df, within_out)
     print(f"  → {within_out}  ({len(within_df)} rows)")
 
     records = build_full_jr_records(cross_df, v2_path)

@@ -32,52 +32,131 @@ from jr_database.config import (  # noqa: E402
     RA_WORKPACK_XLSX,
     ensure_output_dirs,
 )
-from jr_database.export_icmid_sheet_worklist import build_worklist  # noqa: E402
-from jr_database.export_one_sided import ResolveCache, build_tables, load_sheet2  # noqa: E402
+from jr_database.lib.sheet_worklist import build_worklist  # noqa: E402
+from jr_database.lib.one_sided import ResolveCache, build_tables, load_sheet2  # noqa: E402
 from jr_database.resolve_homeland import get_resolver  # noqa: E402
 from jr_database.sources import load_all_cross_assertions  # noqa: E402
 
 
 def _steps_df() -> pd.DataFrame:
     rows = [
-        ("目的", "一本檔處理三件事：名字 resolve、Sheet2 互惠缺漏、把 Keerthana/llm 補進 ICMID Sheet2/3。"),
-        ("", ""),
-        ("總原則", "先 resolve 名字，再判斷漏打／互惠。沒 resolve 的拼寫不要當漏打。"),
-        ("Resolve 順序", "ethnic_entity_index → registry aliases → GIS exact（murdock → greg → geopr）。"),
-        ("合法 polygon_source", "只填 murdock / greg / geopr（不要填 Joshua Project）。"),
-        ("", ""),
-        ("STEP 1 — 對名字（必做）", "開 sheet：1_unmatched_entities"),
-        ("做什麼", "entity 還對不上 homeland。填 polygon_source、polygon_id；可選 display_name / resolve_source / aliases。"),
-        ("範例", "Maasai → murdock / MASAI（雙 a 拼寫要手動對到 Murdock MASAI）。"),
-        ("做完後", "存檔，執行：uv run python -B code/jr_database/build_cross_group.py --apply-unmatched"),
-        ("", ""),
-        ("STEP 1b — Sheet2 裡未 resolve 的 partner", "開 sheet：1b_unresolved_partners"),
-        ("做什麼", "Sheet2 Joking link 裡的拼寫對不上（如 Zaramu、Kami）。同樣填進 1_unmatched_entities 或 index alias，再 --apply-unmatched。"),
-        ("注意", "這些不算「漏打反向」；先 alias 再重跑 workpack 看 2_missing_reverse。"),
-        ("", ""),
-        ("STEP 2 — Sheet2 單邊缺反向", "開 sheet：2_missing_reverse"),
-        ("做什麼", "has_link 已寫 partner；missing_on 那列沒寫回來。在 ICMID- Africa.xlsx Sheet2 補 should_add，或從 has_link 刪掉並註記。"),
-        ("若有 unresolved spellings", "先做 STEP 1b，再重跑 export，避免誤判。"),
-        ("", ""),
-        ("STEP 2b — partner 無 Sheet2 列", "開 sheet：2b_partner_not_in_sheet2"),
-        ("意思", "A 寫了 B，B 有 resolve，但 Sheet2 沒有 B 那列（常是 GREG/GeoEPR）。無法在 Sheet2 補反向。"),
-        ("怎麼處理", "接受為額外族群；或確認是否應新建 Murdock 列；不要硬當 missing_reverse。"),
-        ("", ""),
-        ("STEP 3 — 把其他來源補進 ICMID", "開 sheet：3_to_sheet2 與 3_to_sheet3"),
-        ("規則（老師）", "pair 至少一邊是 murdock → Sheet2；兩邊都不是 → Sheet3。"),
-        ("來源", "keerthana_analysis + llm_ehraf（不含 keerthana og）。"),
-        ("3_to_sheet2", "status=add_partner… → 在既有 Sheet2 列的 Joking link 加上 partner_to_add；create_new… → 先新建 Ethnic Group 列。"),
-        ("3_to_sheet3", "兩邊都不是 murdock，候補進 Sheet3。先丟掉過泛名稱（villagers、Europeans、males…）。"),
-        ("3_already_on_sheet2", "已在 Sheet2，可略過。"),
-        ("", ""),
-        ("建議順序", "1 → 1b → apply-unmatched → 重跑本 workpack → 2 → 2b → 3。"),
         (
-            "重跑指令",
+            "Purpose",
+            "One workbook for three tasks: resolve names, fix Sheet2 reciprocity gaps, "
+            "and import Keerthana/llm pairs into ICMID Sheet2/3.",
+        ),
+        ("", ""),
+        (
+            "Principle",
+            "Resolve names first, then judge missing / one-sided links. "
+            "Unresolved spellings are not missing reverse links.",
+        ),
+        (
+            "Resolve order",
+            "ethnic_entity_index → registry aliases → GIS exact (murdock → greg → geopr).",
+        ),
+        (
+            "Allowed polygon_source",
+            "Only murdock / greg / geopr (do not use Joshua Project).",
+        ),
+        ("", ""),
+        ("STEP 1 — Resolve names (required)", "Open sheet: 1_unmatched_entities"),
+        (
+            "What to do",
+            "Entities still without a homeland. Fill polygon_source, polygon_id; "
+            "optional display_name / resolve_source / aliases.",
+        ),
+        (
+            "Example",
+            "Maasai → murdock / MASAI (double-a spelling must be mapped to Murdock MASAI).",
+        ),
+        (
+            "After filling",
+            "Save, then run: uv run python -B code/jr_database/build_cross_group.py --apply-unmatched",
+        ),
+        ("", ""),
+        (
+            "STEP 1b — Unresolved Sheet2 partners",
+            "Open sheet: 1b_unresolved_partners",
+        ),
+        (
+            "What to do",
+            "Spellings in Sheet2 Joking link that do not resolve (e.g. Zaramu, Kami). "
+            "Add them to 1_unmatched_entities or an index alias, then --apply-unmatched.",
+        ),
+        (
+            "Note",
+            "These are not missing reverse links; alias first, then re-export the workpack "
+            "and check 2_missing_reverse.",
+        ),
+        ("", ""),
+        ("STEP 2 — Sheet2 missing reverse", "Open sheet: 2_missing_reverse"),
+        (
+            "What to do",
+            "has_link already lists the partner; missing_on does not list back. "
+            "Add should_add on ICMID- Africa.xlsx Sheet2, or remove from has_link and note why.",
+        ),
+        (
+            "If unresolved spellings remain",
+            "Finish STEP 1b first, then re-export to avoid false positives.",
+        ),
+        ("", ""),
+        (
+            "STEP 2b — Partner has no Sheet2 row",
+            "Open sheet: 2b_partner_not_in_sheet2",
+        ),
+        (
+            "Meaning",
+            "A lists B, B resolves, but Sheet2 has no row for B (often GREG/GeoEPR). "
+            "Cannot add a Sheet2 reverse link.",
+        ),
+        (
+            "How to handle",
+            "Accept as an extra group, or confirm whether a Murdock row should be created; "
+            "do not treat as missing_reverse.",
+        ),
+        ("", ""),
+        (
+            "STEP 3 — Import other sources into ICMID",
+            "Open sheets: 3_to_sheet2 and 3_to_sheet3",
+        ),
+        (
+            "Rule (advisor)",
+            "If at least one endpoint is murdock → Sheet2; if neither is → Sheet3.",
+        ),
+        (
+            "Sources",
+            "keerthana_analysis + llm_ehraf (not keerthana og).",
+        ),
+        (
+            "3_to_sheet2",
+            "status=add_partner… → append partner_to_add on the existing Sheet2 Joking link; "
+            "create_new… → create an Ethnic Group row first.",
+        ),
+        (
+            "3_to_sheet3",
+            "Neither side is murdock; candidate for Sheet3. Drop overly generic names "
+            "(villagers, Europeans, males, …) first.",
+        ),
+        ("3_already_on_sheet2", "Already on Sheet2; skip."),
+        ("", ""),
+        (
+            "Suggested order",
+            "1 → 1b → apply-unmatched → re-export this workpack → 2 → 2b → 3.",
+        ),
+        (
+            "Re-run commands",
             "uv run python -B code/jr_database/build_cross_group.py --apply-unmatched && "
             "uv run python -B code/jr_database/export_ra_workpack.py",
         ),
-        ("主檔", "data/sources/ICMID- Africa.xlsx（Sheet2 主編碼；Sheet3 暫存）。"),
-        ("長期對照表", "data/lookup/ethnic_entity_index.xlsx（apply 後寫入；勿只改 workpack 不 apply）。"),
+        (
+            "Primary coding file",
+            "data/sources/ICMID- Africa.xlsx (Sheet2 main coding; Sheet3 holding).",
+        ),
+        (
+            "Long-term lookup",
+            "data/lookup/ethnic_entity_index.xlsx (written on apply; do not edit only the workpack).",
+        ),
     ]
     return pd.DataFrame(rows, columns=["section", "detail"])
 

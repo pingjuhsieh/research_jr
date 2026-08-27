@@ -19,7 +19,8 @@ from typing import Any
 
 import pandas as pd
 
-from config import ETHNIC_ENTITY_INDEX_XLSX, POLYGON_GROUP_REGISTRY_XLSX, WITHIN_GROUPS_CSV
+from config import ETHNIC_ENTITY_INDEX_XLSX, POLYGON_GROUP_REGISTRY_XLSX, WITHIN_GROUP_XLSX
+from jr_tables import load_within_group
 from entity_homeland import VALID_POLYGON_SOURCES, index_polygon_trusted
 from entity_index import _clean, _sanitize_for_excel, lookup_row
 
@@ -341,14 +342,13 @@ def remove_auto_bootstrapped_registry_rows(registry_df: pd.DataFrame) -> tuple[p
 def collect_unmapped_names(
     registry_map: dict[str, str],
     index_lookup: dict | None = None,
-    within_csv: Path = WITHIN_GROUPS_CSV,
+    within_path: Path = WITHIN_GROUP_XLSX,
     between_entity_names: set[str] | None = None,
 ) -> list[str]:
     """Names referenced in JR data that do not resolve to a registry polygon_id."""
     names: set[str] = set()
-    if within_csv.is_file():
-        df = pd.read_csv(within_csv)
-        df.columns = [c.strip().lower().replace(" ", "_") for c in df.columns]
+    if within_path.is_file() or within_path.with_suffix(".csv").is_file():
+        df = load_within_group(within_path if within_path.is_file() else within_path.with_suffix(".csv"))
         if "ethnography_group" in df.columns:
             names.update(_clean(v) for v in df["ethnography_group"] if _clean(v))
     if between_entity_names:

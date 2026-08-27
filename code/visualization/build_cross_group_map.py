@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """
 Build an interactive Leaflet map highlighting ethnic homelands with
-cross-group joking relationships from the consolidated between-group dataset.
+cross-group joking relationships.
 
-Data source: output/visualization/between_group_joking.xlsx
-             (run prepare.py first)
+Data source: output/jr_database/cross_group_map.xlsx
+             (from sync_from_jr_database / run.sh)
 
 Usage (from project root):
-    uv run python code/visualization/prepare.py all
-    uv run python code/visualization/build_cross_group_map.py
+    bash code/jr_database/scripts/run.sh
+    # or map-only:
+    bash code/visualization/scripts/run_map.sh
 """
 from __future__ import annotations
 
@@ -25,8 +26,8 @@ if str(_VIS_DIR) not in sys.path:
 import pandas as pd
 
 from config import (
-    BETWEEN_GROUP_JOKING_XLSX,
     CROSS_GROUP_MAP_HTML,
+    CROSS_GROUP_MAP_XLSX,
     INTENSITY_COLORS,
     JR_RECORDS_JSON,
     LOOKUP_ROOT,
@@ -36,8 +37,9 @@ from config import (
     REGION_COLORS,
     UNMAPPED_REGISTRY_CSV,
     UNRESOLVED_CSV,
-    WITHIN_GROUPS_CSV,
+    WITHIN_GROUP_XLSX,
 )
+from jr_tables import load_within_group
 from entity_homeland import (
     EntityHomeland,
     KIN_TYPES,
@@ -162,12 +164,11 @@ def _build_within_group_map(
     index_lookup: dict,
 ) -> tuple[dict[str, dict], dict[str, list[str]]]:
     """Build within-group JR pairs keyed by polygon_id, with record ID linkage."""
-    if not WITHIN_GROUPS_CSV.is_file():
-        print(f"  WARNING: {WITHIN_GROUPS_CSV} not found — within-group data will be empty")
+    if not WITHIN_GROUP_XLSX.is_file() and not WITHIN_GROUP_XLSX.with_suffix(".csv").is_file():
+        print(f"  WARNING: {WITHIN_GROUP_XLSX} not found — within-group data will be empty")
         return {}, {}
 
-    df = pd.read_csv(WITHIN_GROUPS_CSV)
-    df.columns = [c.strip().lower().replace(" ", "_") for c in df.columns]
+    df = load_within_group()
 
     within_map: dict[str, dict] = {}
     within_pair_records: dict[str, list[str]] = {}
@@ -241,11 +242,10 @@ def _add_within_only_groups(
     resolver: EntityResolver,
 ) -> int:
     """Add ethnography groups that have within JR but no cross-group map entity."""
-    if not WITHIN_GROUPS_CSV.is_file():
+    if not WITHIN_GROUP_XLSX.is_file() and not WITHIN_GROUP_XLSX.with_suffix(".csv").is_file():
         return 0
 
-    df = pd.read_csv(WITHIN_GROUPS_CSV)
-    df.columns = [c.strip().lower().replace(" ", "_") for c in df.columns]
+    df = load_within_group()
 
     existing_polygon_keys: set[tuple[str, str]] = set()
     existing_polygon_group_ids: set[str] = set()
@@ -684,12 +684,9 @@ def build_map(input_path: Path, output_path: Path) -> None:
     print(f"  GREG polygons highlighted:    {len(greg_highlights)}")
     print(f"  GeoEPR polygons highlighted:  {len(geopr_highlights)}")
     print(f"  Point markers (no polygon):   {len(markers)}")
-    print(f"  Unresolved entities:        {len(unresolved)}")
+    print(f"  Unresolved entities:        {len(unresolved)} (see RA_workpack)")
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    if not unresolved.empty:
-        unresolved.to_csv(UNRESOLVED_CSV, index=False)
-        print(f"  Wrote unresolved list → {UNRESOLVED_CSV}")
 
     between_names = {
         *df["entity_a"].dropna().astype(str),
@@ -697,11 +694,12 @@ def build_map(input_path: Path, output_path: Path) -> None:
     }
     unmapped = collect_unmapped_names(registry_map, index_lookup, between_entity_names=between_names)
     if unmapped:
-        UNMAPPED_REGISTRY_CSV.parent.mkdir(parents=True, exist_ok=True)
-        pd.DataFrame({"name": unmapped, "action": "add to polygon_group_registry.xlsx aliases"}).to_csv(
-            UNMAPPED_REGISTRY_CSV, index=False,
-        )
-        print(f"  Unmapped names (need registry aliases): {len(unmapped)} → {UNMAPPED_REGISTRY_CSV}")
+        print(f"  Unmapped registry names: {len(unmapped)} (add aliases in polygon_group_registry if needed)")
+
+    for stale in (UNRESOLVED_CSV, UNMAPPED_REGISTRY_CSV):
+        if stale.is_file():
+            stale.unlink()
+            print(f"  removed obsolete {stale.name}")
 
     print("Building GeoJSON layers…")
     murdock_gj = murdock_geojson()
@@ -725,7 +723,7 @@ def build_map(input_path: Path, output_path: Path) -> None:
     print("  Building within-group pair map…")
     within_group_map, within_pair_records = _build_within_group_map(registry_map, index_lookup)
 
-    # Merge same-ethnic-group pairs from between_group_joking into within_group_map
+    # Merge same-ethnic-group pairs from cross_group_map into within_group_map
     merged_count = 0
     for mkey, pairs in same_poly_within.items():
         pid = resolve_polygon_id(mkey, registry_map, index_lookup) if mkey else mkey
@@ -812,8 +810,8 @@ def main() -> None:
     parser.add_argument(
         "--input",
         type=Path,
-        default=BETWEEN_GROUP_JOKING_XLSX,
-        help="Between-group joking table (default: output/visualization/between_group_joking.xlsx)",
+        default=CROSS_GROUP_MAP_XLSX,
+        help="Cross-group map table (default: output/jr_database/cross_group_map.xlsx)",
     )
     parser.add_argument("--output", type=Path, default=CROSS_GROUP_MAP_HTML)
     args = parser.parse_args()

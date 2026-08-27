@@ -7,7 +7,7 @@ Generated products go to `output/settlement/`. EA/grid constructs stay in `data/
 
 ```
 data/lookup/jr_polygon_aliases.csv
-output/visualization/group_intensity_summary.csv
+output/jr_database/group_intensity_summary.csv
         │
 export_cross_group_homelands.py  →  output/settlement/cross_group_homeland_units.csv
 00_generate_pure_grid.R          →  data/ea/grid_sf.rds

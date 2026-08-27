@@ -14,11 +14,14 @@ is auto-synced — you do not need to maintain it for JR resolve.
 Usage (from ICMID PingJu project root):
     uv run python -B code/jr_database/build_cross_group.py
     uv run python -B code/jr_database/build_cross_group.py --apply-unmatched
+    bash code/jr_database/scripts/run.sh              # build + map
+    bash code/jr_database/scripts/run.sh --no-map     # build only
 """
 from __future__ import annotations
 
 import argparse
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -43,7 +46,6 @@ from jr_database.config import (  # noqa: E402
     CROSS_GROUP_CSV,
     CROSS_GROUP_XLSX,
     ETHNIC_ENTITY_INDEX_XLSX,
-    MATCHED_LOG_XLSX,
     POLYGON_GROUP_REGISTRY_XLSX,
     RA_UNMATCHED_SHEET,
     RA_WORKPACK_XLSX,
@@ -132,30 +134,6 @@ def _upsert_index_row(
     return pd.concat([index, pd.DataFrame([row])], ignore_index=True)
 
 
-def _append_matched_log(rows: list[dict]) -> None:
-    """Permanent archive of applied unmatched fills (never wiped by rebuild)."""
-    if not rows:
-        return
-    new = pd.DataFrame(rows)
-    new["applied_at"] = pd.Timestamp.now().isoformat(timespec="seconds")
-    if MATCHED_LOG_XLSX.is_file():
-        old = pd.read_excel(MATCHED_LOG_XLSX)
-        out = pd.concat([old, new], ignore_index=True)
-    else:
-        out = new
-    # de-dupe on entity + polygon_id + resolve_source, keep latest
-    out["_k"] = (
-        out.get("entity", pd.Series(dtype=str)).fillna("").astype(str).str.casefold()
-        + "|"
-        + out.get("polygon_id", pd.Series(dtype=str)).fillna("").astype(str).str.upper()
-        + "|"
-        + out.get("resolve_source", pd.Series(dtype=str)).fillna("").astype(str)
-    )
-    out = out.drop_duplicates(subset=["_k"], keep="last").drop(columns=["_k"])
-    MATCHED_LOG_XLSX.parent.mkdir(parents=True, exist_ok=True)
-    out.to_excel(MATCHED_LOG_XLSX, index=False, sheet_name="matched")
-
-
 def sync_registry_from_index(index: pd.DataFrame) -> int:
     """Ensure registry has a row for every trusted index polygon; keep manual aliases."""
     registry = load_registry() if POLYGON_GROUP_REGISTRY_XLSX.is_file() else pd.DataFrame(columns=REGISTRY_COLUMNS)
@@ -209,7 +187,6 @@ def apply_unmatched(
     index = load_index() if ETHNIC_ENTITY_INDEX_XLSX.is_file() else pd.DataFrame(columns=INDEX_COLUMNS)
     applied = 0
     alias_n = 0
-    log_rows: list[dict] = []
 
     for _, r in um.iterrows():
         src = _clean(r.get("polygon_source")).lower().replace("geoepr", "geopr")
@@ -235,21 +212,6 @@ def apply_unmatched(
             notes=notes,
         )
         applied += 1
-        log_rows.append(
-            {
-                "entity": raw,
-                "polygon_source": src,
-                "polygon_id": pid,
-                "display_name": display,
-                "resolve_source": resolve_source,
-                "coder": coder,
-                "aliases": _clean(r.get("aliases")),
-                "notes": notes,
-                "example_pair_partner": _clean(r.get("example_pair_partner")),
-                "n_pairs": r.get("n_pairs", ""),
-                "source_flags_seen": _clean(r.get("source_flags_seen")),
-            }
-        )
 
         for alias in _split_aliases(r.get("aliases", "")):
             if alias.upper() == raw.upper():
@@ -267,10 +229,8 @@ def apply_unmatched(
             alias_n += 1
 
     save_index(index)
-    _append_matched_log(log_rows)
     reg_added = sync_registry_from_index(index)
     print(f"Applied {applied} entity fills (+{alias_n} aliases) → {ETHNIC_ENTITY_INDEX_XLSX}")
-    print(f"Matched log → {MATCHED_LOG_XLSX}  (+{len(log_rows)} this run)")
     print(f"Registry sync: +{reg_added} new polygon rows → {POLYGON_GROUP_REGISTRY_XLSX}")
     return applied
 
@@ -495,11 +455,13 @@ def run_build() -> None:
     unmatched = build_unmatched(pairs, assertions)
 
     pairs_out = pairs.drop(columns=["pair_key"], errors="ignore")
-    pairs_out.to_csv(CROSS_GROUP_CSV, index=False)
     with pd.ExcelWriter(CROSS_GROUP_XLSX, engine="openpyxl") as writer:
         pairs_out.to_excel(writer, sheet_name="cross_group", index=False)
     print(f"  → {CROSS_GROUP_XLSX}")
-    print(f"  → {CROSS_GROUP_CSV}")
+    # Drop stale CSV twin if present (xlsx is the single pair deliverable).
+    if CROSS_GROUP_CSV.is_file():
+        CROSS_GROUP_CSV.unlink()
+        print(f"  removed duplicate {CROSS_GROUP_CSV.name}")
 
     print(
         f"  unmatched entities={len(unmatched)} "
@@ -509,6 +471,21 @@ def run_build() -> None:
     print("Done.")
 
 
+def _run_map_pipeline() -> None:
+    """Sync map inputs + build interactive HTML under output/jr_database/."""
+    print("Building map deliverable (output/jr_database/)…")
+    sync = _CODE / "visualization" / "sync_from_jr_database.py"
+    build = _CODE / "visualization" / "build_cross_group_map.py"
+    subprocess.check_call(
+        [sys.executable, "-B", str(sync)],
+        cwd=str(_PIPELINE),
+    )
+    subprocess.check_call(
+        [sys.executable, "-B", str(build)],
+        cwd=str(_PIPELINE),
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Build consolidated cross-group JR database")
     parser.add_argument(
@@ -516,11 +493,26 @@ def main() -> None:
         action="store_true",
         help="Write filled RA_workpack 1_unmatched_entities into ethnic_entity_index (+ sync registry), then rebuild",
     )
+    parser.add_argument(
+        "--with-map",
+        dest="with_map",
+        action="store_true",
+        default=True,
+        help="Also sync + build the interactive map under output/jr_database/ (default: on)",
+    )
+    parser.add_argument(
+        "--no-map",
+        dest="with_map",
+        action="store_false",
+        help="Skip map build",
+    )
     args = parser.parse_args()
     if args.apply_unmatched:
         apply_unmatched()
         get_resolver.cache_clear()
     run_build()
+    if args.with_map:
+        _run_map_pipeline()
 
 
 if __name__ == "__main__":

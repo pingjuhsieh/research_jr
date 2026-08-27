@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
-"""List Sheet2 joking links that are one-sided AFTER homeland resolve.
+"""Sheet2 one-sided JR helpers for export_ra_workpack (internal).
 
-Library helpers for export_ra_workpack.py (RA deliverable is RA_workpack.xlsx only).
-
-Usage (from ICMID PingJu project root):
-    uv run python -B code/jr_database/export_ra_workpack.py
+Do not run directly — use export_ra_workpack.py.
 """
+
 from __future__ import annotations
 
 import argparse
@@ -20,7 +18,8 @@ import pandas as pd
 from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
 
-_CODE = Path(__file__).resolve().parent.parent
+_JR = Path(__file__).resolve().parent.parent  # code/jr_database
+_CODE = _JR.parent
 _PIPELINE = _CODE.parent
 for _p in (_CODE, _PIPELINE, _CODE / "visualization"):
     if str(_p) not in sys.path:
@@ -482,7 +481,7 @@ def main() -> None:
     parser.add_argument("--src", type=Path, default=ICMID_MANUAL_XLSX)
     args = parser.parse_args()
     run(args.src)
-    print("RA deliverable is RA_workpack.xlsx — run export_ra_workpack.py")
+    print("Internal helper — run: uv run python -B code/jr_database/export_ra_workpack.py")
 
 
 if __name__ == "__main__":

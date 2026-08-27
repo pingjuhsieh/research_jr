@@ -2,7 +2,7 @@
 """Export homeland units for groups with cross-group joking relationships.
 
 Uses the Visualization pipeline when lookup tables exist; otherwise falls back to
-``output/visualization/group_intensity_summary.csv`` (groups with n_iii > 0) plus
+``output/jr_database/group_intensity_summary.csv`` (groups with n_iii > 0) plus
 ``data/lookup/jr_polygon_aliases.csv`` for name collisions.
 
 Output: output/settlement/cross_group_homeland_units.csv
@@ -24,7 +24,7 @@ VIS_DIR = PIPELINE_ROOT / "code" / "visualization"
 OUT_DIR = PIPELINE_ROOT / "output" / "settlement"
 OUT_CSV = OUT_DIR / "cross_group_homeland_units.csv"
 ALIASES_CSV = PIPELINE_ROOT / "data" / "lookup" / "jr_polygon_aliases.csv"
-INTENSITY_CSV = PIPELINE_ROOT / "output" / "visualization" / "group_intensity_summary.csv"
+INTENSITY_CSV = PIPELINE_ROOT / "output" / "jr_database" / "map" / "group_intensity_summary.csv"
 
 SOURCE_PRIORITY = {"murdock": 0, "greg": 1, "geopr": 2, "point": 3}
 
@@ -49,25 +49,29 @@ def _export_from_visualization() -> pd.DataFrame | None:
     if str(VIS_DIR) not in sys.path:
         sys.path.insert(0, str(VIS_DIR))
 
-    from config import BETWEEN_GROUP_JOKING_XLSX, POLYGON_GROUP_REGISTRY_XLSX
+    from config import CROSS_GROUP_MAP_XLSX, POLYGON_GROUP_REGISTRY_XLSX
     from build_cross_group_map import _build_highlight_data, _load_between_groups
     from entity_index import build_lookup, load_index
     from entity_resolver import EntityResolver
     from polygon_registry import build_name_to_polygon_map, load_registry
 
-    input_path = BETWEEN_GROUP_JOKING_XLSX
+    input_path = CROSS_GROUP_MAP_XLSX
     if not input_path.is_file():
-        alt = (
-            PIPELINE_ROOT
-            / "output"
-            / "llm_ehraf"
-            / "export"
-            / "llm_ehraf_cross_group.csv"
-        )
-        if alt.is_file():
-            input_path = alt
+        legacy = VIS_DIR.parent.parent / "output" / "jr_database" / "between_group_joking.xlsx"
+        if legacy.is_file():
+            input_path = legacy
         else:
-            return None
+            alt = (
+                PIPELINE_ROOT
+                / "output"
+                / "llm_ehraf"
+                / "export"
+                / "llm_ehraf_cross_group.csv"
+            )
+            if alt.is_file():
+                input_path = alt
+            else:
+                return None
 
     registry_df = load_registry() if POLYGON_GROUP_REGISTRY_XLSX.is_file() else pd.DataFrame()
     registry_map = build_name_to_polygon_map(registry_df) if not registry_df.empty else {}

@@ -1,6 +1,6 @@
 # Shared data (`data/`) — raw / curated inputs only
 
-Generated products live under `output/` (especially `output/result/`).
+Generated products live under `output/` (especially `output/jr_database/`).
 Do not treat merge/map intermediates as source data.
 
 ## Layout
@@ -26,9 +26,9 @@ data/
     └── thp_per_murdock.csv
 ```
 
-Visualization intermediates (`between_group_joking.xlsx`, `jr_records.json`,
-`group_intensity_summary.csv`, …) live in `output/visualization/`.
-Prefer `output/result/cross_group.xlsx` for the consolidated JR database.
+Map intermediates (`cross_group_map.xlsx`, `jr_records.json`,
+`group_intensity_summary.csv`, …) live in `output/jr_database/`.
+Prefer `output/jr_database/cross_group.xlsx` for the consolidated JR database.
 
 ## Override
 

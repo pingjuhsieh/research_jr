@@ -41,12 +41,13 @@ THP_CSV = REFERENCE_ROOT / "thp_per_murdock.csv"
 # ── LLM eHRAF export ──────────────────────────────────────────────────────────
 DOC_LEVEL_JR_CSV = PIPELINE_ROOT / "output" / "llm_ehraf" / "export" / "llm_ehraf_joking_relationships.csv"
 
-# ── Outputs (visualization pipeline) ──────────────────────────────────────────
-OUTPUT_DIR = PIPELINE_ROOT / "output" / "visualization"
+# ── Outputs (flat under output/jr_database/) ──────────────────────────────────
+JR_DB_OUTPUT = PIPELINE_ROOT / "output" / "jr_database"
+OUTPUT_DIR = JR_DB_OUTPUT
 BETWEEN_GROUP_SOURCE_MERGED_XLSX = OUTPUT_DIR / "between_group_source_merged.xlsx"
-BETWEEN_GROUP_JOKING_XLSX = OUTPUT_DIR / "between_group_joking.xlsx"
-WITHIN_GROUPS_CSV = OUTPUT_DIR / "within_group.csv"
-WITHIN_GROUPS_MERGED_CSV = WITHIN_GROUPS_CSV
+# Map intermediate: assertion-shaped reshape of cross_group (homeland keys for coloring)
+CROSS_GROUP_MAP_XLSX = OUTPUT_DIR / "cross_group_map.xlsx"
+WITHIN_GROUP_XLSX = OUTPUT_DIR / "within_group.xlsx"
 JR_RECORDS_JSON = OUTPUT_DIR / "jr_records.json"
 JR_SUMMARY_XLSX = OUTPUT_DIR / "ethnic_group_jr_summary.xlsx"
 GROUP_INTENSITY_CSV = OUTPUT_DIR / "group_intensity_summary.csv"

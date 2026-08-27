@@ -11,14 +11,12 @@ cp .env.example .env   # OPENAI_API_KEY
 # 1) LLM from eHRAF (if rebuilding extraction)
 uv run python -B code/llm_ehraf/run.py all
 
-# 2) Consolidated cross-group JR database
-uv run python -B code/jr_database/build_cross_group.py
-
-# 3) Optional map
-bash code/visualization/scripts/run_map.sh
+# 2) JR database (pairs + map)
+bash code/jr_database/scripts/run.sh
 ```
 
-Final clean cross-group table: **`output/result/cross_group.xlsx`**
+Deliverables: **`output/jr_database/`**
+(map: `output/jr_database/cross_group_jr_map.html`)
 
 ---
 
@@ -28,15 +26,14 @@ Final clean cross-group table: **`output/result/cross_group.xlsx`**
 ICMID PingJu/
 ├── code/
 │   ├── llm_ehraf/       # PDF → LLM extraction (eHRAF)
-│   ├── jr_database/     # Merge sources → master cross-group + homeland
-│   ├── visualization/   # Interactive map
+│   ├── jr_database/     # Merge sources → database + map
+│   ├── visualization/   # Map builder (outputs → jr_database/)
 │   ├── settlement/
 │   └── climate/
 ├── data/                # RAW inputs only (PDFs, GIS, original tables)
 ├── output/
 │   ├── llm_ehraf/       # LLM intermediates
-│   ├── jr_database/     # Merge intermediates + unmatched sheet
-│   └── result/          # Final clean products
+│   └── jr_database/     # All JR database products (tables + map)
 ├── literature/
 └── PIPELINE.md
 ```
@@ -44,8 +41,8 @@ ICMID PingJu/
 | Path | Role |
 |------|------|
 | `code/llm_ehraf/` | eHRAF PDFs → markdown → LLM → CSV |
-| `code/jr_database/` | Keerthana + LLM + ICMID manual → `output/result/` |
+| `code/jr_database/` | Keerthana + LLM + ICMID → `output/jr_database/` |
 | `data/` | Original / downloadable inputs |
-| `output/result/` | Clean deliverables |
+| `output/jr_database/` | Clean deliverables + interactive map |
 
 See [PIPELINE.md](PIPELINE.md) and [code/jr_database/README.md](code/jr_database/README.md).

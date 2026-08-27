@@ -2,7 +2,7 @@
 
 Edit the xlsx directly to set polygon_source, polygon_id, parent_ethnic_group.
 prepare.py adds missing entity stubs only — it never guesses GIS matches.
-Unmatched rows → output/visualization/unmatched_homelands.xlsx for manual review.
+Unmatched rows → output/jr_database/unmatched_homelands.xlsx (legacy) for manual review.
 """
 from __future__ import annotations
 
@@ -16,8 +16,9 @@ from config import (
     BETWEEN_GROUP_SOURCE_XLSX,
     ETHNIC_ENTITY_INDEX_XLSX,
     KEERTHANA_ETHNICS_XLSX,
-    WITHIN_GROUPS_CSV,
+    WITHIN_GROUP_XLSX,
 )
+from jr_tables import load_within_group
 from entity_homeland import VALID_POLYGON_SOURCES, index_polygon_trusted, infer_parent_group
 
 # Entity types that belong in the ethnic index (homeland / alias concordance).
@@ -365,7 +366,7 @@ def _register_candidate(
 
 def collect_index_candidates(
     joking_path: Path | None = None,
-    within_csv: Path = WITHIN_GROUPS_CSV,
+    within_path: Path = WITHIN_GROUP_XLSX,
 ) -> dict[str, dict]:
     """Names that should appear in the ethnic index (groups/clans only, not kin/person)."""
     candidates: dict[str, dict] = {}
@@ -382,9 +383,8 @@ def collect_index_candidates(
                     _clean(row.get(f"{prefix}_type", "")),
                     parent_ethnic_group=ethno,
                 )
-    if within_csv.is_file():
-        df = pd.read_csv(within_csv)
-        df.columns = [c.strip().lower().replace(" ", "_") for c in df.columns]
+    if within_path.is_file() or within_path.with_suffix(".csv").is_file():
+        df = load_within_group(within_path if within_path.is_file() else within_path.with_suffix(".csv"))
         for _, row in df.iterrows():
             ethno = _clean(row.get("ethnography_group", ""))
             if ethno:
@@ -398,10 +398,10 @@ def collect_index_candidates(
 
 def collect_entity_names(
     joking_path: Path | None = None,
-    within_csv: Path = WITHIN_GROUPS_CSV,
+    within_path: Path = WITHIN_GROUP_XLSX,
 ) -> set[str]:
     """Backward-compatible wrapper — indexable names only."""
-    return set(collect_index_candidates(joking_path, within_csv).keys())
+    return set(collect_index_candidates(joking_path, within_path).keys())
 
 
 def sync_new_entities(

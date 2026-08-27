@@ -6,10 +6,10 @@
 |-------|----------|
 | `data/` | Raw inputs only |
 | `code/llm_ehraf/` | eHRAF → LLM JR extraction |
-| `code/jr_database/` | Consolidate sources + homeland map |
+| `code/jr_database/` | Consolidate sources + homeland + map deliverables |
+| `code/visualization/` | Map builder (writes into `output/jr_database/`) |
 | `output/llm_ehraf/` | LLM intermediates |
-| `output/jr_database/` | Merge intermediates + `RA_workpack.xlsx` |
-| `output/result/` | **Final clean files** |
+| `output/jr_database/` | **All JR database products** (pairs, RA workpack, map) |
 
 ## A. LLM eHRAF
 
@@ -21,39 +21,46 @@ uv run python -B code/llm_ehraf/run.py export
 
 Writes `output/llm_ehraf/export/llm_ehraf_joking_relationships.csv` (and cross / within_kin splits).
 
-## B. Consolidated cross-group JR database
+## B. Consolidated JR database (+ map)
 
 Sources:
 
 1. LLM eHRAF (`scope=cross_group`)
 2. Keerthana `data/sources/keerthana_cross_group.xlsx` (`analysis` only)
 3. ICMID manual `data/sources/ICMID- Africa.xlsx`
-   (Sheet2 main: Murdock row × column F comma-separated JR partners; Sheet1 confirmed; Sheet3 ignored)
+   (Sheet2 / `JR_pair`; Sheet1 confirmed; Sheet3 ignored)
 
 ```bash
+# Full deliverable tree (pairs + assertions + map)
+bash code/jr_database/scripts/run.sh
+
+# Or Python directly (map on by default)
 uv run python -B code/jr_database/build_cross_group.py
+uv run python -B code/jr_database/build_cross_group.py --no-map
 ```
 
-- Assertions (full provenance): `output/jr_database/merge_cross_assertions.csv`
-- **RA work queue:** `output/jr_database/RA_workpack.xlsx` (regen with `export_ra_workpack.py`)
-- **Result:** `output/result/cross_group.xlsx`
+Writes under `output/jr_database/`:
 
-Fill `polygon_source`, `polygon_id`, and `resolve_source` (wiki URL etc.) on
-`RA_workpack.xlsx` sheet `1_unmatched_entities` — optionally `aliases` — then:
+| File | Role |
+|------|------|
+| `cross_group.xlsx` | Clean undirected pairs + homeland |
+| `RA_workpack.xlsx` | RA queue (regen: `export_ra_workpack.py`) |
+| `cross_group_jr_map.html` | Interactive map |
+| `jr_records.json` | Detail-panel records (map intermediate) |
+
+Fill `polygon_source`, `polygon_id`, and `resolve_source` on
+`RA_workpack.xlsx` sheet `1_unmatched_entities`, then:
 
 ```bash
 uv run python -B code/jr_database/build_cross_group.py --apply-unmatched
 uv run python -B code/jr_database/export_ra_workpack.py
 ```
 
-## C. Map (optional)
+## C. Map only (optional)
 
 ```bash
 bash code/visualization/scripts/run_map.sh
 ```
-
-Syncs from `output/result/cross_group` + assertions, then writes
-`output/visualization/cross_group_jr_map.html`.
 
 ## D. Settlement / climate (downstream)
 
