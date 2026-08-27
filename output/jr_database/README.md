@@ -19,7 +19,7 @@ Map **code** stays in `code/visualization/`; only the files land here.
 | `within_group.xlsx` | **Within-group / kinship** pairs (separate scope; not in cross) |
 | `merge_cross_assertions.csv` | One row per source assertion (full provenance) |
 | `RA_workpack.xlsx` | RA queue (`0_STEPS`, unmatched, reciprocity, import) |
-| `cross_group_jr_map.html` | Interactive map (open in a browser) |
+| `jr_map.html` | Interactive map (cross + within + kin) |
 
 Canonical ICMID pair coding is the **`JR_pair` sheet** on
 `data/sources/ICMID- Africa.xlsx` — not a second copy in this folder.

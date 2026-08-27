@@ -23,5 +23,5 @@ fi
 echo ""
 echo "Outputs in output/jr_database/:"
 echo "  cross_group.xlsx · merge_cross_assertions.csv · RA_workpack.xlsx"
-[[ "$NO_MAP" -eq 0 ]] && echo "  cross_group_jr_map.html"
+[[ "$NO_MAP" -eq 0 ]] && echo "  jr_map.html"
 echo "(see output/jr_database/README.md)"

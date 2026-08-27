@@ -45,7 +45,7 @@ Writes under `output/jr_database/`:
 |------|------|
 | `cross_group.xlsx` | Clean undirected pairs + homeland |
 | `RA_workpack.xlsx` | RA queue (regen: `export_ra_workpack.py`) |
-| `cross_group_jr_map.html` | Interactive map |
+| `jr_map.html` | Interactive map (cross + within + kin) |
 | `jr_records.json` | Detail-panel records (map intermediate) |
 
 Fill `polygon_source`, `polygon_id`, and `resolve_source` on

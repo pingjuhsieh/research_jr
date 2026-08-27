@@ -16,7 +16,7 @@ bash code/jr_database/scripts/run.sh
 ```
 
 Deliverables: **`output/jr_database/`**
-(map: `output/jr_database/cross_group_jr_map.html`)
+(map: `output/jr_database/jr_map.html`)
 
 ---
 

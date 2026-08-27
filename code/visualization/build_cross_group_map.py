@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
-Build an interactive Leaflet map highlighting ethnic homelands with
-cross-group joking relationships.
+Build an interactive Leaflet map of joking relationships
+(cross-group, within-group, and kinship) on ethnic homelands.
 
-Data source: output/jr_database/cross_group_map.xlsx
-             (from sync_from_jr_database / run.sh)
+Data sources under output/jr_database/:
+  cross_group_map.xlsx, within_group.xlsx, jr_records.json
+  (from sync_from_jr_database / run.sh)
 
 Usage (from project root):
     bash code/jr_database/scripts/run.sh
@@ -487,7 +488,7 @@ def _build_highlight_data(
                     "color": color,
                     "label": name,
                     "meta": (
-                        f"<b>Cross-group JR</b><br>{name}<br>"
+                        f"<b>Joking relationship</b><br>{name}<br>"
                         f"Type: {etype}<br>Region: {region or '—'}<br>"
                         f"Source: {resolved.source}"
                     ),
@@ -665,7 +666,7 @@ def build_map(input_path: Path, output_path: Path) -> None:
 
     print(f"Loading joking data: {input_path}")
     df = _load_between_groups(input_path)
-    print(f"  {len(df)} between-group relationship rows · {len(jr_records)} detail records")
+    print(f"  {len(df)} cross-group relationship rows · {len(jr_records)} detail records")
 
     print("Resolving entities to homelands…")
     if not POLYGON_GROUP_REGISTRY_XLSX.is_file():
@@ -696,7 +697,11 @@ def build_map(input_path: Path, output_path: Path) -> None:
     if unmapped:
         print(f"  Unmapped registry names: {len(unmapped)} (add aliases in polygon_group_registry if needed)")
 
-    for stale in (UNRESOLVED_CSV, UNMAPPED_REGISTRY_CSV):
+    for stale in (
+        UNRESOLVED_CSV,
+        UNMAPPED_REGISTRY_CSV,
+        OUTPUT_DIR / "cross_group_jr_map.html",
+    ):
         if stale.is_file():
             stale.unlink()
             print(f"  removed obsolete {stale.name}")
@@ -713,8 +718,19 @@ def build_map(input_path: Path, output_path: Path) -> None:
     n_keerthana = sum(1 for r in jr_records.values() if r.get("source") == "Keerthana")
     n_ehraf = sum(1 for r in jr_records.values() if r.get("source") == "eHRAF")
     n_icmid = sum(1 for r in jr_records.values() if r.get("source") == "ICMID")
+    scope_counts: dict[str, int] = {}
+    for r in jr_records.values():
+        sc = str(r.get("scope_coded") or "").strip().lower().replace("-", "_")
+        if sc in ("between_groups",):
+            sc = "cross_group"
+        if sc:
+            scope_counts[sc] = scope_counts.get(sc, 0) + 1
+    n_cross = scope_counts.get("cross_group", len(df))
+    n_within = scope_counts.get("within_group", 0)
+    n_kin = scope_counts.get("kinship", 0)
     stats_line = (
-        f"{len(df)} cross-group links · {unique_entities} entities · "
+        f"{n_cross} cross · {n_within} within · {n_kin} kin · "
+        f"{unique_entities} cross entities · "
         f"{len(highlights)} Murdock + {len(greg_highlights)} GREG + {len(geopr_highlights)} GeoEPR · "
         f"{len(jr_records)} JR records ({n_ehraf} eHRAF · {n_keerthana} Keerthana · {n_icmid} ICMID)"
     )
@@ -806,7 +822,7 @@ def build_map(input_path: Path, output_path: Path) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Build cross-group JR homeland map")
+    parser = argparse.ArgumentParser(description="Build JR homeland map (cross + within + kin)")
     parser.add_argument(
         "--input",
         type=Path,

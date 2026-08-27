@@ -8,4 +8,4 @@ bash code/jr_database/scripts/run.sh          # preferred (DB + map)
 bash code/visualization/scripts/run_map.sh    # map only
 ```
 
-Open `output/jr_database/cross_group_jr_map.html`.
+Open `output/jr_database/jr_map.html`.

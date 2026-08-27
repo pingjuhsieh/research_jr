@@ -52,7 +52,8 @@ JR_RECORDS_JSON = OUTPUT_DIR / "jr_records.json"
 JR_SUMMARY_XLSX = OUTPUT_DIR / "ethnic_group_jr_summary.xlsx"
 GROUP_INTENSITY_CSV = OUTPUT_DIR / "group_intensity_summary.csv"
 UNMATCHED_HOMELANDS_XLSX = OUTPUT_DIR / "unmatched_homelands.xlsx"
-CROSS_GROUP_MAP_HTML = OUTPUT_DIR / "cross_group_jr_map.html"
+CROSS_GROUP_MAP_HTML = OUTPUT_DIR / "jr_map.html"
+JR_MAP_HTML = CROSS_GROUP_MAP_HTML  # alias: map covers cross + within + kin
 UNRESOLVED_CSV = OUTPUT_DIR / "unresolved_entities.csv"
 UNMAPPED_REGISTRY_CSV = OUTPUT_DIR / "unmapped_polygon_registry.csv"
 

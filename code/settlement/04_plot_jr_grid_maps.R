@@ -225,7 +225,7 @@ map_binary <- ggplot() +
   scale_fill_manual(values = BINARY_COLORS, name = "Cross-group JR") +
   theme_map +
   labs(
-    title = "Cross-Group Joking Relationships on 0.5° Grid",
+    title = "Joking Relationships on 0.5° Grid",
     subtitle = "Binary: cell intersects any homeland with cross-group JR (n_iii > 0)"
   )
 

@@ -44,7 +44,8 @@ CROSS_GROUP_CSV = JR_DB_OUTPUT / "cross_group.csv"
 SHEET2_JR_PAIRS_XLSX = JR_DB_OUTPUT / "sheet2_jr_pairs.xlsx"
 
 # Map (same folder)
-CROSS_GROUP_MAP_HTML = JR_DB_OUTPUT / "cross_group_jr_map.html"
+CROSS_GROUP_MAP_HTML = JR_DB_OUTPUT / "jr_map.html"
+JR_MAP_HTML = CROSS_GROUP_MAP_HTML  # alias: map covers cross + within + kin
 JR_RECORDS_JSON = JR_DB_OUTPUT / "jr_records.json"
 # Map reshape of cross_group (+ assertion-level cols); regen by sync_from_jr_database
 CROSS_GROUP_MAP_XLSX = JR_DB_OUTPUT / "cross_group_map.xlsx"
