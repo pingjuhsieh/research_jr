@@ -38,4 +38,6 @@ uv run python -B code/jr_database/build_cross_group.py --apply-unmatched
 uv run python -B code/jr_database/export_ra_workpack.py
 ```
 
-Resolve order: `ethnic_entity_index` → registry aliases → GIS exact name.
+Resolve order: ``ICMID- Africa.xlsx`` sheet ``ethnic_entity_index`` → registry aliases → GIS exact name.
+
+On each ``build_cross_group`` / ``export_ra_workpack`` run, sheet ``Unmatched entities`` on the ICMID workbook is synced: resolved names drop out; pipeline unmatched are added/updated.

@@ -209,9 +209,14 @@ def load_icmid_jr_pair(path: Path = ICMID_MANUAL_XLSX) -> list[dict[str, Any]]:
     """Load curated undirected pairs from sheet ``JR_pair`` (preferred over Sheet2)."""
     if not path.is_file():
         return []
-    try:
-        df = pd.read_excel(path, sheet_name="JR_pair")
-    except ValueError:
+    df = None
+    for sheet in ("JR_pair", "JR pair", "Sheet2_JR_pairs"):
+        try:
+            df = pd.read_excel(path, sheet_name=sheet)
+            break
+        except ValueError:
+            continue
+    if df is None:
         return []
     df.columns = [str(c).strip() for c in df.columns]
     rows: list[dict[str, Any]] = []

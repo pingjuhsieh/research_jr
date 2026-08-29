@@ -30,6 +30,8 @@ KEERTHANA_ETHNICS_XLSX = SOURCES_ROOT / "keerthana_ethnics.xlsx"
 LEGACY_ETHNICS_XLSX = KEERTHANA_ETHNICS_XLSX
 
 # ── Editable matching tables (lookup/) ────────────────────────────────────────
+ICMID_MANUAL_XLSX = SOURCES_ROOT / "ICMID- Africa.xlsx"
+ICMID_INDEX_SHEET = "ethnic_entity_index"
 ETHNIC_ENTITY_INDEX_XLSX = LOOKUP_ROOT / "ethnic_entity_index.xlsx"
 POLYGON_GROUP_REGISTRY_XLSX = LOOKUP_ROOT / "polygon_group_registry.xlsx"
 

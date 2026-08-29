@@ -44,12 +44,13 @@ from jr_tables import load_within_group
 from entity_homeland import (
     EntityHomeland,
     KIN_TYPES,
+    VALID_POLYGON_SOURCES,
     homeland_to_entity_meta,
     same_ethnic_from_annotations,
     same_ethnic_group,
 )
 from entity_index import build_lookup, load_index, lookup_row
-from entity_resolver import EntityResolver
+from entity_resolver import EntityResolver, ResolvedEntity
 from geo_layers import geoepr_geojson, greg_geojson, murdock_geojson
 from polygon_registry import (
     SOURCE_PRIORITY,
@@ -355,6 +356,54 @@ def _add_murdock_highlight(
         entry["lon"] = lon
 
 
+def _homeland_from_sheet_columns(
+    *,
+    name: str,
+    prefix: str,
+    row: pd.Series,
+    resolver: EntityResolver,
+    row_region: str,
+    entity_region_raw: str,
+    effective_region,
+) -> tuple[ResolvedEntity | None, EntityHomeland | None]:
+    """Use pipeline-resolved homeland columns when manual resolver misses."""
+    if _clean_str(row.get(f"{prefix}_homeland_status")) != "resolved":
+        return None, None
+    psrc = _clean_str(row.get(f"{prefix}_polygon_source")).lower()
+    pid = _clean_str(row.get(f"{prefix}_polygon_id"))
+    if psrc not in VALID_POLYGON_SOURCES or not pid:
+        return None, None
+    hit = resolver._lookup_in_source(psrc, pid)
+    if hit is None:
+        return None, None
+    region = effective_region(row_region, entity_region_raw)
+    color = REGION_COLORS.get(region, "#e76f51")
+    polygon_id = (hit.murdock_name or hit.greg_name or pid).strip()
+    resolved = ResolvedEntity(
+        raw_name=name,
+        canonical=name,
+        region=region,
+        color=color,
+        source=hit.source,
+        murdock_name=hit.murdock_name,
+        greg_name=hit.greg_name,
+        lat=hit.lat,
+        lon=hit.lon,
+    )
+    homeland = EntityHomeland(
+        raw_name=name,
+        canonical_name=name,
+        entity_type="",
+        parent_ethnic_group=_clean_str(row.get(f"{prefix}_parent_group")),
+        polygon_source=psrc,
+        polygon_id=polygon_id,
+        region=region,
+        lat=hit.lat,
+        lon=hit.lon,
+    )
+    return resolved, homeland
+
+
 def _add_named_highlight(
     container: dict,
     key: str,
@@ -441,6 +490,25 @@ def _build_highlight_data(
 
             resolved = _resolve(name)
             homeland = _resolve_homeland(name)
+            if (
+                resolved is None
+                or resolved.source == "unresolved"
+                or not (homeland and homeland.is_resolved)
+            ):
+                sheet_res, sheet_hom = _homeland_from_sheet_columns(
+                    name=name,
+                    prefix=prefix,
+                    row=row,
+                    resolver=resolver,
+                    row_region=row_region,
+                    entity_region_raw=entity_region_raw,
+                    effective_region=_effective_region,
+                )
+                if sheet_res and sheet_hom:
+                    resolved = sheet_res
+                    homeland = sheet_hom
+                    resolve_cache[name] = resolved
+                    homeland_cache[name] = homeland
             region = _effective_region(row_region, entity_region_raw) or (
                 homeland.region if homeland else (resolved.region if resolved else "")
             )

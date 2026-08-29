@@ -13727,11 +13727,11 @@
   "icmid_jr_pair:549": {
     "id": "icmid_jr_pair:549",
     "source": "ICMID",
-    "doc_id": "",
-    "source_pdf": "",
-    "source_url": "https://ehrafworldcultures.yale.edu/cultures/ms25/summary",
-    "source_citation": "Human Relations Area Files. n.d. \"Tuareg.\" eHRAF World Cultures. New Haven, CT: Human Relations Area Files. Accessed August 4, 2026. https://ehrafworldcultures.yale.edu/cultures/ms25/summary.",
-    "source_page": "10",
+    "doc_id": "/Tuareg_Nicolaisen_1963_429_KS",
+    "source_pdf": "Tuareg_Nicolaisen_1963_429_KS.pdf",
+    "source_url": "/Tuareg_Nicolaisen_1963_429_KS",
+    "source_citation": "",
+    "source_page": "",
     "ethnography_group": "",
     "region": "North Africa",
     "entity_a": "AHAGGAREN",
@@ -13741,7 +13741,7 @@
     "scope_coded": "cross_group",
     "reasoning": "AHAGGAREN are a subgroup of Tuareg",
     "notes": "AHAGGAREN are a subgroup of Tuareg",
-    "quote": "There are joking relationships with cousins; relationships with affines are characterized by extreme reserve.",
+    "quote": "This is true also of present day joking between noble Tuareg and vassals, and between all Tuareg and various black-skinned people such as the Imeggedezen and even slaves.",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -13751,6 +13751,31 @@
   },
   "icmid_jr_pair:550": {
     "id": "icmid_jr_pair:550",
+    "source": "ICMID",
+    "doc_id": "/Tuareg_Nicolaisen_1963_429_KS",
+    "source_pdf": "Tuareg_Nicolaisen_1963_429_KS.pdf",
+    "source_url": "/Tuareg_Nicolaisen_1963_429_KS",
+    "source_citation": "",
+    "source_page": "",
+    "ethnography_group": "",
+    "region": "North Africa",
+    "entity_a": "AHAGGAREN",
+    "entity_b": "Imeggedezen",
+    "entity_a_type": "",
+    "entity_b_type": "",
+    "scope_coded": "cross_group",
+    "reasoning": "AHAGGAREN are a subgroup of Tuareg",
+    "notes": "AHAGGAREN are a subgroup of Tuareg",
+    "quote": "This is true also of present day joking between noble Tuareg and vassals, and between all Tuareg and various black-skinned people such as the Imeggedezen and even slaves.",
+    "relation_label": "",
+    "local_term": "",
+    "symmetry": "",
+    "relation_type": "",
+    "confidence": 0.0,
+    "joking_source": "icmid_jr_pair"
+  },
+  "icmid_jr_pair:551": {
+    "id": "icmid_jr_pair:551",
     "source": "ICMID",
     "doc_id": "Cotedivoire_Meke_2004.pdf",
     "source_pdf": "Cotedivoire_Meke_2004.pdf.pdf",
@@ -13774,8 +13799,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:551": {
-    "id": "icmid_jr_pair:551",
+  "icmid_jr_pair:552": {
+    "id": "icmid_jr_pair:552",
     "source": "ICMID",
     "doc_id": "Cotedivoire_Meke_2004.pdf",
     "source_pdf": "Cotedivoire_Meke_2004.pdf.pdf",
@@ -13799,8 +13824,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:552": {
-    "id": "icmid_jr_pair:552",
+  "icmid_jr_pair:553": {
+    "id": "icmid_jr_pair:553",
     "source": "ICMID",
     "doc_id": "Tem_Facebook.pdf",
     "source_pdf": "Tem_Facebook.pdf.pdf",
@@ -13824,8 +13849,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:553": {
-    "id": "icmid_jr_pair:553",
+  "icmid_jr_pair:554": {
+    "id": "icmid_jr_pair:554",
     "source": "ICMID",
     "doc_id": "Hubert_DESCHAMPS_1959.pdf",
     "source_pdf": "Hubert_DESCHAMPS_1959.pdf.pdf",
@@ -13849,8 +13874,33 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:554": {
-    "id": "icmid_jr_pair:554",
+  "icmid_jr_pair:555": {
+    "id": "icmid_jr_pair:555",
+    "source": "ICMID",
+    "doc_id": "Hubert_DESCHAMPS_1959.pdf",
+    "source_pdf": "Hubert_DESCHAMPS_1959.pdf.pdf",
+    "source_url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers11-03/15847.pdf",
+    "source_citation": "Deschamps, H. (1959). Les migrations intérieures passées et présentes à Madagascar.",
+    "source_page": "31",
+    "ethnography_group": "",
+    "region": "East Africa",
+    "entity_a": "ANTAISAKA",
+    "entity_b": "Makoa",
+    "entity_a_type": "",
+    "entity_b_type": "",
+    "scope_coded": "cross_group",
+    "reasoning": "",
+    "notes": "",
+    "quote": "Il en fut de même sur les basses vallées du Manambolo (Maintirano) et du Sambao (Besalampy), ainsi que dans l'Ambongo (Soalala Mitsinjo). A la parenté lointaine avec les Sakalava se joignait là, pour faciliter les choses aux Antesaka, leur parenté à plaisanterie (ziva, somandraza, fanopa) avec les Makoa. Dans l'ouest, les Antesaka reviennent à leurs origines et sont en pays d'amitié",
+    "relation_label": "",
+    "local_term": "",
+    "symmetry": "",
+    "relation_type": "",
+    "confidence": 0.0,
+    "joking_source": "icmid_jr_pair"
+  },
+  "icmid_jr_pair:556": {
+    "id": "icmid_jr_pair:556",
     "source": "ICMID",
     "doc_id": "Cotedivoire_Meke_2004.pdf\nCoteDivoire_Nea_2021.pdf",
     "source_pdf": "Cotedivoire_Meke_2004.pdf\nCoteDivoire_Nea_2021.pdf.pdf",
@@ -13874,8 +13924,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:555": {
-    "id": "icmid_jr_pair:555",
+  "icmid_jr_pair:557": {
+    "id": "icmid_jr_pair:557",
     "source": "ICMID",
     "doc_id": "Cotedivoire_Meke_2004.pdf\nCoteDivoire_Nea_2021.pdf",
     "source_pdf": "Cotedivoire_Meke_2004.pdf\nCoteDivoire_Nea_2021.pdf.pdf",
@@ -13899,8 +13949,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:556": {
-    "id": "icmid_jr_pair:556",
+  "icmid_jr_pair:558": {
+    "id": "icmid_jr_pair:558",
     "source": "ICMID",
     "doc_id": "Cotedivoire_Meke_2004.pdf",
     "source_pdf": "Cotedivoire_Meke_2004.pdf.pdf",
@@ -13924,8 +13974,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:557": {
-    "id": "icmid_jr_pair:557",
+  "icmid_jr_pair:559": {
+    "id": "icmid_jr_pair:559",
     "source": "ICMID",
     "doc_id": "Ashanti_Arhin_1967",
     "source_pdf": "Ashanti_Arhin_1967.pdf",
@@ -13949,8 +13999,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:558": {
-    "id": "icmid_jr_pair:558",
+  "icmid_jr_pair:560": {
+    "id": "icmid_jr_pair:560",
     "source": "ICMID",
     "doc_id": "Attie_UNDP_2016",
     "source_pdf": "Attie_UNDP_2016.pdf",
@@ -13974,8 +14024,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:559": {
-    "id": "icmid_jr_pair:559",
+  "icmid_jr_pair:561": {
+    "id": "icmid_jr_pair:561",
     "source": "ICMID",
     "doc_id": "CoteDivoire_Nea_2021.pdf,\nCotedivoire_Meke_2004.pdf,\nAttie_UNDP_2016        \n[for Avikam] Avikam_Victor_2025.pdf",
     "source_pdf": "CoteDivoire_Nea_2021.pdf,\nCotedivoire_Meke_2004.pdf,\nAttie_UNDP_2016        \n[for Avikam] Avikam_Victor_2025.pdf.pdf",
@@ -13999,8 +14049,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:560": {
-    "id": "icmid_jr_pair:560",
+  "icmid_jr_pair:562": {
+    "id": "icmid_jr_pair:562",
     "source": "ICMID",
     "doc_id": "Attie_UNDP_2016",
     "source_pdf": "Attie_UNDP_2016.pdf",
@@ -14024,8 +14074,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:561": {
-    "id": "icmid_jr_pair:561",
+  "icmid_jr_pair:563": {
+    "id": "icmid_jr_pair:563",
     "source": "ICMID",
     "doc_id": "Attie_UNDP_2016",
     "source_pdf": "Attie_UNDP_2016.pdf",
@@ -14049,8 +14099,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:562": {
-    "id": "icmid_jr_pair:562",
+  "icmid_jr_pair:564": {
+    "id": "icmid_jr_pair:564",
     "source": "ICMID",
     "doc_id": "Avikam_Victor_2025.pdf",
     "source_pdf": "Avikam_Victor_2025.pdf.pdf",
@@ -14074,8 +14124,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:563": {
-    "id": "icmid_jr_pair:563",
+  "icmid_jr_pair:565": {
+    "id": "icmid_jr_pair:565",
     "source": "ICMID",
     "doc_id": "Cotedivoire_Meke_2004.pdf",
     "source_pdf": "Cotedivoire_Meke_2004.pdf.pdf",
@@ -14099,33 +14149,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:564": {
-    "id": "icmid_jr_pair:564",
-    "source": "ICMID",
-    "doc_id": "CoteDivoire_Nea_2021.pdf",
-    "source_pdf": "CoteDivoire_Nea_2021.pdf.pdf",
-    "source_url": "",
-    "source_citation": "NEA, Madou. « Écriture et développement en Côte d'Ivoire ». ZAOULI, n°02 Spécial, décembre 2021, pp. 318-328. Enseignant-chercheur, Département de Théâtre et Traditions Populaires, ESTCA/INSAAC, Côte d'Ivoire. ISSN : 2788-9343.",
-    "source_page": "322",
-    "ethnography_group": "",
-    "region": "West Africa",
-    "entity_a": "Abron",
-    "entity_b": "KULANGO",
-    "entity_a_type": "",
-    "entity_b_type": "",
-    "scope_coded": "cross_group",
-    "reasoning": "",
-    "notes": "",
-    "quote": "Tableau 2 : Alliances inter-ethniques à plaisanterie",
-    "relation_label": "",
-    "local_term": "",
-    "symmetry": "",
-    "relation_type": "",
-    "confidence": 0.0,
-    "joking_source": "icmid_jr_pair"
-  },
-  "icmid_jr_pair:565": {
-    "id": "icmid_jr_pair:565",
+  "icmid_jr_pair:566": {
+    "id": "icmid_jr_pair:566",
     "source": "ICMID",
     "doc_id": "Kanuri_Lohr_2005, [for Afo] Afo_Martin_2023",
     "source_pdf": "Kanuri_Lohr_2005, [for Afo] Afo_Martin_2023.pdf",
@@ -14149,8 +14174,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:566": {
-    "id": "icmid_jr_pair:566",
+  "icmid_jr_pair:567": {
+    "id": "icmid_jr_pair:567",
     "source": "ICMID",
     "doc_id": "Cotedivoire_Meke_2004.pdf",
     "source_pdf": "Cotedivoire_Meke_2004.pdf.pdf",
@@ -14174,8 +14199,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:567": {
-    "id": "icmid_jr_pair:567",
+  "icmid_jr_pair:568": {
+    "id": "icmid_jr_pair:568",
     "source": "ICMID",
     "doc_id": "Thomas_Herlehy_1984.pdf",
     "source_pdf": "Thomas_Herlehy_1984.pdf.pdf",
@@ -14199,8 +14224,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:568": {
-    "id": "icmid_jr_pair:568",
+  "icmid_jr_pair:569": {
+    "id": "icmid_jr_pair:569",
     "source": "ICMID",
     "doc_id": "CoteDivoire_Nea_2021.pdf,\nCotedivoire_Meke_2004.pdf,\nAttie_UNDP_2016        \n[for Avikam] Avikam_Victor_2025.pdf",
     "source_pdf": "CoteDivoire_Nea_2021.pdf,\nCotedivoire_Meke_2004.pdf,\nAttie_UNDP_2016        \n[for Avikam] Avikam_Victor_2025.pdf.pdf",
@@ -14224,8 +14249,33 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:569": {
-    "id": "icmid_jr_pair:569",
+  "icmid_jr_pair:570": {
+    "id": "icmid_jr_pair:570",
+    "source": "ICMID",
+    "doc_id": "Attie_UNDP_2016",
+    "source_pdf": "Attie_UNDP_2016.pdf",
+    "source_url": "https://mptf.undp.org/sites/default/files/documents/25000/les_pactes_communautaires_outils_de_prevention_des_conflits_et_de_consolidation_de_la_paix.pdf",
+    "source_citation": "Action pour le Développement Communautaire (ADC). Les pactes communautaires, outils de prévention des conflits et de consolidation de la paix : le cas de la Guinée forestière et des pays limitrophes, Libéria, Sierra Leone et Côte d’Ivoire. Rapport d’étude. Mars 2016. Financé par le PNUD/Peacebuilding Fund.",
+    "source_page": "20",
+    "ethnography_group": "",
+    "region": "West Africa",
+    "entity_a": "Attie",
+    "entity_b": "KRU",
+    "entity_a_type": "",
+    "entity_b_type": "",
+    "scope_coded": "cross_group",
+    "reasoning": "",
+    "notes": "",
+    "quote": "en Côte\nd’Ivoire, les Attié ont pour parentés à plaisanterie les Oida, Mbatto, Kroumen, Bakué), ce n’est\npas le cas en Guinée forestière",
+    "relation_label": "",
+    "local_term": "",
+    "symmetry": "",
+    "relation_type": "",
+    "confidence": 0.0,
+    "joking_source": "icmid_jr_pair"
+  },
+  "icmid_jr_pair:571": {
+    "id": "icmid_jr_pair:571",
     "source": "ICMID",
     "doc_id": "Bargou_Bigou_2019.pdf",
     "source_pdf": "Bargou_Bigou_2019.pdf.pdf",
@@ -14249,8 +14299,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:570": {
-    "id": "icmid_jr_pair:570",
+  "icmid_jr_pair:572": {
+    "id": "icmid_jr_pair:572",
     "source": "ICMID",
     "doc_id": "Bachama_Fardon_1983.pdf, Jukun_Adelberger_2008.pdf",
     "source_pdf": "Bachama_Fardon_1983.pdf, Jukun_Adelberger_2008.pdf.pdf",
@@ -14274,8 +14324,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:571": {
-    "id": "icmid_jr_pair:571",
+  "icmid_jr_pair:573": {
+    "id": "icmid_jr_pair:573",
     "source": "ICMID",
     "doc_id": "Bachama_Fardon_1983.pdf, Jukun_Adelberger_2008.pdf",
     "source_pdf": "Bachama_Fardon_1983.pdf, Jukun_Adelberger_2008.pdf.pdf",
@@ -14299,8 +14349,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:572": {
-    "id": "icmid_jr_pair:572",
+  "icmid_jr_pair:574": {
+    "id": "icmid_jr_pair:574",
     "source": "ICMID",
     "doc_id": "Balante_Badjie_2020.pdf",
     "source_pdf": "Balante_Badjie_2020.pdf.pdf",
@@ -14324,14 +14374,14 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:573": {
-    "id": "icmid_jr_pair:573",
+  "icmid_jr_pair:575": {
+    "id": "icmid_jr_pair:575",
     "source": "ICMID",
-    "doc_id": "Bambara_Diallo_2006.pdf\n\nBambara_119_NK:p1",
-    "source_pdf": "Bambara_Diallo_2006.pdf\n\nBambara_119_NK:p1.pdf",
-    "source_url": "",
-    "source_citation": "Youssouf DIALLO, « Identités et relations de plaisanterie chez les Peuls de l'ouest du Burkina Faso »,\nCahiers d’études africaines [En ligne], 184 | 2006, mis en ligne le 01 janvier 2008, consulté le 21\nseptembre 2021. URL : http://journals.openedition.org/etudesafricaines/15399 ; DOI : https://doi.org/\n10.4000/etudesafricaines.15399\n\nDieterlen, Germaine, and Katia Wolf. 1951. “An Essay on the Religion of the Bambara.” In Bibliothèque de Sociologie Contemporaine. 1951, Paris. Presses universitaires de France. https://ehrafworldcultures.yale.edu/cultures/fa08/documents/001.",
-    "source_page": "783",
+    "doc_id": "Bambara_Diallo_2006.pdf\n\nBambara_119_NK:p1\n\nSonghai_Cisse_2013        \n\n[For Malinke] Cotedivoire_Meke_2004.pdf",
+    "source_pdf": "Bambara_Diallo_2006.pdf\n\nBambara_119_NK:p1\n\nSonghai_Cisse_2013        \n\n[For Malinke] Cotedivoire_Meke_2004.pdf.pdf",
+    "source_url": "https://www.academia.edu/49184471/Introduction_joking_kinship_1258_\n[For Malinke]    https://jaga.afrique-gouvernance.net/_docs/les_alliances_a_plaisanteries_comme_voie.pdf",
+    "source_citation": "Youssouf DIALLO, « Identités et relations de plaisanterie chez les Peuls de l'ouest du Burkina Faso »,\nCahiers d’études africaines [En ligne], 184 | 2006, mis en ligne le 01 janvier 2008, consulté le 21\nseptembre 2021. URL : http://journals.openedition.org/etudesafricaines/15399 ; DOI : https://doi.org/\n10.4000/etudesafricaines.15399\n\nDieterlen, Germaine, and Katia Wolf. 1951. “An Essay on the Religion of the Bambara.” In Bibliothèque de Sociologie Contemporaine. 1951, Paris. Presses universitaires de France. https://ehrafworldcultures.yale.edu/cultures/fa08/documents/001.\n\ncisse, mamadou. “Introduction Joking Kinship[1258].” Joking Kinship, 2013.       \n\n[For Malinke] Meïté, Méké. 2004. \"Les alliances à plaisanteries comme voie...\" Éthiopiques 72. https://jaga.afrique-gouvernance.net/_docs/les_alliances_a_plaisanteries_comme_voie.pdf.",
+    "source_page": "783\n\n[for Soninke]  14",
     "ethnography_group": "",
     "region": "West Africa",
     "entity_a": "BAMBARA",
@@ -14341,7 +14391,7 @@
     "scope_coded": "cross_group",
     "reasoning": "",
     "notes": "",
-    "quote": "L’examen des\naspects historiques du phénomène des plaisanteries dans ses moments\nconstitutifs révèle que ce type de relations constitue le modèle restreint\nd’interactions sociales larges et relativement anciennes où se reflète la repré-\nsentation de rapports de force passés entre groupes dominants et groupes\ndominés dans les formations étatiques précoloniales ouest-africaines. Les\nrelations de clientèle Peuls/Bambara dans le cadre du royaume de Ségou,\nde même que les relations entre les chefs wattara/ouattara de l’ancien État\nde Kong et les groupes assujettis sont typiques de ce genre de relations\nentre dominants et dominés.\n\nThus, a Koulibali is a Kéita's senãnku among the Bambara; Bozo and Dogon as well as Bozo and Somono are also senãnku(1).",
+    "quote": "L’examen des\naspects historiques du phénomène des plaisanteries dans ses moments\nconstitutifs révèle que ce type de relations constitue le modèle restreint\nd’interactions sociales larges et relativement anciennes où se reflète la repré-\nsentation de rapports de force passés entre groupes dominants et groupes\ndominés dans les formations étatiques précoloniales ouest-africaines. Les\nrelations de clientèle Peuls/Bambara dans le cadre du royaume de Ségou,\nde même que les relations entre les chefs wattara/ouattara de l’ancien État\nde Kong et les groupes assujettis sont typiques de ce genre de relations\nentre dominants et dominés.\n\nThus, a Koulibali is a Kéita's senãnku among the Bambara; Bozo and Dogon as well as Bozo and Somono are also senãnku(1).\n\n \"The Soninke and the Bamana, the Mossi and the Gurmantche, the Manding with the Soninke,\nthe Khassonke and the Bamana maintain joking kinship.\"\n\n[For Malinke] Ailleurs dans la sous région",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -14349,8 +14399,33 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:574": {
-    "id": "icmid_jr_pair:574",
+  "icmid_jr_pair:576": {
+    "id": "icmid_jr_pair:576",
+    "source": "ICMID",
+    "doc_id": "Bambara_Diallo_2006.pdf\n\nBambara_119_NK:p1\n\nSonghai_Cisse_2013        \n\n[For Malinke] Cotedivoire_Meke_2004.pdf",
+    "source_pdf": "Bambara_Diallo_2006.pdf\n\nBambara_119_NK:p1\n\nSonghai_Cisse_2013        \n\n[For Malinke] Cotedivoire_Meke_2004.pdf.pdf",
+    "source_url": "https://www.academia.edu/49184471/Introduction_joking_kinship_1258_\n[For Malinke]    https://jaga.afrique-gouvernance.net/_docs/les_alliances_a_plaisanteries_comme_voie.pdf",
+    "source_citation": "Youssouf DIALLO, « Identités et relations de plaisanterie chez les Peuls de l'ouest du Burkina Faso »,\nCahiers d’études africaines [En ligne], 184 | 2006, mis en ligne le 01 janvier 2008, consulté le 21\nseptembre 2021. URL : http://journals.openedition.org/etudesafricaines/15399 ; DOI : https://doi.org/\n10.4000/etudesafricaines.15399\n\nDieterlen, Germaine, and Katia Wolf. 1951. “An Essay on the Religion of the Bambara.” In Bibliothèque de Sociologie Contemporaine. 1951, Paris. Presses universitaires de France. https://ehrafworldcultures.yale.edu/cultures/fa08/documents/001.\n\ncisse, mamadou. “Introduction Joking Kinship[1258].” Joking Kinship, 2013.       \n\n[For Malinke] Meïté, Méké. 2004. \"Les alliances à plaisanteries comme voie...\" Éthiopiques 72. https://jaga.afrique-gouvernance.net/_docs/les_alliances_a_plaisanteries_comme_voie.pdf.",
+    "source_page": "783\n\n[for Soninke]  14",
+    "ethnography_group": "",
+    "region": "West Africa",
+    "entity_a": "BAMBARA",
+    "entity_b": "Soninke",
+    "entity_a_type": "",
+    "entity_b_type": "",
+    "scope_coded": "cross_group",
+    "reasoning": "",
+    "notes": "",
+    "quote": "L’examen des\naspects historiques du phénomène des plaisanteries dans ses moments\nconstitutifs révèle que ce type de relations constitue le modèle restreint\nd’interactions sociales larges et relativement anciennes où se reflète la repré-\nsentation de rapports de force passés entre groupes dominants et groupes\ndominés dans les formations étatiques précoloniales ouest-africaines. Les\nrelations de clientèle Peuls/Bambara dans le cadre du royaume de Ségou,\nde même que les relations entre les chefs wattara/ouattara de l’ancien État\nde Kong et les groupes assujettis sont typiques de ce genre de relations\nentre dominants et dominés.\n\nThus, a Koulibali is a Kéita's senãnku among the Bambara; Bozo and Dogon as well as Bozo and Somono are also senãnku(1).\n\n \"The Soninke and the Bamana, the Mossi and the Gurmantche, the Manding with the Soninke,\nthe Khassonke and the Bamana maintain joking kinship.\"\n\n[For Malinke] Ailleurs dans la sous région",
+    "relation_label": "",
+    "local_term": "",
+    "symmetry": "",
+    "relation_type": "",
+    "confidence": 0.0,
+    "joking_source": "icmid_jr_pair"
+  },
+  "icmid_jr_pair:577": {
+    "id": "icmid_jr_pair:577",
     "source": "ICMID",
     "doc_id": "Bargu_Schottman_1995.pdf; Bargou_Bigou_2019.pdf",
     "source_pdf": "Bargu_Schottman_1995.pdf; Bargou_Bigou_2019.pdf.pdf",
@@ -14374,8 +14449,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:575": {
-    "id": "icmid_jr_pair:575",
+  "icmid_jr_pair:578": {
+    "id": "icmid_jr_pair:578",
     "source": "ICMID",
     "doc_id": "Bargu_Schottman_1995.pdf; Bargou_Bigou_2019.pdf",
     "source_pdf": "Bargu_Schottman_1995.pdf; Bargou_Bigou_2019.pdf.pdf",
@@ -14399,8 +14474,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:576": {
-    "id": "icmid_jr_pair:576",
+  "icmid_jr_pair:579": {
+    "id": "icmid_jr_pair:579",
     "source": "ICMID",
     "doc_id": "Bargu_Schottman_1995.pdf; Bargou_Bigou_2019.pdf",
     "source_pdf": "Bargu_Schottman_1995.pdf; Bargou_Bigou_2019.pdf.pdf",
@@ -14424,8 +14499,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:577": {
-    "id": "icmid_jr_pair:577",
+  "icmid_jr_pair:580": {
+    "id": "icmid_jr_pair:580",
     "source": "ICMID",
     "doc_id": "CoteDivoire_Nea_2021.pdf\n\nCotedivoire_Meke_2004.pdf",
     "source_pdf": "CoteDivoire_Nea_2021.pdf\n\nCotedivoire_Meke_2004.pdf.pdf",
@@ -14449,8 +14524,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:578": {
-    "id": "icmid_jr_pair:578",
+  "icmid_jr_pair:581": {
+    "id": "icmid_jr_pair:581",
     "source": "ICMID",
     "doc_id": "CoteDivoire_Nea_2021.pdf\n\nCotedivoire_Meke_2004.pdf",
     "source_pdf": "CoteDivoire_Nea_2021.pdf\n\nCotedivoire_Meke_2004.pdf.pdf",
@@ -14474,8 +14549,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:579": {
-    "id": "icmid_jr_pair:579",
+  "icmid_jr_pair:582": {
+    "id": "icmid_jr_pair:582",
     "source": "ICMID",
     "doc_id": "Bayi_Nandiba",
     "source_pdf": "Bayi_Nandiba.pdf",
@@ -14491,7 +14566,7 @@
     "scope_coded": "cross_group",
     "reasoning": "",
     "notes": "",
-    "quote": "Les railleries et les plaisanteries organisées par les Dii et les Gbaya\npendant les cérémonies funéraires constituent aussi un facteur de consolidation\ndes liens interethniques entre Dii et Gbaya.",
+    "quote": "Les railleries et les plaisanteries organisées par les Dii et les Gbaya pendant les cérémonies funéraires constituent aussi un facteur de consolidation des liens interethniques entre Dii et Gbaya.",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -14499,8 +14574,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:580": {
-    "id": "icmid_jr_pair:580",
+  "icmid_jr_pair:583": {
+    "id": "icmid_jr_pair:583",
     "source": "ICMID",
     "doc_id": "Mitchell_J._C_1956.pdf",
     "source_pdf": "Mitchell_J._C_1956.pdf.pdf",
@@ -14524,8 +14599,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:581": {
-    "id": "icmid_jr_pair:581",
+  "icmid_jr_pair:584": {
+    "id": "icmid_jr_pair:584",
     "source": "ICMID",
     "doc_id": "IAN_CUNNISON_1959.pdf",
     "source_pdf": "IAN_CUNNISON_1959.pdf.pdf",
@@ -14549,8 +14624,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:582": {
-    "id": "icmid_jr_pair:582",
+  "icmid_jr_pair:585": {
+    "id": "icmid_jr_pair:585",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -14574,8 +14649,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:583": {
-    "id": "icmid_jr_pair:583",
+  "icmid_jr_pair:586": {
+    "id": "icmid_jr_pair:586",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -14599,8 +14674,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:584": {
-    "id": "icmid_jr_pair:584",
+  "icmid_jr_pair:587": {
+    "id": "icmid_jr_pair:587",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -14624,8 +14699,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:585": {
-    "id": "icmid_jr_pair:585",
+  "icmid_jr_pair:588": {
+    "id": "icmid_jr_pair:588",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -14649,8 +14724,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:586": {
-    "id": "icmid_jr_pair:586",
+  "icmid_jr_pair:589": {
+    "id": "icmid_jr_pair:589",
     "source": "ICMID",
     "doc_id": "CoteDivoire_Nea_2021.pdf",
     "source_pdf": "CoteDivoire_Nea_2021.pdf.pdf",
@@ -14674,13 +14749,13 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:587": {
-    "id": "icmid_jr_pair:587",
+  "icmid_jr_pair:590": {
+    "id": "icmid_jr_pair:590",
     "source": "ICMID",
-    "doc_id": "",
-    "source_pdf": "",
+    "doc_id": "/Mbuti_Turnbull_1983_32_KS",
+    "source_pdf": "Mbuti_Turnbull_1983_32_KS.pdf",
     "source_url": "/Mbuti_Turnbull_1983_32_KS",
-    "source_citation": "Yet with all this mockery and ridicule, and very real trickery, there was never a trace of malice or real hostility. If anything, it was really rather friendly ridicule, a form of group joking relationship that merely helped to establish the clear and necessary difference between “them” and “us.”\n \n\n ...they came to regard me with the same kind of rather amused disdain that they had, or pretended to have, for the Mbuti.",
+    "source_citation": "",
     "source_page": "",
     "ethnography_group": "",
     "region": "Central Africa",
@@ -14691,7 +14766,7 @@
     "scope_coded": "cross_group",
     "reasoning": "",
     "notes": "",
-    "quote": "",
+    "quote": "Yet with all this mockery and ridicule, and very real trickery, there was never a trace of malice or real hostility. If anything, it was really rather friendly ridicule, a form of group joking relationship that merely helped to establish the clear and necessary difference between “them” and “us.” ...they came to regard me with the same kind of rather amused disdain that they had, or pretended to have, for the Mbuti.",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -14699,8 +14774,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:588": {
-    "id": "icmid_jr_pair:588",
+  "icmid_jr_pair:591": {
+    "id": "icmid_jr_pair:591",
     "source": "ICMID",
     "doc_id": "Burkina_Nyamba_2001.html",
     "source_pdf": "Burkina_Nyamba_2001.html.pdf",
@@ -14724,8 +14799,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:589": {
-    "id": "icmid_jr_pair:589",
+  "icmid_jr_pair:592": {
+    "id": "icmid_jr_pair:592",
     "source": "ICMID",
     "doc_id": "Burkina_Nyamba_2001.html",
     "source_pdf": "Burkina_Nyamba_2001.html.pdf",
@@ -14749,8 +14824,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:590": {
-    "id": "icmid_jr_pair:590",
+  "icmid_jr_pair:593": {
+    "id": "icmid_jr_pair:593",
     "source": "ICMID",
     "doc_id": "Burkina_Nyamba_2001.html\n [for Karaboro] Burkina_Hagberg_2006",
     "source_pdf": "Burkina_Nyamba_2001.html\n [for Karaboro] Burkina_Hagberg_2006.pdf",
@@ -14774,8 +14849,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:591": {
-    "id": "icmid_jr_pair:591",
+  "icmid_jr_pair:594": {
+    "id": "icmid_jr_pair:594",
     "source": "ICMID",
     "doc_id": "Jacques_Coenen-Huther_1987.pdf",
     "source_pdf": "Jacques_Coenen-Huther_1987.pdf.pdf",
@@ -14799,24 +14874,24 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:592": {
-    "id": "icmid_jr_pair:592",
+  "icmid_jr_pair:595": {
+    "id": "icmid_jr_pair:595",
     "source": "ICMID",
-    "doc_id": "Burkina_Hagberg_2006",
-    "source_pdf": "Burkina_Hagberg_2006.pdf",
-    "source_url": "https://www.jstor.org/stable/25843052",
-    "source_citation": "Hagberg, Sten. “The Politics of Joking Relationships in Burkina Faso.” Zeitschrift Für Ethnologie 131, no. 2 (2006): 197–214. http://www.jstor.org/stable/25843052.",
+    "doc_id": "Burkina_Nyamba_2001.html\n\nBurkina_Hagberg_2006",
+    "source_pdf": "Burkina_Nyamba_2001.html\n\nBurkina_Hagberg_2006.pdf",
+    "source_url": "https://journals.openedition.org/communication/5503?lang=en\n\nhttps://www.jstor.org/stable/25843052",
+    "source_citation": "Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.\n\nHagberg, Sten. “The Politics of Joking Relationships in Burkina Faso.” Zeitschrift Für Ethnologie 131, no. 2 (2006): 197–214. http://www.jstor.org/stable/25843052.",
     "source_page": "197",
     "ethnography_group": "",
     "region": "West Africa",
     "entity_a": "BOBO",
-    "entity_b": "Fulbe",
+    "entity_b": "Liptako",
     "entity_a_type": "",
     "entity_b_type": "",
     "scope_coded": "cross_group",
     "reasoning": "",
     "notes": "",
-    "quote": "This paper is about joking relationships and how these are expressed socio-politically\nin different contexts in present-day Burkina Faso. The practice of joking relationships\nis omnipresent in everyday life, and occurs within the family (e. g. between grandchil\ndren and grandparents), between clans (e.g. Coulibaly and Ouattara), and between\nethnic groups (e. g. Fulbe and Bobo, Dagara and Gouin)",
+    "quote": "Tableau 1. Groupes alliés à plaisanteries\n\n\"This paper is about joking relationships and how these are expressed socio-politically\nin different contexts in present-day Burkina Faso. The practice of joking relationships\nis omnipresent in everyday life, and occurs within the family (e. g. between grandchil\ndren and grandparents), between clans (e.g. Coulibaly and Ouattara), and between\nethnic groups (e. g. Fulbe and Bobo, Dagara and Gouin)\"",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -14824,8 +14899,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:593": {
-    "id": "icmid_jr_pair:593",
+  "icmid_jr_pair:596": {
+    "id": "icmid_jr_pair:596",
     "source": "ICMID",
     "doc_id": "Bozo_Attino_2021, Bambara_119_NK:p1",
     "source_pdf": "Bozo_Attino_2021, Bambara_119_NK:p1.pdf",
@@ -14849,8 +14924,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:594": {
-    "id": "icmid_jr_pair:594",
+  "icmid_jr_pair:597": {
+    "id": "icmid_jr_pair:597",
     "source": "ICMID",
     "doc_id": "Sisala_Grindal_1972",
     "source_pdf": "Sisala_Grindal_1972.pdf",
@@ -14874,8 +14949,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:595": {
-    "id": "icmid_jr_pair:595",
+  "icmid_jr_pair:598": {
+    "id": "icmid_jr_pair:598",
     "source": "ICMID",
     "doc_id": "Bura_Dice.pdf",
     "source_pdf": "Bura_Dice.pdf.pdf",
@@ -14899,14 +14974,14 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:596": {
-    "id": "icmid_jr_pair:596",
+  "icmid_jr_pair:599": {
+    "id": "icmid_jr_pair:599",
     "source": "ICMID",
-    "doc_id": "Burkina_Hagberg_2006",
-    "source_pdf": "Burkina_Hagberg_2006.pdf",
-    "source_url": "",
-    "source_citation": "The Politics of Joking Relationships in Burkina Faso\nAuthor(s): Sten Hagberg\nSource: Zeitschrift für Ethnologie, 2006, Bd. 131, H. 2 (2006), pp. 197-214\nPublished by: Dietrich Reimer Verlag GmbH\nStable URL: https://www.jstor.org/stable/25843052",
-    "source_page": "202",
+    "doc_id": "Mossi_Skinner_195_NK.pdf\n [for Dagari] Dagaaba_Wegru_2000.pdf\n[For Busansi] Burkina_Hagberg_2006",
+    "source_pdf": "Mossi_Skinner_195_NK.pdf\n [for Dagari] Dagaaba_Wegru_2000.pdf\n[For Busansi] Burkina_Hagberg_2006.pdf",
+    "source_url": "https://www.jstor.org/stable/3773072",
+    "source_citation": "Grindal, Bruce T. “An Ethnographic Classification of the Sisala of Northern Ghana.” Ethnology 11, no. 4 (1972): 409–24. https://doi.org/10.2307/3773072.\n \n Cohen, Ronald. 1960. The Structure of Kanuri Society. 1960, Ann Arbor, Michigan. University Microfilms. https://ehrafworldcultures.yale.edu/cultures/ms14/documents/003.\n\n [for Dagari] Wegru, Joseph Yelepuo. “The Dagaaba-Frafra Joking Relationship.” Folklore: Electronic Journal of Folklore 14 (2000): 85–97. https://doi.org/10.7592/FEJF2000.14.dagaaba.\n\n[For Busansi] The Politics of Joking Relationships in Burkina Faso\nAuthor(s): Sten Hagberg\nSource: Zeitschrift für Ethnologie, 2006, Bd. 131, H. 2 (2006), pp. 197-214\nPublished by: Dietrich Reimer Verlag GmbH\nStable URL: https://www.jstor.org/stable/25843052",
+    "source_page": "411\n [for Dagari] 1\n[For Busansi] 202",
     "ethnography_group": "",
     "region": "West Africa",
     "entity_a": "BUSANSI",
@@ -14916,7 +14991,7 @@
     "scope_coded": "cross_group",
     "reasoning": "",
     "notes": "",
-    "quote": "and no official sanction was taken against the bad\nbehaviour of the state agent Ernest. In other words, the joking relationship between\nBisa and Gurunsi - in this case between the district head (Andre) and the wife of the\nstate agent (Solange) - saved Ernest from sancti",
+    "quote": "The Sisala have an institutional form of intertribal joking rela-\n tionship with the tribes whom they refer to as Grunshi, Ilamely, the Nanuma\n and Nankanse and possibly also the Builsa and Kasena.\n \n \n[For Busansi] and no official sanction was taken against the bad\nbehaviour of the state agent Ernest. In other words, the joking relationship between\nBisa and Gurunsi - in this case between the district head (Andre) and the wife of the\nstate agent (Solange) - saved Ernest from sancti",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -14924,8 +14999,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:597": {
-    "id": "icmid_jr_pair:597",
+  "icmid_jr_pair:600": {
+    "id": "icmid_jr_pair:600",
     "source": "ICMID",
     "doc_id": "Mandinka_Volkova_2018.pdf\n [for Serer] Serer_Evans_2025\n[for Balante] Balante_Badjie_2020",
     "source_pdf": "Mandinka_Volkova_2018.pdf\n [for Serer] Serer_Evans_2025\n[for Balante] Balante_Badjie_2020.pdf",
@@ -14949,8 +15024,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:598": {
-    "id": "icmid_jr_pair:598",
+  "icmid_jr_pair:601": {
+    "id": "icmid_jr_pair:601",
     "source": "ICMID",
     "doc_id": "Serer_Evans_2025\n [for Tukulor] Tukulor_Galvan_2006.pdf\n[for Balante] Balante_Badjie_2020.pdf",
     "source_pdf": "Serer_Evans_2025\n [for Tukulor] Tukulor_Galvan_2006.pdf\n[for Balante] Balante_Badjie_2020.pdf.pdf",
@@ -14974,8 +15049,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:599": {
-    "id": "icmid_jr_pair:599",
+  "icmid_jr_pair:602": {
+    "id": "icmid_jr_pair:602",
     "source": "ICMID",
     "doc_id": "Songhai_Cisse_2013",
     "source_pdf": "Songhai_Cisse_2013.pdf",
@@ -14999,8 +15074,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:600": {
-    "id": "icmid_jr_pair:600",
+  "icmid_jr_pair:603": {
+    "id": "icmid_jr_pair:603",
     "source": "ICMID",
     "doc_id": "Bozo_Attino_2021, Bambara_119_NK:p1",
     "source_pdf": "Bozo_Attino_2021, Bambara_119_NK:p1.pdf",
@@ -15024,8 +15099,33 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:601": {
-    "id": "icmid_jr_pair:601",
+  "icmid_jr_pair:604": {
+    "id": "icmid_jr_pair:604",
+    "source": "ICMID",
+    "doc_id": "Bambara_Diallo_2006.pdf\n\nBambara_119_NK:p1\n\nSonghai_Cisse_2013        \n\n[For Malinke] Cotedivoire_Meke_2004.pdf",
+    "source_pdf": "Bambara_Diallo_2006.pdf\n\nBambara_119_NK:p1\n\nSonghai_Cisse_2013        \n\n[For Malinke] Cotedivoire_Meke_2004.pdf.pdf",
+    "source_url": "https://www.academia.edu/49184471/Introduction_joking_kinship_1258_\n[For Malinke]    https://jaga.afrique-gouvernance.net/_docs/les_alliances_a_plaisanteries_comme_voie.pdf",
+    "source_citation": "Youssouf DIALLO, « Identités et relations de plaisanterie chez les Peuls de l'ouest du Burkina Faso »,\nCahiers d’études africaines [En ligne], 184 | 2006, mis en ligne le 01 janvier 2008, consulté le 21\nseptembre 2021. URL : http://journals.openedition.org/etudesafricaines/15399 ; DOI : https://doi.org/\n10.4000/etudesafricaines.15399\n\nDieterlen, Germaine, and Katia Wolf. 1951. “An Essay on the Religion of the Bambara.” In Bibliothèque de Sociologie Contemporaine. 1951, Paris. Presses universitaires de France. https://ehrafworldcultures.yale.edu/cultures/fa08/documents/001.\n\ncisse, mamadou. “Introduction Joking Kinship[1258].” Joking Kinship, 2013.       \n\n[For Malinke] Meïté, Méké. 2004. \"Les alliances à plaisanteries comme voie...\" Éthiopiques 72. https://jaga.afrique-gouvernance.net/_docs/les_alliances_a_plaisanteries_comme_voie.pdf.",
+    "source_page": "783\n\n[for Soninke]  14",
+    "ethnography_group": "",
+    "region": "West Africa",
+    "entity_a": "Bambara",
+    "entity_b": "MALINKE",
+    "entity_a_type": "",
+    "entity_b_type": "",
+    "scope_coded": "cross_group",
+    "reasoning": "",
+    "notes": "",
+    "quote": "L’examen des\naspects historiques du phénomène des plaisanteries dans ses moments\nconstitutifs révèle que ce type de relations constitue le modèle restreint\nd’interactions sociales larges et relativement anciennes où se reflète la repré-\nsentation de rapports de force passés entre groupes dominants et groupes\ndominés dans les formations étatiques précoloniales ouest-africaines. Les\nrelations de clientèle Peuls/Bambara dans le cadre du royaume de Ségou,\nde même que les relations entre les chefs wattara/ouattara de l’ancien État\nde Kong et les groupes assujettis sont typiques de ce genre de relations\nentre dominants et dominés.\n\nThus, a Koulibali is a Kéita's senãnku among the Bambara; Bozo and Dogon as well as Bozo and Somono are also senãnku(1).\n\n \"The Soninke and the Bamana, the Mossi and the Gurmantche, the Manding with the Soninke,\nthe Khassonke and the Bamana maintain joking kinship.\"\n\n[For Malinke] Ailleurs dans la sous région",
+    "relation_label": "",
+    "local_term": "",
+    "symmetry": "",
+    "relation_type": "",
+    "confidence": 0.0,
+    "joking_source": "icmid_jr_pair"
+  },
+  "icmid_jr_pair:605": {
+    "id": "icmid_jr_pair:605",
     "source": "ICMID",
     "doc_id": "",
     "source_pdf": "",
@@ -15049,8 +15149,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:602": {
-    "id": "icmid_jr_pair:602",
+  "icmid_jr_pair:606": {
+    "id": "icmid_jr_pair:606",
     "source": "ICMID",
     "doc_id": "CoteDivoire_Nea_2021.pdf",
     "source_pdf": "CoteDivoire_Nea_2021.pdf.pdf",
@@ -15074,8 +15174,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:603": {
-    "id": "icmid_jr_pair:603",
+  "icmid_jr_pair:607": {
+    "id": "icmid_jr_pair:607",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -15099,8 +15199,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:604": {
-    "id": "icmid_jr_pair:604",
+  "icmid_jr_pair:608": {
+    "id": "icmid_jr_pair:608",
     "source": "ICMID",
     "doc_id": "Wim_van Binsbergen_2011.pdf",
     "source_pdf": "Wim_van Binsbergen_2011.pdf.pdf",
@@ -15124,8 +15224,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:605": {
-    "id": "icmid_jr_pair:605",
+  "icmid_jr_pair:609": {
+    "id": "icmid_jr_pair:609",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -15149,8 +15249,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:606": {
-    "id": "icmid_jr_pair:606",
+  "icmid_jr_pair:610": {
+    "id": "icmid_jr_pair:610",
     "source": "ICMID",
     "doc_id": "",
     "source_pdf": "",
@@ -15174,13 +15274,13 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:607": {
-    "id": "icmid_jr_pair:607",
+  "icmid_jr_pair:611": {
+    "id": "icmid_jr_pair:611",
     "source": "ICMID",
-    "doc_id": "Burkina_Nyamba_2001.html",
-    "source_pdf": "Burkina_Nyamba_2001.html.pdf",
-    "source_url": "https://journals.openedition.org/communication/5503?lang=en",
-    "source_citation": "Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.",
+    "doc_id": "Burkina_Nyamba_2001.html\n\nCotedivoire_Meke_2004.pdf",
+    "source_pdf": "Burkina_Nyamba_2001.html\n\nCotedivoire_Meke_2004.pdf.pdf",
+    "source_url": "https://journals.openedition.org/communication/5503?lang=en\n\nhttps://jaga.afrique-gouvernance.net/_docs/les_alliances_a_plaisanteries_comme_voie.pdf",
+    "source_citation": "Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.\n\nMeïté, Méké. 2004. \"Les alliances à plaisanteries comme voie...\" Éthiopiques 72. https://jaga.afrique-gouvernance.net/_docs/les_alliances_a_plaisanteries_comme_voie.pdf.",
     "source_page": "",
     "ethnography_group": "",
     "region": "West Africa",
@@ -15189,9 +15289,9 @@
     "entity_a_type": "",
     "entity_b_type": "",
     "scope_coded": "cross_group",
-    "reasoning": "",
-    "notes": "",
-    "quote": "Tableau 1. Groupes alliés à plaisanteries",
+    "reasoning": "Changing Fulbe to Liptako as liptako is a fulani area",
+    "notes": "Changing Fulbe to Liptako as liptako is a fulani area",
+    "quote": "Tableau 1. Groupes alliés à plaisanteries\n\n1.3. Ailleurs dans la sous région",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -15199,8 +15299,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:608": {
-    "id": "icmid_jr_pair:608",
+  "icmid_jr_pair:612": {
+    "id": "icmid_jr_pair:612",
     "source": "ICMID",
     "doc_id": "Bura_Dice.pdf",
     "source_pdf": "Bura_Dice.pdf.pdf",
@@ -15224,13 +15324,38 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:609": {
-    "id": "icmid_jr_pair:609",
+  "icmid_jr_pair:613": {
+    "id": "icmid_jr_pair:613",
     "source": "ICMID",
-    "doc_id": "Burkina_Nyamba_2001.html",
-    "source_pdf": "Burkina_Nyamba_2001.html.pdf",
-    "source_url": "https://journals.openedition.org/communication/5503?lang=en",
-    "source_citation": "Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.",
+    "doc_id": "CoteDivoire_Nea_2021.pdf",
+    "source_pdf": "CoteDivoire_Nea_2021.pdf.pdf",
+    "source_url": "",
+    "source_citation": "NEA, Madou. « Écriture et développement en Côte d'Ivoire ». ZAOULI, n°02 Spécial, décembre 2021, pp. 318-328. Enseignant-chercheur, Département de Théâtre et Traditions Populaires, ESTCA/INSAAC, Côte d'Ivoire. ISSN : 2788-9343.",
+    "source_page": "322",
+    "ethnography_group": "",
+    "region": "West Africa",
+    "entity_a": "Brong",
+    "entity_b": "KULANGO",
+    "entity_a_type": "",
+    "entity_b_type": "",
+    "scope_coded": "cross_group",
+    "reasoning": "",
+    "notes": "",
+    "quote": "Tableau 2 : Alliances inter-ethniques à plaisanterie",
+    "relation_label": "",
+    "local_term": "",
+    "symmetry": "",
+    "relation_type": "",
+    "confidence": 0.0,
+    "joking_source": "icmid_jr_pair"
+  },
+  "icmid_jr_pair:614": {
+    "id": "icmid_jr_pair:614",
+    "source": "ICMID",
+    "doc_id": "Burkina_Nyamba_2001.html\n\nCotedivoire_Meke_2004.pdf",
+    "source_pdf": "Burkina_Nyamba_2001.html\n\nCotedivoire_Meke_2004.pdf.pdf",
+    "source_url": "https://journals.openedition.org/communication/5503?lang=en\n\nhttps://jaga.afrique-gouvernance.net/_docs/les_alliances_a_plaisanteries_comme_voie.pdf",
+    "source_citation": "Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.\n\nMeïté, Méké. 2004. \"Les alliances à plaisanteries comme voie...\" Éthiopiques 72. https://jaga.afrique-gouvernance.net/_docs/les_alliances_a_plaisanteries_comme_voie.pdf.",
     "source_page": "",
     "ethnography_group": "",
     "region": "West Africa",
@@ -15239,9 +15364,9 @@
     "entity_a_type": "",
     "entity_b_type": "",
     "scope_coded": "cross_group",
-    "reasoning": "",
-    "notes": "",
-    "quote": "Tableau 1. Groupes alliés à plaisanteries",
+    "reasoning": "Changing Fulbe to Liptako as liptako is a fulani area",
+    "notes": "Changing Fulbe to Liptako as liptako is a fulani area",
+    "quote": "Tableau 1. Groupes alliés à plaisanteries\n\n1.3. Ailleurs dans la sous région",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -15249,8 +15374,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:610": {
-    "id": "icmid_jr_pair:610",
+  "icmid_jr_pair:615": {
+    "id": "icmid_jr_pair:615",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -15274,8 +15399,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:611": {
-    "id": "icmid_jr_pair:611",
+  "icmid_jr_pair:616": {
+    "id": "icmid_jr_pair:616",
     "source": "ICMID",
     "doc_id": "Chokossi_Abokyi_2025",
     "source_pdf": "Chokossi_Abokyi_2025.pdf",
@@ -15299,8 +15424,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:612": {
-    "id": "icmid_jr_pair:612",
+  "icmid_jr_pair:617": {
+    "id": "icmid_jr_pair:617",
     "source": "ICMID",
     "doc_id": "Chokossi_Abokyi_2025",
     "source_pdf": "Chokossi_Abokyi_2025.pdf",
@@ -15324,8 +15449,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:613": {
-    "id": "icmid_jr_pair:613",
+  "icmid_jr_pair:618": {
+    "id": "icmid_jr_pair:618",
     "source": "ICMID",
     "doc_id": "",
     "source_pdf": "",
@@ -15341,7 +15466,7 @@
     "scope_coded": "cross_group",
     "reasoning": "The Marabtin tribes are a subgroup of Cyrenaicans. Source : https://www.jstor.org/stable/2844217?googleloggedin=true&seq=13, pg 41",
     "notes": "The Marabtin tribes are a subgroup of Cyrenaicans. Source : https://www.jstor.org/stable/2844217?googleloggedin=true&seq=13, pg 41",
-    "quote": "Today, the Bedouins tend to joke about their lack of zeal, and often point out that “holy men” are not to be trusted.\nThis is seen in Sa’adi behavior toward the Marabtin tribes who are their vassals. ; With the mother’s brother a man enjoys all the freedoms he is denied in his relationships with his father and father’s brother. He is permitted to joke with him; they indulge in exchanges of obscenities.",
+    "quote": "Today, the Bedouins tend to joke about their lack of zeal, and often point out that “holy men” are not to be trusted. This is seen in Sa’adi behavior toward the Marabtin tribes who are their vassals. ; With the mother’s brother a man enjoys all the freedoms he is denied in his relationships with his father and father’s brother. He is permitted to joke with him; they indulge in exchanges of obscenities.",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -15349,8 +15474,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:614": {
-    "id": "icmid_jr_pair:614",
+  "icmid_jr_pair:619": {
+    "id": "icmid_jr_pair:619",
     "source": "ICMID",
     "doc_id": "Cham_Adelberger_1999",
     "source_pdf": "Cham_Adelberger_1999.pdf",
@@ -15374,24 +15499,24 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:615": {
-    "id": "icmid_jr_pair:615",
+  "icmid_jr_pair:620": {
+    "id": "icmid_jr_pair:620",
     "source": "ICMID",
-    "doc_id": "Burkina_Nyamba_2001.html",
-    "source_pdf": "Burkina_Nyamba_2001.html.pdf",
-    "source_url": "https://journals.openedition.org/communication/5503?lang=en",
-    "source_citation": "Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.",
+    "doc_id": "Burkina_Nyamba_2001.html\n\nCotedivoire_Meke_2004.pdf",
+    "source_pdf": "Burkina_Nyamba_2001.html\n\nCotedivoire_Meke_2004.pdf.pdf",
+    "source_url": "https://journals.openedition.org/communication/5503?lang=en\n\nhttps://jaga.afrique-gouvernance.net/_docs/les_alliances_a_plaisanteries_comme_voie.pdf",
+    "source_citation": "Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.\n\nMeïté, Méké. 2004. \"Les alliances à plaisanteries comme voie...\" Éthiopiques 72. https://jaga.afrique-gouvernance.net/_docs/les_alliances_a_plaisanteries_comme_voie.pdf.",
     "source_page": "",
     "ethnography_group": "",
     "region": "West Africa",
     "entity_a": "DAFI",
-    "entity_b": "Fulbe",
+    "entity_b": "Liptako",
     "entity_a_type": "",
     "entity_b_type": "",
     "scope_coded": "cross_group",
-    "reasoning": "",
-    "notes": "",
-    "quote": "Tableau 1. Groupes alliés à plaisanteries",
+    "reasoning": "Changing Fulbe to Liptako as liptako is a fulani area",
+    "notes": "Changing Fulbe to Liptako as liptako is a fulani area",
+    "quote": "Tableau 1. Groupes alliés à plaisanteries\n\n1.3. Ailleurs dans la sous région",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -15399,14 +15524,39 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:616": {
-    "id": "icmid_jr_pair:616",
+  "icmid_jr_pair:621": {
+    "id": "icmid_jr_pair:621",
     "source": "ICMID",
-    "doc_id": "Mossi_Skinner_195_NK.pdf\n [for Dagari] Dagaaba_Wegru_2000.pdf",
-    "source_pdf": "Mossi_Skinner_195_NK.pdf\n [for Dagari] Dagaaba_Wegru_2000.pdf.pdf",
+    "doc_id": "Burkina_Nyamba_2001.html\n[For Dafi] Cotedivoire_Meke_2004.pdf",
+    "source_pdf": "Burkina_Nyamba_2001.html\n[For Dafi] Cotedivoire_Meke_2004.pdf.pdf",
+    "source_url": "https://journals.openedition.org/communication/5503?lang=en\n\nhttps://jaga.afrique-gouvernance.net/_docs/les_alliances_a_plaisanteries_comme_voie.pdf",
+    "source_citation": "Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.\n\nMeïté, Méké. 2004. \"Les alliances à plaisanteries comme voie...\" Éthiopiques 72.",
+    "source_page": "",
+    "ethnography_group": "",
+    "region": "West Africa",
+    "entity_a": "DAFI",
+    "entity_b": "Mossi",
+    "entity_a_type": "",
+    "entity_b_type": "",
+    "scope_coded": "cross_group",
+    "reasoning": "",
+    "notes": "",
+    "quote": "Tableau 1. Groupes alliés à plaisanteries\n\n[For Dafi] 1.3. Ailleurs dans la sous région... Mossi/Dafin",
+    "relation_label": "",
+    "local_term": "",
+    "symmetry": "",
+    "relation_type": "",
+    "confidence": 0.0,
+    "joking_source": "icmid_jr_pair"
+  },
+  "icmid_jr_pair:622": {
+    "id": "icmid_jr_pair:622",
+    "source": "ICMID",
+    "doc_id": "Mossi_Skinner_195_NK.pdf\n [for Dagari] Dagaaba_Wegru_2000.pdf\n[For Busansi] Burkina_Hagberg_2006",
+    "source_pdf": "Mossi_Skinner_195_NK.pdf\n [for Dagari] Dagaaba_Wegru_2000.pdf\n[For Busansi] Burkina_Hagberg_2006.pdf",
     "source_url": "https://www.jstor.org/stable/3773072",
-    "source_citation": "Grindal, Bruce T. “An Ethnographic Classification of the Sisala of Northern Ghana.” Ethnology 11, no. 4 (1972): 409–24. https://doi.org/10.2307/3773072.\n \n Cohen, Ronald. 1960. The Structure of Kanuri Society. 1960, Ann Arbor, Michigan. University Microfilms. https://ehrafworldcultures.yale.edu/cultures/ms14/documents/003.\n\n [for Dagari] Wegru, Joseph Yelepuo. “The Dagaaba-Frafra Joking Relationship.” Folklore: Electronic Journal of Folklore 14 (2000): 85–97. https://doi.org/10.7592/FEJF2000.14.dagaaba.",
-    "source_page": "411\n [for Dagari] 1",
+    "source_citation": "Grindal, Bruce T. “An Ethnographic Classification of the Sisala of Northern Ghana.” Ethnology 11, no. 4 (1972): 409–24. https://doi.org/10.2307/3773072.\n \n Cohen, Ronald. 1960. The Structure of Kanuri Society. 1960, Ann Arbor, Michigan. University Microfilms. https://ehrafworldcultures.yale.edu/cultures/ms14/documents/003.\n\n [for Dagari] Wegru, Joseph Yelepuo. “The Dagaaba-Frafra Joking Relationship.” Folklore: Electronic Journal of Folklore 14 (2000): 85–97. https://doi.org/10.7592/FEJF2000.14.dagaaba.\n\n[For Busansi] The Politics of Joking Relationships in Burkina Faso\nAuthor(s): Sten Hagberg\nSource: Zeitschrift für Ethnologie, 2006, Bd. 131, H. 2 (2006), pp. 197-214\nPublished by: Dietrich Reimer Verlag GmbH\nStable URL: https://www.jstor.org/stable/25843052",
+    "source_page": "411\n [for Dagari] 1\n[For Busansi] 202",
     "ethnography_group": "",
     "region": "West Africa",
     "entity_a": "DAGARI",
@@ -15416,7 +15566,7 @@
     "scope_coded": "cross_group",
     "reasoning": "",
     "notes": "",
-    "quote": "The Sisala have an institutional form of intertribal joking rela-\n tionship with the tribes whom they refer to as Grunshi, Ilamely, the Nanuma\n and Nankanse and possibly also the Builsa and Kasena.\n \n The Mossi\n attitude toward the Gourounsi men is conditioned by the fact that the \n Mossi were still expanding and absorbing the Gourounsi when the French\n arrived. Mossi often jokingly refer to the Gourounsi as their ligidi (meaning\n money), implying their status as individuals to be sold as slaves.\n [for Builsa] The Sisala have an institutional form of intertribal joking rela-\n tionship with the tribes whom they refer to as Grunshi, Ilamely, the Nanuma\n and Nankanse and possibly also the Builsa and Kasena.\n [for Dagari] The present article concerns inter-ethnic humour and its develop-\n ment between the Dagaaba and Gurune (or Frafra) tribes in Ghana.",
+    "quote": "The Sisala have an institutional form of intertribal joking rela-\n tionship with the tribes whom they refer to as Grunshi, Ilamely, the Nanuma\n and Nankanse and possibly also the Builsa and Kasena.\n \n \n[For Busansi] and no official sanction was taken against the bad\nbehaviour of the state agent Ernest. In other words, the joking relationship between\nBisa and Gurunsi - in this case between the district head (Andre) and the wife of the\nstate agent (Solange) - saved Ernest from sancti",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -15424,8 +15574,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:617": {
-    "id": "icmid_jr_pair:617",
+  "icmid_jr_pair:623": {
+    "id": "icmid_jr_pair:623",
     "source": "ICMID",
     "doc_id": "Dagaaba_Wegru_2000.pdf\n\n[For Guin] Burkina_Nyamba_2001.html",
     "source_pdf": "Dagaaba_Wegru_2000.pdf\n\n[For Guin] Burkina_Nyamba_2001.html.pdf",
@@ -15449,8 +15599,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:618": {
-    "id": "icmid_jr_pair:618",
+  "icmid_jr_pair:624": {
+    "id": "icmid_jr_pair:624",
     "source": "ICMID",
     "doc_id": "Dagomba_Awedoba_2006",
     "source_pdf": "Dagomba_Awedoba_2006.pdf",
@@ -15474,8 +15624,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:619": {
-    "id": "icmid_jr_pair:619",
+  "icmid_jr_pair:625": {
+    "id": "icmid_jr_pair:625",
     "source": "ICMID",
     "doc_id": "Dakakari_Gummi_2023",
     "source_pdf": "Dakakari_Gummi_2023.pdf",
@@ -15499,8 +15649,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:620": {
-    "id": "icmid_jr_pair:620",
+  "icmid_jr_pair:626": {
+    "id": "icmid_jr_pair:626",
     "source": "ICMID",
     "doc_id": "Dan_Kadjo_2014.pdf",
     "source_pdf": "Dan_Kadjo_2014.pdf.pdf",
@@ -15524,8 +15674,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:621": {
-    "id": "icmid_jr_pair:621",
+  "icmid_jr_pair:627": {
+    "id": "icmid_jr_pair:627",
     "source": "ICMID",
     "doc_id": "Gagu_Achilles.pdf",
     "source_pdf": "Gagu_Achilles.pdf.pdf",
@@ -15549,8 +15699,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:622": {
-    "id": "icmid_jr_pair:622",
+  "icmid_jr_pair:628": {
+    "id": "icmid_jr_pair:628",
     "source": "ICMID",
     "doc_id": "CoteDivoire_Nea_2021.pdf\n[For Dan] Dan_Kadjo_2014.pdf",
     "source_pdf": "CoteDivoire_Nea_2021.pdf\n[For Dan] Dan_Kadjo_2014.pdf.pdf",
@@ -15574,8 +15724,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:623": {
-    "id": "icmid_jr_pair:623",
+  "icmid_jr_pair:629": {
+    "id": "icmid_jr_pair:629",
     "source": "ICMID",
     "doc_id": "Dan_Kadjo_2014.pdf",
     "source_pdf": "Dan_Kadjo_2014.pdf.pdf",
@@ -15599,8 +15749,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:624": {
-    "id": "icmid_jr_pair:624",
+  "icmid_jr_pair:630": {
+    "id": "icmid_jr_pair:630",
     "source": "ICMID",
     "doc_id": "Dan_Kadjo_2014.pdf",
     "source_pdf": "Dan_Kadjo_2014.pdf.pdf",
@@ -15624,8 +15774,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:625": {
-    "id": "icmid_jr_pair:625",
+  "icmid_jr_pair:631": {
+    "id": "icmid_jr_pair:631",
     "source": "ICMID",
     "doc_id": "Dan_Kadjo_2014.pdf",
     "source_pdf": "Dan_Kadjo_2014.pdf.pdf",
@@ -15649,13 +15799,13 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:626": {
-    "id": "icmid_jr_pair:626",
+  "icmid_jr_pair:632": {
+    "id": "icmid_jr_pair:632",
     "source": "ICMID",
-    "doc_id": "Burkina_Hagberg_2006\n[For Dian] Burkina_Nyamba_2001.html",
-    "source_pdf": "Burkina_Hagberg_2006\n[For Dian] Burkina_Nyamba_2001.html.pdf",
-    "source_url": "https://www.jstor.org/stable/25843052\n[For Dian] https://journals.openedition.org/communication/5503?lang=en",
-    "source_citation": "Hagberg, Sten. “The Politics of Joking Relationships in Burkina Faso.” Zeitschrift Für Ethnologie 131, no. 2 (2006): 197–214. http://www.jstor.org/stable/25843052.\n\n[For Dian] Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.",
+    "doc_id": "Burkina_Hagberg_2006\n[For Dian] Burkina_Nyamba_2001.html       \n[For Lobi] Lobi_Sissao.html",
+    "source_pdf": "Burkina_Hagberg_2006\n[For Dian] Burkina_Nyamba_2001.html       \n[For Lobi] Lobi_Sissao.html.pdf",
+    "source_url": "https://www.jstor.org/stable/25843052\n[For Dian] https://journals.openedition.org/communication/5503?lang=en\n[For Lobi] https://journals.openedition.org/africanistes/636",
+    "source_citation": "Hagberg, Sten. “The Politics of Joking Relationships in Burkina Faso.” Zeitschrift Für Ethnologie 131, no. 2 (2006): 197–214. http://www.jstor.org/stable/25843052.\n\n[For Dian] Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.\n\n[For Lobi] Alain Joseph Sissao, Alliances et parentés à plaisanterie au Burkina Faso: Mécanismes de fonctionnement et avenir (Ouagadougou: Sankofa & Gurli Éditions, 2002), 333–336.",
     "source_page": "197",
     "ethnography_group": "",
     "region": "West Africa",
@@ -15666,7 +15816,7 @@
     "scope_coded": "cross_group",
     "reasoning": "",
     "notes": "",
-    "quote": "This paper is about joking relationships and how these are expressed socio-politically\nin different contexts in present-day Burkina Faso. The practice of joking relationships\nis omnipresent in everyday life, and occurs within the family (e. g. between grandchil\ndren and grandparents), between clans (e.g. Coulibaly and Ouattara), and between\nethnic groups (e. g. Fulbe and Bobo, Dagara and Gouin)\n\n[For Dian] Tableau 1. Groupes alliés à plaisanteries",
+    "quote": "This paper is about joking relationships and how these are expressed socio-politically\nin different contexts in present-day Burkina Faso. The practice of joking relationships\nis omnipresent in everyday life, and occurs within the family (e. g. between grandchil\ndren and grandparents), between clans (e.g. Coulibaly and Ouattara), and between\nethnic groups (e. g. Fulbe and Bobo, Dagara and Gouin)\n\n[For Dian] Tableau 1. Groupes alliés à plaisanteries\n\n[For Lobi]  Ainsi entend-on fréquemment les Cerma (Gouin) accuser les Lobi d’être des « mangeurs de chiens » et ces derniers se défendre en rétorquant que « les Cerma sont de grands buveurs de banji (vin de palme) ».",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -15674,8 +15824,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:627": {
-    "id": "icmid_jr_pair:627",
+  "icmid_jr_pair:633": {
+    "id": "icmid_jr_pair:633",
     "source": "ICMID",
     "doc_id": "CoteDivoire_Nea_2021.pdf,\nCotedivoire_Meke_2004.pdf,\nAttie_UNDP_2016        \n[for Avikam] Avikam_Victor_2025.pdf",
     "source_pdf": "CoteDivoire_Nea_2021.pdf,\nCotedivoire_Meke_2004.pdf,\nAttie_UNDP_2016        \n[for Avikam] Avikam_Victor_2025.pdf.pdf",
@@ -15699,33 +15849,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:628": {
-    "id": "icmid_jr_pair:628",
-    "source": "ICMID",
-    "doc_id": "CoteDivoire_Nea_2021.pdf,\nCotedivoire_Meke_2004.pdf,\nAttie_UNDP_2016        \n[for Avikam] Avikam_Victor_2025.pdf",
-    "source_pdf": "CoteDivoire_Nea_2021.pdf,\nCotedivoire_Meke_2004.pdf,\nAttie_UNDP_2016        \n[for Avikam] Avikam_Victor_2025.pdf.pdf",
-    "source_url": "[for Attie] https://mptf.undp.org/sites/default/files/documents/25000/les_pactes_communautaires_outils_de_prevention_des_conflits_et_de_consolidation_de_la_paix.pdf\n[for Avikam] https://www.revue-zaouli.com/wp-content/uploads/2025/05/11-MABA-Tagbo-Victor_Zaouli_Hors-Serie-N%C2%B04_Mai-2025.pdf",
-    "source_citation": "NEA, Madou. « Écriture et développement en Côte d'Ivoire ». ZAOULI, n°02 Spécial, décembre 2021, pp. 318-328. Enseignant-chercheur, Département de Théâtre et Traditions Populaires, ESTCA/INSAAC, Côte d'Ivoire. ISSN : 2788-9343.,\n\nMeïté, Méké. 2004. \"Les alliances à plaisanteries comme voie...\" Éthiopiques 72. https://jaga.afrique-gouvernance.net/_docs/les_alliances_a_plaisanteries_comme_voie.pdf\n\nAction pour le Développement Communautaire (ADC). Les pactes communautaires, outils de prévention des conflits et de consolidation de la paix : le cas de la Guinée forestière et des pays limitrophes, Libéria, Sierra Leone et Côte d’Ivoire. Rapport d’étude. Mars 2016. Financé par le PNUD/Peacebuilding Fund,\n\n[for Avikam] MABA, Tagbo Victor. « L'alliance matrimoniale entre Dida et Avikam en Côte d'Ivoire : histoire et implications dans l'intégration des deux communautés ». ZAOULI, Hors-Série n°4, mai 2025, pp. 267-294. ISSN-L 2788-9343, E-ISSN 2959-7870.",
-    "source_page": "322",
-    "ethnography_group": "",
-    "region": "West Africa",
-    "entity_a": "DIDA",
-    "entity_b": "Kroumen",
-    "entity_a_type": "",
-    "entity_b_type": "",
-    "scope_coded": "cross_group",
-    "reasoning": "",
-    "notes": "",
-    "quote": "Tableau 2 : Alliances inter-ethniques à plaisanterie,\n\nQUELQUES ALLIANCES A PLAISANTERIES...Adjoukrou /Dida, Adjoukrou / Alladian        \n\n\"en Côte\nd’Ivoire, les Attié ont pour parentés à plaisanterie les Oida, Mbatto, Kroumen, Bakué), ce n’est\npas le cas en Guinée forestière\"\n\n[for Attie] en Côte\nd’Ivoire, les Attié ont pour parentés à plaisanterie les Oida, Mbatto, Kroumen, Bakué), ce n’est\npas le cas en Guinée forestière\n[for Avikam] Cette forme de collaboration est tout aussi valable dans le\nmandingue, au nord, entre les parents à plaisanterie et dans\nle sud, entre les alliés matrimoniaux Dida et Avikam. C’est\nune alliance de non-agression qui exige des alliés la\ncoexistence pacifique.",
-    "relation_label": "",
-    "local_term": "",
-    "symmetry": "",
-    "relation_type": "",
-    "confidence": 0.0,
-    "joking_source": "icmid_jr_pair"
-  },
-  "icmid_jr_pair:629": {
-    "id": "icmid_jr_pair:629",
+  "icmid_jr_pair:634": {
+    "id": "icmid_jr_pair:634",
     "source": "ICMID",
     "doc_id": "CoteDivoire_Nea_2021.pdf,\nCotedivoire_Meke_2004.pdf,\nAttie_UNDP_2016        \n[for Avikam] Avikam_Victor_2025.pdf",
     "source_pdf": "CoteDivoire_Nea_2021.pdf,\nCotedivoire_Meke_2004.pdf,\nAttie_UNDP_2016        \n[for Avikam] Avikam_Victor_2025.pdf.pdf",
@@ -15749,8 +15874,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:630": {
-    "id": "icmid_jr_pair:630",
+  "icmid_jr_pair:635": {
+    "id": "icmid_jr_pair:635",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -15774,8 +15899,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:631": {
-    "id": "icmid_jr_pair:631",
+  "icmid_jr_pair:636": {
+    "id": "icmid_jr_pair:636",
     "source": "ICMID",
     "doc_id": "Thomas_Herlehy_1984.pdf",
     "source_pdf": "Thomas_Herlehy_1984.pdf.pdf",
@@ -15799,8 +15924,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:632": {
-    "id": "icmid_jr_pair:632",
+  "icmid_jr_pair:637": {
+    "id": "icmid_jr_pair:637",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -15824,8 +15949,33 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:633": {
-    "id": "icmid_jr_pair:633",
+  "icmid_jr_pair:638": {
+    "id": "icmid_jr_pair:638",
+    "source": "ICMID",
+    "doc_id": "Dyula_Launay_1977.pdf\n\n[For Lobi] Burkina_Nyamba_2001.html",
+    "source_pdf": "Dyula_Launay_1977.pdf\n\n[For Lobi] Burkina_Nyamba_2001.html.pdf",
+    "source_url": "[For Lobi] https://journals.openedition.org/communication/5503?lang=en",
+    "source_citation": "Launay, Robert. “Joking Slavery.” Africa 47, no. 4 (1977): 413–22. https://doi.org/10.2307/1158346.\n\n[For Lobi] Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.",
+    "source_page": "413",
+    "ethnography_group": "",
+    "region": "West Africa",
+    "entity_a": "DIULA",
+    "entity_b": "Lobi",
+    "entity_a_type": "",
+    "entity_b_type": "",
+    "scope_coded": "cross_group",
+    "reasoning": "",
+    "notes": "",
+    "quote": "THE Dyula of northern Ivory Coast consider that joking behaviour (tlon, a word\nthat applies more generally to 'play', such as children's games) is an\nappropriate mode of social interaction between a variety of categories of persons. Such\nbehaviour is by no means peculiar to the Dyula and to related societies. For the most\npart, the kinds of role relationships characterized by joking among the Dyula have\nlong been familiar to anthropologists: 'grandparents' and 'grandchildren', cross-\ncousins, certain categories of affines (cf. Radcliffe-Brown 1952: 90-I i6). \n\n[For lobi] Tableau 1. Groupes alliés à plaisanteries",
+    "relation_label": "",
+    "local_term": "",
+    "symmetry": "",
+    "relation_type": "",
+    "confidence": 0.0,
+    "joking_source": "icmid_jr_pair"
+  },
+  "icmid_jr_pair:639": {
+    "id": "icmid_jr_pair:639",
     "source": "ICMID",
     "doc_id": "Komono_Diallo_2006",
     "source_pdf": "Komono_Diallo_2006.pdf",
@@ -15849,13 +15999,13 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:634": {
-    "id": "icmid_jr_pair:634",
+  "icmid_jr_pair:640": {
+    "id": "icmid_jr_pair:640",
     "source": "ICMID",
-    "doc_id": "Burkina_Hagberg_2006\n[For Dian] Burkina_Nyamba_2001.html",
-    "source_pdf": "Burkina_Hagberg_2006\n[For Dian] Burkina_Nyamba_2001.html.pdf",
-    "source_url": "https://www.jstor.org/stable/25843052\n[For Dian] https://journals.openedition.org/communication/5503?lang=en",
-    "source_citation": "Hagberg, Sten. “The Politics of Joking Relationships in Burkina Faso.” Zeitschrift Für Ethnologie 131, no. 2 (2006): 197–214. http://www.jstor.org/stable/25843052.\n\n[For Dian] Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.",
+    "doc_id": "Burkina_Hagberg_2006\n[For Dian] Burkina_Nyamba_2001.html       \n[For Lobi] Lobi_Sissao.html",
+    "source_pdf": "Burkina_Hagberg_2006\n[For Dian] Burkina_Nyamba_2001.html       \n[For Lobi] Lobi_Sissao.html.pdf",
+    "source_url": "https://www.jstor.org/stable/25843052\n[For Dian] https://journals.openedition.org/communication/5503?lang=en\n[For Lobi] https://journals.openedition.org/africanistes/636",
+    "source_citation": "Hagberg, Sten. “The Politics of Joking Relationships in Burkina Faso.” Zeitschrift Für Ethnologie 131, no. 2 (2006): 197–214. http://www.jstor.org/stable/25843052.\n\n[For Dian] Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.\n\n[For Lobi] Alain Joseph Sissao, Alliances et parentés à plaisanterie au Burkina Faso: Mécanismes de fonctionnement et avenir (Ouagadougou: Sankofa & Gurli Éditions, 2002), 333–336.",
     "source_page": "197",
     "ethnography_group": "",
     "region": "West Africa",
@@ -15866,7 +16016,7 @@
     "scope_coded": "cross_group",
     "reasoning": "",
     "notes": "",
-    "quote": "This paper is about joking relationships and how these are expressed socio-politically\nin different contexts in present-day Burkina Faso. The practice of joking relationships\nis omnipresent in everyday life, and occurs within the family (e. g. between grandchil\ndren and grandparents), between clans (e.g. Coulibaly and Ouattara), and between\nethnic groups (e. g. Fulbe and Bobo, Dagara and Gouin)\n\n[For Dian] Tableau 1. Groupes alliés à plaisanteries",
+    "quote": "This paper is about joking relationships and how these are expressed socio-politically\nin different contexts in present-day Burkina Faso. The practice of joking relationships\nis omnipresent in everyday life, and occurs within the family (e. g. between grandchil\ndren and grandparents), between clans (e.g. Coulibaly and Ouattara), and between\nethnic groups (e. g. Fulbe and Bobo, Dagara and Gouin)\n\n[For Dian] Tableau 1. Groupes alliés à plaisanteries\n\n[For Lobi]  Ainsi entend-on fréquemment les Cerma (Gouin) accuser les Lobi d’être des « mangeurs de chiens » et ces derniers se défendre en rétorquant que « les Cerma sont de grands buveurs de banji (vin de palme) ».",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -15874,8 +16024,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:635": {
-    "id": "icmid_jr_pair:635",
+  "icmid_jr_pair:641": {
+    "id": "icmid_jr_pair:641",
     "source": "ICMID",
     "doc_id": "Burkina_Nyamba_2001.html",
     "source_pdf": "Burkina_Nyamba_2001.html.pdf",
@@ -15899,8 +16049,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:636": {
-    "id": "icmid_jr_pair:636",
+  "icmid_jr_pair:642": {
+    "id": "icmid_jr_pair:642",
     "source": "ICMID",
     "doc_id": "Yoruba_Enoch_2024\n [for Dakakari] Dakakari_Gummi_2023\n [for Gbari] Hausa_Beik_215_NK:p2\n [for Nupe] Dakakari_Gummi_2023\n [for Songhai] Songhai_Cisse_2013",
     "source_pdf": "Yoruba_Enoch_2024\n [for Dakakari] Dakakari_Gummi_2023\n [for Gbari] Hausa_Beik_215_NK:p2\n [for Nupe] Dakakari_Gummi_2023\n [for Songhai] Songhai_Cisse_2013.pdf",
@@ -15924,8 +16074,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:637": {
-    "id": "icmid_jr_pair:637",
+  "icmid_jr_pair:643": {
+    "id": "icmid_jr_pair:643",
     "source": "ICMID",
     "doc_id": "Mandinka_Volkova_2018.pdf\n [for Serer] Serer_Evans_2025\n[for Balante] Balante_Badjie_2020",
     "source_pdf": "Mandinka_Volkova_2018.pdf\n [for Serer] Serer_Evans_2025\n[for Balante] Balante_Badjie_2020.pdf",
@@ -15949,33 +16099,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:638": {
-    "id": "icmid_jr_pair:638",
-    "source": "ICMID",
-    "doc_id": "Burkina_Nyamba_2001.html\n [for Karaboro] Burkina_Hagberg_2006",
-    "source_pdf": "Burkina_Nyamba_2001.html\n [for Karaboro] Burkina_Hagberg_2006.pdf",
-    "source_url": "https://journals.openedition.org/communication/5503?lang=en",
-    "source_citation": "Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.\n [for Karaboro] The Politics of Joking Relationships in Burkina Faso\n Author(s): Sten Hagberg\n Source: Zeitschrift für Ethnologie, 2006, Bd. 131, H. 2 (2006), pp. 197-214\n Published by: Dietrich Reimer Verlag GmbH\n Stable URL: https://www.jstor.org/stable/25843052",
-    "source_page": "[for Karaboro] 212",
-    "ethnography_group": "",
-    "region": "West Africa",
-    "entity_a": "Diula",
-    "entity_b": "LOBI",
-    "entity_a_type": "",
-    "entity_b_type": "",
-    "scope_coded": "cross_group",
-    "reasoning": "",
-    "notes": "",
-    "quote": "Tableau 1. Groupes alliés à plaisanteries\n [for Karaboro] d pact, today all people from Banfora and all people from Gaoua joke with\n each other. Karaboro joke with Lobi, although some interlocutors recognise that they do\n not have any blood pa",
-    "relation_label": "",
-    "local_term": "",
-    "symmetry": "",
-    "relation_type": "",
-    "confidence": 0.0,
-    "joking_source": "icmid_jr_pair"
-  },
-  "icmid_jr_pair:639": {
-    "id": "icmid_jr_pair:639",
+  "icmid_jr_pair:644": {
+    "id": "icmid_jr_pair:644",
     "source": "ICMID",
     "doc_id": "CoteDivoire_Nea_2021.pdf\n[For Dan] Dan_Kadjo_2014.pdf",
     "source_pdf": "CoteDivoire_Nea_2021.pdf\n[For Dan] Dan_Kadjo_2014.pdf.pdf",
@@ -15999,8 +16124,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:640": {
-    "id": "icmid_jr_pair:640",
+  "icmid_jr_pair:645": {
+    "id": "icmid_jr_pair:645",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -16024,8 +16149,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:641": {
-    "id": "icmid_jr_pair:641",
+  "icmid_jr_pair:646": {
+    "id": "icmid_jr_pair:646",
     "source": "ICMID",
     "doc_id": "Songhai_Cisse_2013\n [for Dogon] Bozo_Attino_2021",
     "source_pdf": "Songhai_Cisse_2013\n [for Dogon] Bozo_Attino_2021.pdf",
@@ -16049,8 +16174,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:642": {
-    "id": "icmid_jr_pair:642",
+  "icmid_jr_pair:647": {
+    "id": "icmid_jr_pair:647",
     "source": "ICMID",
     "doc_id": "Yoruba_Enoch_2024\n [for Fon] Bargou_Bigou_2019.pdf",
     "source_pdf": "Yoruba_Enoch_2024\n [for Fon] Bargou_Bigou_2019.pdf.pdf",
@@ -16074,8 +16199,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:643": {
-    "id": "icmid_jr_pair:643",
+  "icmid_jr_pair:648": {
+    "id": "icmid_jr_pair:648",
     "source": "ICMID",
     "doc_id": "",
     "source_pdf": "",
@@ -16099,8 +16224,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:644": {
-    "id": "icmid_jr_pair:644",
+  "icmid_jr_pair:649": {
+    "id": "icmid_jr_pair:649",
     "source": "ICMID",
     "doc_id": "Kanuri_Lohr_2005, [for Afo] Afo_Martin_2023",
     "source_pdf": "Kanuri_Lohr_2005, [for Afo] Afo_Martin_2023.pdf",
@@ -16124,8 +16249,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:645": {
-    "id": "icmid_jr_pair:645",
+  "icmid_jr_pair:650": {
+    "id": "icmid_jr_pair:650",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -16149,8 +16274,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:646": {
-    "id": "icmid_jr_pair:646",
+  "icmid_jr_pair:651": {
+    "id": "icmid_jr_pair:651",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -16174,8 +16299,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:647": {
-    "id": "icmid_jr_pair:647",
+  "icmid_jr_pair:652": {
+    "id": "icmid_jr_pair:652",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -16199,39 +16324,14 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:648": {
-    "id": "icmid_jr_pair:648",
+  "icmid_jr_pair:653": {
+    "id": "icmid_jr_pair:653",
     "source": "ICMID",
-    "doc_id": "Mossi_Skinner_195_NK.pdf\n [for Dagari] Dagaaba_Wegru_2000.pdf",
-    "source_pdf": "Mossi_Skinner_195_NK.pdf\n [for Dagari] Dagaaba_Wegru_2000.pdf.pdf",
+    "doc_id": "Mossi_Skinner_195_NK.pdf\n [for Dagari] Dagaaba_Wegru_2000.pdf\n[For Busansi] Burkina_Hagberg_2006",
+    "source_pdf": "Mossi_Skinner_195_NK.pdf\n [for Dagari] Dagaaba_Wegru_2000.pdf\n[For Busansi] Burkina_Hagberg_2006.pdf",
     "source_url": "https://www.jstor.org/stable/3773072",
-    "source_citation": "Grindal, Bruce T. “An Ethnographic Classification of the Sisala of Northern Ghana.” Ethnology 11, no. 4 (1972): 409–24. https://doi.org/10.2307/3773072.\n \n Cohen, Ronald. 1960. The Structure of Kanuri Society. 1960, Ann Arbor, Michigan. University Microfilms. https://ehrafworldcultures.yale.edu/cultures/ms14/documents/003.\n\n [for Dagari] Wegru, Joseph Yelepuo. “The Dagaaba-Frafra Joking Relationship.” Folklore: Electronic Journal of Folklore 14 (2000): 85–97. https://doi.org/10.7592/FEJF2000.14.dagaaba.",
-    "source_page": "411\n [for Dagari] 1",
-    "ethnography_group": "",
-    "region": "West Africa",
-    "entity_a": "GRUNSHI",
-    "entity_b": "Mossi",
-    "entity_a_type": "",
-    "entity_b_type": "",
-    "scope_coded": "cross_group",
-    "reasoning": "",
-    "notes": "",
-    "quote": "The Sisala have an institutional form of intertribal joking rela-\n tionship with the tribes whom they refer to as Grunshi, Ilamely, the Nanuma\n and Nankanse and possibly also the Builsa and Kasena.\n \n The Mossi\n attitude toward the Gourounsi men is conditioned by the fact that the \n Mossi were still expanding and absorbing the Gourounsi when the French\n arrived. Mossi often jokingly refer to the Gourounsi as their ligidi (meaning\n money), implying their status as individuals to be sold as slaves.\n [for Builsa] The Sisala have an institutional form of intertribal joking rela-\n tionship with the tribes whom they refer to as Grunshi, Ilamely, the Nanuma\n and Nankanse and possibly also the Builsa and Kasena.\n [for Dagari] The present article concerns inter-ethnic humour and its develop-\n ment between the Dagaaba and Gurune (or Frafra) tribes in Ghana.",
-    "relation_label": "",
-    "local_term": "",
-    "symmetry": "",
-    "relation_type": "",
-    "confidence": 0.0,
-    "joking_source": "icmid_jr_pair"
-  },
-  "icmid_jr_pair:649": {
-    "id": "icmid_jr_pair:649",
-    "source": "ICMID",
-    "doc_id": "Mossi_Skinner_195_NK.pdf\n [for Dagari] Dagaaba_Wegru_2000.pdf",
-    "source_pdf": "Mossi_Skinner_195_NK.pdf\n [for Dagari] Dagaaba_Wegru_2000.pdf.pdf",
-    "source_url": "https://www.jstor.org/stable/3773072",
-    "source_citation": "Grindal, Bruce T. “An Ethnographic Classification of the Sisala of Northern Ghana.” Ethnology 11, no. 4 (1972): 409–24. https://doi.org/10.2307/3773072.\n \n Cohen, Ronald. 1960. The Structure of Kanuri Society. 1960, Ann Arbor, Michigan. University Microfilms. https://ehrafworldcultures.yale.edu/cultures/ms14/documents/003.\n\n [for Dagari] Wegru, Joseph Yelepuo. “The Dagaaba-Frafra Joking Relationship.” Folklore: Electronic Journal of Folklore 14 (2000): 85–97. https://doi.org/10.7592/FEJF2000.14.dagaaba.",
-    "source_page": "411\n [for Dagari] 1",
+    "source_citation": "Grindal, Bruce T. “An Ethnographic Classification of the Sisala of Northern Ghana.” Ethnology 11, no. 4 (1972): 409–24. https://doi.org/10.2307/3773072.\n \n Cohen, Ronald. 1960. The Structure of Kanuri Society. 1960, Ann Arbor, Michigan. University Microfilms. https://ehrafworldcultures.yale.edu/cultures/ms14/documents/003.\n\n [for Dagari] Wegru, Joseph Yelepuo. “The Dagaaba-Frafra Joking Relationship.” Folklore: Electronic Journal of Folklore 14 (2000): 85–97. https://doi.org/10.7592/FEJF2000.14.dagaaba.\n\n[For Busansi] The Politics of Joking Relationships in Burkina Faso\nAuthor(s): Sten Hagberg\nSource: Zeitschrift für Ethnologie, 2006, Bd. 131, H. 2 (2006), pp. 197-214\nPublished by: Dietrich Reimer Verlag GmbH\nStable URL: https://www.jstor.org/stable/25843052",
+    "source_page": "411\n [for Dagari] 1\n[For Busansi] 202",
     "ethnography_group": "",
     "region": "West Africa",
     "entity_a": "GRUNSHI",
@@ -16241,7 +16341,7 @@
     "scope_coded": "cross_group",
     "reasoning": "",
     "notes": "",
-    "quote": "The Sisala have an institutional form of intertribal joking rela-\n tionship with the tribes whom they refer to as Grunshi, Ilamely, the Nanuma\n and Nankanse and possibly also the Builsa and Kasena.\n \n The Mossi\n attitude toward the Gourounsi men is conditioned by the fact that the \n Mossi were still expanding and absorbing the Gourounsi when the French\n arrived. Mossi often jokingly refer to the Gourounsi as their ligidi (meaning\n money), implying their status as individuals to be sold as slaves.\n [for Builsa] The Sisala have an institutional form of intertribal joking rela-\n tionship with the tribes whom they refer to as Grunshi, Ilamely, the Nanuma\n and Nankanse and possibly also the Builsa and Kasena.\n [for Dagari] The present article concerns inter-ethnic humour and its develop-\n ment between the Dagaaba and Gurune (or Frafra) tribes in Ghana.",
+    "quote": "The Sisala have an institutional form of intertribal joking rela-\n tionship with the tribes whom they refer to as Grunshi, Ilamely, the Nanuma\n and Nankanse and possibly also the Builsa and Kasena.\n \n \n[For Busansi] and no official sanction was taken against the bad\nbehaviour of the state agent Ernest. In other words, the joking relationship between\nBisa and Gurunsi - in this case between the district head (Andre) and the wife of the\nstate agent (Solange) - saved Ernest from sancti",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -16249,13 +16349,38 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:650": {
-    "id": "icmid_jr_pair:650",
+  "icmid_jr_pair:654": {
+    "id": "icmid_jr_pair:654",
     "source": "ICMID",
-    "doc_id": "Burkina_Nyamba_2001.html\n [for Tem] Tem_Facebook.pdf",
-    "source_pdf": "Burkina_Nyamba_2001.html\n [for Tem] Tem_Facebook.pdf.pdf",
-    "source_url": "https://journals.openedition.org/communication/5503?lang=en\n [for Tem] https://www.facebook.com/nayayodika/photos/la-parent%C3%A9-%C3%A0-plaisanterie-%EF%B8%8F-ce-que-cest-la-parent%C3%A9-%C3%A0-plaisanterie-est-une-pratiq/122123464010069638/",
-    "source_citation": "Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.\n [for Tem] Facebook page Na Ya Yo Dika, 13 Nov 2024",
+    "doc_id": "Burkina_Hagberg_2006\n[For Dian] Burkina_Nyamba_2001.html       \n[For Lobi] Lobi_Sissao.html",
+    "source_pdf": "Burkina_Hagberg_2006\n[For Dian] Burkina_Nyamba_2001.html       \n[For Lobi] Lobi_Sissao.html.pdf",
+    "source_url": "https://www.jstor.org/stable/25843052\n[For Dian] https://journals.openedition.org/communication/5503?lang=en\n[For Lobi] https://journals.openedition.org/africanistes/636",
+    "source_citation": "Hagberg, Sten. “The Politics of Joking Relationships in Burkina Faso.” Zeitschrift Für Ethnologie 131, no. 2 (2006): 197–214. http://www.jstor.org/stable/25843052.\n\n[For Dian] Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.\n\n[For Lobi] Alain Joseph Sissao, Alliances et parentés à plaisanterie au Burkina Faso: Mécanismes de fonctionnement et avenir (Ouagadougou: Sankofa & Gurli Éditions, 2002), 333–336.",
+    "source_page": "197",
+    "ethnography_group": "",
+    "region": "West Africa",
+    "entity_a": "GUIN",
+    "entity_b": "Lobi",
+    "entity_a_type": "",
+    "entity_b_type": "",
+    "scope_coded": "cross_group",
+    "reasoning": "",
+    "notes": "",
+    "quote": "This paper is about joking relationships and how these are expressed socio-politically\nin different contexts in present-day Burkina Faso. The practice of joking relationships\nis omnipresent in everyday life, and occurs within the family (e. g. between grandchil\ndren and grandparents), between clans (e.g. Coulibaly and Ouattara), and between\nethnic groups (e. g. Fulbe and Bobo, Dagara and Gouin)\n\n[For Dian] Tableau 1. Groupes alliés à plaisanteries\n\n[For Lobi]  Ainsi entend-on fréquemment les Cerma (Gouin) accuser les Lobi d’être des « mangeurs de chiens » et ces derniers se défendre en rétorquant que « les Cerma sont de grands buveurs de banji (vin de palme) ».",
+    "relation_label": "",
+    "local_term": "",
+    "symmetry": "",
+    "relation_type": "",
+    "confidence": 0.0,
+    "joking_source": "icmid_jr_pair"
+  },
+  "icmid_jr_pair:655": {
+    "id": "icmid_jr_pair:655",
+    "source": "ICMID",
+    "doc_id": "Burkina_Nyamba_2001.html\n [for Tem] Tem_Facebook.pdf\n[for Yadse] Gurma_Yaogo_2024",
+    "source_pdf": "Burkina_Nyamba_2001.html\n [for Tem] Tem_Facebook.pdf\n[for Yadse] Gurma_Yaogo_2024.pdf",
+    "source_url": "https://journals.openedition.org/communication/5503?lang=en\n [for Tem] https://www.facebook.com/nayayodika/photos/la-parent%C3%A9-%C3%A0-plaisanterie-%EF%B8%8F-ce-que-cest-la-parent%C3%A9-%C3%A0-plaisanterie-est-une-pratiq/122123464010069638/\n[for Yadse] https://www.revue-akofena.com/wp-content/uploads/2025/03/Col.12-Gerard-YAOGO_131-144.pdf",
+    "source_citation": "Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.\n [for Tem] Facebook page Na Ya Yo Dika, 13 Nov 2024\n[for Yadse] Yaogo, Gérard. 2025. « Les figures de style dans les discours de la parenté et de l'alliance à plaisanterie. » Akofena, hors-série 12 (mars): 131–144.",
     "source_page": "",
     "ethnography_group": "",
     "region": "West Africa",
@@ -16266,7 +16391,7 @@
     "scope_coded": "cross_group",
     "reasoning": "",
     "notes": "",
-    "quote": "Tableau 1. Groupes alliés à plaisanteries\n [for Tem] Au Togo, il existe des ethnies qui se charrient entre elles. C’est l’exemple des #Tem et des #Mobas sur le terme\n “#Wawa” qui signifie “esclave”. Les deux s’appellent Wawa ; à se demander finalement qui est l’esclave de l’autre ?\n Ou encore des #Akposso et des #Akebu au sujet de “#Alè” qui signifie “celui que j’envoie”.\n \n les Tém ont eu à conclure des alliances communautaires (« Kédya ») encore vivaces aujourd'hui avec les Moba et les Gourmantché vivant à Dapaong au nord du Togo et au sud du Burkina Faso d'une part et avec les Samirê au centre-est du Togo et au Bénin d'autre part, justifiant les railleries réciproques (bastêrê) entre eux et les groupes concernés. Ces alliances autorisent des railleries réciproques entre ces peuples.",
+    "quote": "Tableau 1. Groupes alliés à plaisanteries\n [for Tem] Au Togo, il existe des ethnies qui se charrient entre elles. C’est l’exemple des #Tem et des #Mobas sur le terme\n “#Wawa” qui signifie “esclave”. Les deux s’appellent Wawa ; à se demander finalement qui est l’esclave de l’autre ?\n Ou encore des #Akposso et des #Akebu au sujet de “#Alè” qui signifie “celui que j’envoie”.\n \n les Tém ont eu à conclure des alliances communautaires (« Kédya ») encore vivaces aujourd'hui avec les Moba et les Gourmantché vivant à Dapaong au nord du Togo et au sud du Burkina Faso d'une part et avec les Samirê au centre-est du Togo et au Bénin d'autre part, justifiant les railleries réciproques (bastêrê) entre eux et les groupes concernés. Ces alliances autorisent des railleries réciproques entre ces peuples.\n\n[for Yadse] L’alliance à plaisanterie se fait spécifiquement entre ethnies, entre\ncastes. Au Burkina Faso, ce jeu social se pratique entre les Samo et les Mossé, les Bissa et\nles Gourounsis, les Bobo et les Dafing, les Bobo et les Peul, les Peul et les Yarsé, les\nGourmatché et les Yadse, les Bissa et les Yadse, les Zaosé et les Yana. Notons bien que la\nliste est non-exhaustive.",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -16274,13 +16399,38 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:651": {
-    "id": "icmid_jr_pair:651",
+  "icmid_jr_pair:656": {
+    "id": "icmid_jr_pair:656",
     "source": "ICMID",
-    "doc_id": "Burkina_Nyamba_2001.html\n [for Tem] Tem_Facebook.pdf",
-    "source_pdf": "Burkina_Nyamba_2001.html\n [for Tem] Tem_Facebook.pdf.pdf",
-    "source_url": "https://journals.openedition.org/communication/5503?lang=en\n [for Tem] https://www.facebook.com/nayayodika/photos/la-parent%C3%A9-%C3%A0-plaisanterie-%EF%B8%8F-ce-que-cest-la-parent%C3%A9-%C3%A0-plaisanterie-est-une-pratiq/122123464010069638/",
-    "source_citation": "Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.\n [for Tem] Facebook page Na Ya Yo Dika, 13 Nov 2024",
+    "doc_id": "Burkina_Nyamba_2001.html\n [for Tem] Tem_Facebook.pdf\n[for Yadse] Gurma_Yaogo_2024",
+    "source_pdf": "Burkina_Nyamba_2001.html\n [for Tem] Tem_Facebook.pdf\n[for Yadse] Gurma_Yaogo_2024.pdf",
+    "source_url": "https://journals.openedition.org/communication/5503?lang=en\n [for Tem] https://www.facebook.com/nayayodika/photos/la-parent%C3%A9-%C3%A0-plaisanterie-%EF%B8%8F-ce-que-cest-la-parent%C3%A9-%C3%A0-plaisanterie-est-une-pratiq/122123464010069638/\n[for Yadse] https://www.revue-akofena.com/wp-content/uploads/2025/03/Col.12-Gerard-YAOGO_131-144.pdf",
+    "source_citation": "Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.\n [for Tem] Facebook page Na Ya Yo Dika, 13 Nov 2024\n[for Yadse] Yaogo, Gérard. 2025. « Les figures de style dans les discours de la parenté et de l'alliance à plaisanterie. » Akofena, hors-série 12 (mars): 131–144.",
+    "source_page": "",
+    "ethnography_group": "",
+    "region": "West Africa",
+    "entity_a": "GURMA",
+    "entity_b": "Yadse",
+    "entity_a_type": "",
+    "entity_b_type": "",
+    "scope_coded": "cross_group",
+    "reasoning": "",
+    "notes": "",
+    "quote": "Tableau 1. Groupes alliés à plaisanteries\n [for Tem] Au Togo, il existe des ethnies qui se charrient entre elles. C’est l’exemple des #Tem et des #Mobas sur le terme\n “#Wawa” qui signifie “esclave”. Les deux s’appellent Wawa ; à se demander finalement qui est l’esclave de l’autre ?\n Ou encore des #Akposso et des #Akebu au sujet de “#Alè” qui signifie “celui que j’envoie”.\n \n les Tém ont eu à conclure des alliances communautaires (« Kédya ») encore vivaces aujourd'hui avec les Moba et les Gourmantché vivant à Dapaong au nord du Togo et au sud du Burkina Faso d'une part et avec les Samirê au centre-est du Togo et au Bénin d'autre part, justifiant les railleries réciproques (bastêrê) entre eux et les groupes concernés. Ces alliances autorisent des railleries réciproques entre ces peuples.\n\n[for Yadse] L’alliance à plaisanterie se fait spécifiquement entre ethnies, entre\ncastes. Au Burkina Faso, ce jeu social se pratique entre les Samo et les Mossé, les Bissa et\nles Gourounsis, les Bobo et les Dafing, les Bobo et les Peul, les Peul et les Yarsé, les\nGourmatché et les Yadse, les Bissa et les Yadse, les Zaosé et les Yana. Notons bien que la\nliste est non-exhaustive.",
+    "relation_label": "",
+    "local_term": "",
+    "symmetry": "",
+    "relation_type": "",
+    "confidence": 0.0,
+    "joking_source": "icmid_jr_pair"
+  },
+  "icmid_jr_pair:657": {
+    "id": "icmid_jr_pair:657",
+    "source": "ICMID",
+    "doc_id": "Burkina_Nyamba_2001.html\n [for Tem] Tem_Facebook.pdf\n[for Yadse] Gurma_Yaogo_2024",
+    "source_pdf": "Burkina_Nyamba_2001.html\n [for Tem] Tem_Facebook.pdf\n[for Yadse] Gurma_Yaogo_2024.pdf",
+    "source_url": "https://journals.openedition.org/communication/5503?lang=en\n [for Tem] https://www.facebook.com/nayayodika/photos/la-parent%C3%A9-%C3%A0-plaisanterie-%EF%B8%8F-ce-que-cest-la-parent%C3%A9-%C3%A0-plaisanterie-est-une-pratiq/122123464010069638/\n[for Yadse] https://www.revue-akofena.com/wp-content/uploads/2025/03/Col.12-Gerard-YAOGO_131-144.pdf",
+    "source_citation": "Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.\n [for Tem] Facebook page Na Ya Yo Dika, 13 Nov 2024\n[for Yadse] Yaogo, Gérard. 2025. « Les figures de style dans les discours de la parenté et de l'alliance à plaisanterie. » Akofena, hors-série 12 (mars): 131–144.",
     "source_page": "",
     "ethnography_group": "",
     "region": "West Africa",
@@ -16291,7 +16441,7 @@
     "scope_coded": "cross_group",
     "reasoning": "",
     "notes": "",
-    "quote": "Tableau 1. Groupes alliés à plaisanteries\n [for Tem] Au Togo, il existe des ethnies qui se charrient entre elles. C’est l’exemple des #Tem et des #Mobas sur le terme\n “#Wawa” qui signifie “esclave”. Les deux s’appellent Wawa ; à se demander finalement qui est l’esclave de l’autre ?\n Ou encore des #Akposso et des #Akebu au sujet de “#Alè” qui signifie “celui que j’envoie”.\n \n les Tém ont eu à conclure des alliances communautaires (« Kédya ») encore vivaces aujourd'hui avec les Moba et les Gourmantché vivant à Dapaong au nord du Togo et au sud du Burkina Faso d'une part et avec les Samirê au centre-est du Togo et au Bénin d'autre part, justifiant les railleries réciproques (bastêrê) entre eux et les groupes concernés. Ces alliances autorisent des railleries réciproques entre ces peuples.",
+    "quote": "Tableau 1. Groupes alliés à plaisanteries\n [for Tem] Au Togo, il existe des ethnies qui se charrient entre elles. C’est l’exemple des #Tem et des #Mobas sur le terme\n “#Wawa” qui signifie “esclave”. Les deux s’appellent Wawa ; à se demander finalement qui est l’esclave de l’autre ?\n Ou encore des #Akposso et des #Akebu au sujet de “#Alè” qui signifie “celui que j’envoie”.\n \n les Tém ont eu à conclure des alliances communautaires (« Kédya ») encore vivaces aujourd'hui avec les Moba et les Gourmantché vivant à Dapaong au nord du Togo et au sud du Burkina Faso d'une part et avec les Samirê au centre-est du Togo et au Bénin d'autre part, justifiant les railleries réciproques (bastêrê) entre eux et les groupes concernés. Ces alliances autorisent des railleries réciproques entre ces peuples.\n\n[for Yadse] L’alliance à plaisanterie se fait spécifiquement entre ethnies, entre\ncastes. Au Burkina Faso, ce jeu social se pratique entre les Samo et les Mossé, les Bissa et\nles Gourounsis, les Bobo et les Dafing, les Bobo et les Peul, les Peul et les Yarsé, les\nGourmatché et les Yadse, les Bissa et les Yadse, les Zaosé et les Yana. Notons bien que la\nliste est non-exhaustive.",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -16299,8 +16449,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:652": {
-    "id": "icmid_jr_pair:652",
+  "icmid_jr_pair:658": {
+    "id": "icmid_jr_pair:658",
     "source": "ICMID",
     "doc_id": "CoteDivoire_Nea_2021.pdf\n[For Dan] Dan_Kadjo_2014.pdf",
     "source_pdf": "CoteDivoire_Nea_2021.pdf\n[For Dan] Dan_Kadjo_2014.pdf.pdf",
@@ -16324,8 +16474,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:653": {
-    "id": "icmid_jr_pair:653",
+  "icmid_jr_pair:659": {
+    "id": "icmid_jr_pair:659",
     "source": "ICMID",
     "doc_id": "CoteDivoire_Nea_2021.pdf\n[For Dan] Dan_Kadjo_2014.pdf",
     "source_pdf": "CoteDivoire_Nea_2021.pdf\n[For Dan] Dan_Kadjo_2014.pdf.pdf",
@@ -16349,8 +16499,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:654": {
-    "id": "icmid_jr_pair:654",
+  "icmid_jr_pair:660": {
+    "id": "icmid_jr_pair:660",
     "source": "ICMID",
     "doc_id": "Yoruba_Enoch_2024\n [for Dakakari] Dakakari_Gummi_2023\n [for Gbari] Hausa_Beik_215_NK:p2\n [for Nupe] Dakakari_Gummi_2023\n [for Songhai] Songhai_Cisse_2013",
     "source_pdf": "Yoruba_Enoch_2024\n [for Dakakari] Dakakari_Gummi_2023\n [for Gbari] Hausa_Beik_215_NK:p2\n [for Nupe] Dakakari_Gummi_2023\n [for Songhai] Songhai_Cisse_2013.pdf",
@@ -16374,8 +16524,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:655": {
-    "id": "icmid_jr_pair:655",
+  "icmid_jr_pair:661": {
+    "id": "icmid_jr_pair:661",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -16399,8 +16549,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:656": {
-    "id": "icmid_jr_pair:656",
+  "icmid_jr_pair:662": {
+    "id": "icmid_jr_pair:662",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -16424,8 +16574,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:657": {
-    "id": "icmid_jr_pair:657",
+  "icmid_jr_pair:663": {
+    "id": "icmid_jr_pair:663",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -16449,8 +16599,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:658": {
-    "id": "icmid_jr_pair:658",
+  "icmid_jr_pair:664": {
+    "id": "icmid_jr_pair:664",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -16474,8 +16624,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:659": {
-    "id": "icmid_jr_pair:659",
+  "icmid_jr_pair:665": {
+    "id": "icmid_jr_pair:665",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -16499,14 +16649,14 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:660": {
-    "id": "icmid_jr_pair:660",
+  "icmid_jr_pair:666": {
+    "id": "icmid_jr_pair:666",
     "source": "ICMID",
-    "doc_id": "Tem_Facebook.pdf",
-    "source_pdf": "Tem_Facebook.pdf.pdf",
-    "source_url": "https://www.facebook.com/nayayodika/photos/la-parent%C3%A9-%C3%A0-plaisanterie-%EF%B8%8F-ce-que-cest-la-parent%C3%A9-%C3%A0-plaisanterie-est-une-pratiq/122123464010069638/",
-    "source_citation": "Facebook page Na Ya Yo Dika, 13 Nov 2024",
-    "source_page": "",
+    "doc_id": "Tem_Facebook.pdf\n[for Kabre] Kabre_Adje_2019.pdf",
+    "source_pdf": "Tem_Facebook.pdf\n[for Kabre] Kabre_Adje_2019.pdf.pdf",
+    "source_url": "https://www.facebook.com/nayayodika/photos/la-parent%C3%A9-%C3%A0-plaisanterie-%EF%B8%8F-ce-que-cest-la-parent%C3%A9-%C3%A0-plaisanterie-est-une-pratiq/122123464010069638/\n\n[for Kabre] https://d1wqtxts1xzle7.cloudfront.net/60335073/RAPPORT_SYMPOSIUM_YAOUI_201820190819-84370-11quay1-libre.pdf?1566238223=&response-content-disposition=inline%3B+filename%3DPremiere_Edition_2018_PEUPLEMENT_DU_PAYS.pdf&Expires=1782720619&Signature=GVpe6LoIs1nv0Rp2DofX5jFbRd~I97OM6anE6eCcWLOOKRsa8r9igDHJqYjZj-X0cEBCF2Ib0mkzqWrnOy8RwQ3ivSkNpYT~cuyl6SaFMMB0DbublNbcA0szp8SXkTW2EWFNfzwMMjGLHCeuHaYUhhI1cmLJQBqDVISsfPV3X4wBuudK8FToCkd6DAbpkuzwPbTcQi3GfTeC3JiOdttiByJ0H99AO7XCycaaIFsUkihAaxMmeUXmM-3w8c0poG-mJlu9AEyUH1HWEuek5I64vyon5ASomvWaJIVInTkhGuQ--p-hHZFw1uiDXBftnpeR4IyLGXbBXABOUqTYqlajyw__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA#page=61",
+    "source_citation": "Facebook page Na Ya Yo Dika, 13 Nov 2024\n\n[for Kabre] Adjé, Isaac Alabi (dir.), Vincent Joseph Mama (ed. en chef), Nestor Labiyi, Aliou Fousseni, Abdou-Coudous Mamam & David Amoussouvi (eds.). Symposium Culturel de Yaoui : Peuplement du pays Shabè et occupation du site historique Etoo de Yaoui — Rapport Final, 1ère éd. Mars 2019. ISBN 978-99982-917-1-3. Dépôt légal n° 11199 du 10/04/2019, Bibliothèque Nationale du Bénin, 2ème trimestre",
+    "source_page": "[for Kabre] 96",
     "ethnography_group": "",
     "region": "West Africa",
     "entity_a": "Gourmantche",
@@ -16516,7 +16666,7 @@
     "scope_coded": "cross_group",
     "reasoning": "",
     "notes": "",
-    "quote": "Au Togo, il existe des ethnies qui se charrient entre elles. C’est l’exemple des #Tem et des #Mobas sur le terme\n“#Wawa” qui signifie “esclave”. Les deux s’appellent Wawa ; à se demander finalement qui est l’esclave de l’autre ?\nOu encore des #Akposso et des #Akebu au sujet de “#Alè” qui signifie “celui que j’envoie”.\n\nles Tém ont eu à conclure des alliances communautaires (« Kédya ») encore vivaces aujourd'hui avec les Moba et les Gourmantché vivant à Dapaong au nord du Togo et au sud du Burkina Faso d'une part et avec les Samirê au centre-est du Togo et au Bénin d'autre part, justifiant les railleries réciproques (bastêrê) entre eux et les groupes concernés. Ces alliances autorisent des railleries réciproques entre ces peuples.",
+    "quote": "Au Togo, il existe des ethnies qui se charrient entre elles. C’est l’exemple des #Tem et des #Mobas sur le terme\n“#Wawa” qui signifie “esclave”. Les deux s’appellent Wawa ; à se demander finalement qui est l’esclave de l’autre ?\nOu encore des #Akposso et des #Akebu au sujet de “#Alè” qui signifie “celui que j’envoie”.\n\nles Tém ont eu à conclure des alliances communautaires (« Kédya ») encore vivaces aujourd'hui avec les Moba et les Gourmantché vivant à Dapaong au nord du Togo et au sud du Burkina Faso d'une part et avec les Samirê au centre-est du Togo et au Bénin d'autre part, justifiant les railleries réciproques (bastêrê) entre eux et les groupes concernés. Ces alliances autorisent des railleries réciproques entre ces peuples.\n\n[for Kabre] \"Une nouvelle ère s‟ouvrit ainsi dans les relatons entre les communautés Boo, Baatonu\net Nago. La plaisanterie à taquinerie encore appelée cousinage, ou parenté à taquinerie\nn‟est pas l‟apanage des peuples Boo, Baatombu et Nago du Borgou. C‟est un\nphénomène socioculturel bien connu dans la plupart des sociétés de l‟Afrique de\nl‟ouest. Il s‟établit généralement entre les cousins issus des éléments mâles et des\néléments féminins d‟une même lignée. Le mariage est interdit entre ses cousins et\ncousines parce qu‟ils descendent d‟un même ancêtre. Il s‟établit également entre des\npeuples liés par un certains nombres de traditions, de phénomènes culturels. L‟histoire\nde ces peuples est généralement marquée par des événements heureux ou malheureux\nqu‟ils sont parvenus à gérer de façon consensuelle. On les appelle les peuples historico-\nethnique. C‟est le cas entre les Mossi et les Gulmantchéba du Burkina-Faso, entre les\nKabiè et les Kotokoli du Togo, entre les Djerma et les Boo-Baatonou. C‟est le cas\négalement entre les Boo et les Tchienga les Bokobaru du Nigéria.\"",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -16524,8 +16674,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:661": {
-    "id": "icmid_jr_pair:661",
+  "icmid_jr_pair:667": {
+    "id": "icmid_jr_pair:667",
     "source": "ICMID",
     "doc_id": "CoteDivoire_Nea_2021.pdf\n[For Dan] Dan_Kadjo_2014.pdf",
     "source_pdf": "CoteDivoire_Nea_2021.pdf\n[For Dan] Dan_Kadjo_2014.pdf.pdf",
@@ -16549,33 +16699,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:662": {
-    "id": "icmid_jr_pair:662",
-    "source": "ICMID",
-    "doc_id": "Burkina_Nyamba_2001.html\n [for Karaboro] Burkina_Hagberg_2006",
-    "source_pdf": "Burkina_Nyamba_2001.html\n [for Karaboro] Burkina_Hagberg_2006.pdf",
-    "source_url": "https://journals.openedition.org/communication/5503?lang=en",
-    "source_citation": "Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.\n [for Karaboro] The Politics of Joking Relationships in Burkina Faso\n Author(s): Sten Hagberg\n Source: Zeitschrift für Ethnologie, 2006, Bd. 131, H. 2 (2006), pp. 197-214\n Published by: Dietrich Reimer Verlag GmbH\n Stable URL: https://www.jstor.org/stable/25843052",
-    "source_page": "[for Karaboro] 212",
-    "ethnography_group": "",
-    "region": "West Africa",
-    "entity_a": "Guin",
-    "entity_b": "LOBI",
-    "entity_a_type": "",
-    "entity_b_type": "",
-    "scope_coded": "cross_group",
-    "reasoning": "",
-    "notes": "",
-    "quote": "Tableau 1. Groupes alliés à plaisanteries\n [for Karaboro] d pact, today all people from Banfora and all people from Gaoua joke with\n each other. Karaboro joke with Lobi, although some interlocutors recognise that they do\n not have any blood pa",
-    "relation_label": "",
-    "local_term": "",
-    "symmetry": "",
-    "relation_type": "",
-    "confidence": 0.0,
-    "joking_source": "icmid_jr_pair"
-  },
-  "icmid_jr_pair:663": {
-    "id": "icmid_jr_pair:663",
+  "icmid_jr_pair:668": {
+    "id": "icmid_jr_pair:668",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -16599,8 +16724,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:664": {
-    "id": "icmid_jr_pair:664",
+  "icmid_jr_pair:669": {
+    "id": "icmid_jr_pair:669",
     "source": "ICMID",
     "doc_id": "Yoruba_Enoch_2024\n [for Dakakari] Dakakari_Gummi_2023\n [for Gbari] Hausa_Beik_215_NK:p2\n [for Nupe] Dakakari_Gummi_2023\n [for Songhai] Songhai_Cisse_2013",
     "source_pdf": "Yoruba_Enoch_2024\n [for Dakakari] Dakakari_Gummi_2023\n [for Gbari] Hausa_Beik_215_NK:p2\n [for Nupe] Dakakari_Gummi_2023\n [for Songhai] Songhai_Cisse_2013.pdf",
@@ -16624,8 +16749,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:665": {
-    "id": "icmid_jr_pair:665",
+  "icmid_jr_pair:670": {
+    "id": "icmid_jr_pair:670",
     "source": "ICMID",
     "doc_id": "Yoruba_Enoch_2024\n [for Dakakari] Dakakari_Gummi_2023\n [for Gbari] Hausa_Beik_215_NK:p2\n [for Nupe] Dakakari_Gummi_2023\n [for Songhai] Songhai_Cisse_2013",
     "source_pdf": "Yoruba_Enoch_2024\n [for Dakakari] Dakakari_Gummi_2023\n [for Gbari] Hausa_Beik_215_NK:p2\n [for Nupe] Dakakari_Gummi_2023\n [for Songhai] Songhai_Cisse_2013.pdf",
@@ -16649,8 +16774,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:666": {
-    "id": "icmid_jr_pair:666",
+  "icmid_jr_pair:671": {
+    "id": "icmid_jr_pair:671",
     "source": "ICMID",
     "doc_id": "Yoruba_Enoch_2024\n [for Dakakari] Dakakari_Gummi_2023\n [for Gbari] Hausa_Beik_215_NK:p2\n [for Nupe] Dakakari_Gummi_2023\n [for Songhai] Songhai_Cisse_2013",
     "source_pdf": "Yoruba_Enoch_2024\n [for Dakakari] Dakakari_Gummi_2023\n [for Gbari] Hausa_Beik_215_NK:p2\n [for Nupe] Dakakari_Gummi_2023\n [for Songhai] Songhai_Cisse_2013.pdf",
@@ -16674,8 +16799,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:667": {
-    "id": "icmid_jr_pair:667",
+  "icmid_jr_pair:672": {
+    "id": "icmid_jr_pair:672",
     "source": "ICMID",
     "doc_id": "LUO_Muperasoka Ssentongo_2015",
     "source_pdf": "LUO_Muperasoka Ssentongo_2015.pdf",
@@ -16699,8 +16824,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:668": {
-    "id": "icmid_jr_pair:668",
+  "icmid_jr_pair:673": {
+    "id": "icmid_jr_pair:673",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -16724,8 +16849,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:669": {
-    "id": "icmid_jr_pair:669",
+  "icmid_jr_pair:674": {
+    "id": "icmid_jr_pair:674",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -16749,8 +16874,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:670": {
-    "id": "icmid_jr_pair:670",
+  "icmid_jr_pair:675": {
+    "id": "icmid_jr_pair:675",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -16774,8 +16899,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:671": {
-    "id": "icmid_jr_pair:671",
+  "icmid_jr_pair:676": {
+    "id": "icmid_jr_pair:676",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -16799,8 +16924,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:672": {
-    "id": "icmid_jr_pair:672",
+  "icmid_jr_pair:677": {
+    "id": "icmid_jr_pair:677",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -16824,8 +16949,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:673": {
-    "id": "icmid_jr_pair:673",
+  "icmid_jr_pair:678": {
+    "id": "icmid_jr_pair:678",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -16849,8 +16974,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:674": {
-    "id": "icmid_jr_pair:674",
+  "icmid_jr_pair:679": {
+    "id": "icmid_jr_pair:679",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -16874,8 +16999,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:675": {
-    "id": "icmid_jr_pair:675",
+  "icmid_jr_pair:680": {
+    "id": "icmid_jr_pair:680",
     "source": "ICMID",
     "doc_id": "Yoruba_Enoch_2024\n [for Fon] Bargou_Bigou_2019.pdf",
     "source_pdf": "Yoruba_Enoch_2024\n [for Fon] Bargou_Bigou_2019.pdf.pdf",
@@ -16899,8 +17024,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:676": {
-    "id": "icmid_jr_pair:676",
+  "icmid_jr_pair:681": {
+    "id": "icmid_jr_pair:681",
     "source": "ICMID",
     "doc_id": "LUO_Muperasoka Ssentongo_2015",
     "source_pdf": "LUO_Muperasoka Ssentongo_2015.pdf",
@@ -16924,8 +17049,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:677": {
-    "id": "icmid_jr_pair:677",
+  "icmid_jr_pair:682": {
+    "id": "icmid_jr_pair:682",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -16949,8 +17074,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:678": {
-    "id": "icmid_jr_pair:678",
+  "icmid_jr_pair:683": {
+    "id": "icmid_jr_pair:683",
     "source": "ICMID",
     "doc_id": "Bargou_Bigou_2019.pdf",
     "source_pdf": "Bargou_Bigou_2019.pdf.pdf",
@@ -16974,8 +17099,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:679": {
-    "id": "icmid_jr_pair:679",
+  "icmid_jr_pair:684": {
+    "id": "icmid_jr_pair:684",
     "source": "ICMID",
     "doc_id": "C_M_N_White_1958.pdf",
     "source_pdf": "C_M_N_White_1958.pdf.pdf",
@@ -16999,8 +17124,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:680": {
-    "id": "icmid_jr_pair:680",
+  "icmid_jr_pair:685": {
+    "id": "icmid_jr_pair:685",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -17024,8 +17149,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:681": {
-    "id": "icmid_jr_pair:681",
+  "icmid_jr_pair:686": {
+    "id": "icmid_jr_pair:686",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -17049,8 +17174,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:682": {
-    "id": "icmid_jr_pair:682",
+  "icmid_jr_pair:687": {
+    "id": "icmid_jr_pair:687",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -17074,8 +17199,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:683": {
-    "id": "icmid_jr_pair:683",
+  "icmid_jr_pair:688": {
+    "id": "icmid_jr_pair:688",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -17099,8 +17224,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:684": {
-    "id": "icmid_jr_pair:684",
+  "icmid_jr_pair:689": {
+    "id": "icmid_jr_pair:689",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -17124,8 +17249,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:685": {
-    "id": "icmid_jr_pair:685",
+  "icmid_jr_pair:690": {
+    "id": "icmid_jr_pair:690",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -17149,8 +17274,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:686": {
-    "id": "icmid_jr_pair:686",
+  "icmid_jr_pair:691": {
+    "id": "icmid_jr_pair:691",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -17174,8 +17299,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:687": {
-    "id": "icmid_jr_pair:687",
+  "icmid_jr_pair:692": {
+    "id": "icmid_jr_pair:692",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -17199,8 +17324,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:688": {
-    "id": "icmid_jr_pair:688",
+  "icmid_jr_pair:693": {
+    "id": "icmid_jr_pair:693",
     "source": "ICMID",
     "doc_id": "Cham_Adelberger_1999",
     "source_pdf": "Cham_Adelberger_1999.pdf",
@@ -17224,8 +17349,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:689": {
-    "id": "icmid_jr_pair:689",
+  "icmid_jr_pair:694": {
+    "id": "icmid_jr_pair:694",
     "source": "ICMID",
     "doc_id": "Munga_Adelberger_1993.pdf\n [for Kanuri] Kanuri_Lohr_2005",
     "source_pdf": "Munga_Adelberger_1993.pdf\n [for Kanuri] Kanuri_Lohr_2005.pdf",
@@ -17249,8 +17374,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:690": {
-    "id": "icmid_jr_pair:690",
+  "icmid_jr_pair:695": {
+    "id": "icmid_jr_pair:695",
     "source": "ICMID",
     "doc_id": "Kanuri_Lohr_2005, [for Afo] Afo_Martin_2023",
     "source_pdf": "Kanuri_Lohr_2005, [for Afo] Afo_Martin_2023.pdf",
@@ -17274,8 +17399,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:691": {
-    "id": "icmid_jr_pair:691",
+  "icmid_jr_pair:696": {
+    "id": "icmid_jr_pair:696",
     "source": "ICMID",
     "doc_id": "Kabre_Adje_2019.pdf",
     "source_pdf": "Kabre_Adje_2019.pdf.pdf",
@@ -17299,8 +17424,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:692": {
-    "id": "icmid_jr_pair:692",
+  "icmid_jr_pair:697": {
+    "id": "icmid_jr_pair:697",
     "source": "ICMID",
     "doc_id": "lambert1947.pdf",
     "source_pdf": "lambert1947.pdf.pdf",
@@ -17324,8 +17449,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:693": {
-    "id": "icmid_jr_pair:693",
+  "icmid_jr_pair:698": {
+    "id": "icmid_jr_pair:698",
     "source": "ICMID",
     "doc_id": "Kanuri_Cohen_73_NK",
     "source_pdf": "Kanuri_Cohen_73_NK.pdf",
@@ -17341,7 +17466,7 @@
     "scope_coded": "cross_group",
     "reasoning": "",
     "notes": "",
-    "quote": "Amongst the various\n\noccupations, joking relations obtain between smiths and butchers; barber-\ndoctors and smiths; mallams (koranic teacher-priests) and hunters; kola-nut\n\nwholesalers and retailers; dyers and tailors; a builder of mud houses and his\nlabourers; a fire-wood seller and his customers; pepper sellers and kola-nut\nwholesalers. Joking relations also hold between clans such as Ngala’s and\nMagumi; Nguma and T[unknown]ara; Kuburi and T[unknown]ara; Su’urti and\nKuburi; or between ethnic groups like Shuwa and Kanuri; Kurdi and Shuwa;\nHausa and Fulani; Kanuri and Fulani; Tubu and Monga; Monga and\nB[unknown]adde; Kanembu and Wasili (Arabs).",
+    "quote": "Amongst the various occupations, joking relations obtain between smiths and butchers; barber- doctors and smiths; mallams (koranic teacher-priests) and hunters; kola-nut wholesalers and retailers; dyers and tailors; a builder of mud houses and his labourers; a fire-wood seller and his customers; pepper sellers and kola-nut wholesalers. Joking relations also hold between clans such as Ngala’s and Magumi; Nguma and T[unknown]ara; Kuburi and T[unknown]ara; Su’urti and Kuburi; or between ethnic groups like Shuwa and Kanuri; Kurdi and Shuwa; Hausa and Fulani; Kanuri and Fulani; Tubu and Monga; Monga and B[unknown]adde; Kanembu and Wasili (Arabs).",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -17349,8 +17474,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:694": {
-    "id": "icmid_jr_pair:694",
+  "icmid_jr_pair:699": {
+    "id": "icmid_jr_pair:699",
     "source": "ICMID",
     "doc_id": "Kanuri_Lohr_2005, [for Afo] Afo_Martin_2023",
     "source_pdf": "Kanuri_Lohr_2005, [for Afo] Afo_Martin_2023.pdf",
@@ -17374,8 +17499,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:695": {
-    "id": "icmid_jr_pair:695",
+  "icmid_jr_pair:700": {
+    "id": "icmid_jr_pair:700",
     "source": "ICMID",
     "doc_id": "Lunda_Chidongo_2021.pdf",
     "source_pdf": "Lunda_Chidongo_2021.pdf.pdf",
@@ -17399,8 +17524,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:696": {
-    "id": "icmid_jr_pair:696",
+  "icmid_jr_pair:701": {
+    "id": "icmid_jr_pair:701",
     "source": "ICMID",
     "doc_id": "",
     "source_pdf": "",
@@ -17424,8 +17549,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:697": {
-    "id": "icmid_jr_pair:697",
+  "icmid_jr_pair:702": {
+    "id": "icmid_jr_pair:702",
     "source": "ICMID",
     "doc_id": "Burkina_Hagberg_2006",
     "source_pdf": "Burkina_Hagberg_2006.pdf",
@@ -17449,8 +17574,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:698": {
-    "id": "icmid_jr_pair:698",
+  "icmid_jr_pair:703": {
+    "id": "icmid_jr_pair:703",
     "source": "ICMID",
     "doc_id": "KIKUYU_Eric Mutisya Kioko_2016.pdf",
     "source_pdf": "KIKUYU_Eric Mutisya Kioko_2016.pdf.pdf",
@@ -17474,8 +17599,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:699": {
-    "id": "icmid_jr_pair:699",
+  "icmid_jr_pair:704": {
+    "id": "icmid_jr_pair:704",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -17499,8 +17624,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:700": {
-    "id": "icmid_jr_pair:700",
+  "icmid_jr_pair:705": {
+    "id": "icmid_jr_pair:705",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -17524,8 +17649,33 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:701": {
-    "id": "icmid_jr_pair:701",
+  "icmid_jr_pair:706": {
+    "id": "icmid_jr_pair:706",
+    "source": "ICMID",
+    "doc_id": "https://fr.wikipedia.org/wiki/Vili_(peuple)",
+    "source_pdf": "https:__fr.wikipedia.org_wiki_Vili_(peuple).pdf",
+    "source_url": "Vili (peuple). (n.d.). In Wikipédia. Retrieved July 8, 2026, from https://fr.wikipedia.org/wiki/Vili_(peuple)",
+    "source_citation": "1",
+    "source_page": "Les Vili auraient vécu harmonieusement avec les Yombé, les Lumbu, les Vungu, les Punu et les Kugni au sein du royaume de Loango . Avec ces peuples, ils ont développé le Bundiku , une relation de bon voisinage qui permet de prévenir des conflits, notamment grâce aux plaisanteries.",
+    "ethnography_group": "",
+    "region": "Central Africa",
+    "entity_a": "KONGO",
+    "entity_b": "Vili",
+    "entity_a_type": "",
+    "entity_b_type": "",
+    "scope_coded": "cross_group",
+    "reasoning": "",
+    "notes": "",
+    "quote": "Vili_Wikipedia.pdf",
+    "relation_label": "",
+    "local_term": "",
+    "symmetry": "",
+    "relation_type": "",
+    "confidence": 0.0,
+    "joking_source": "icmid_jr_pair"
+  },
+  "icmid_jr_pair:707": {
+    "id": "icmid_jr_pair:707",
     "source": "ICMID",
     "doc_id": "Konkomba_Kachim_2019",
     "source_pdf": "Konkomba_Kachim_2019.pdf",
@@ -17549,8 +17699,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:702": {
-    "id": "icmid_jr_pair:702",
+  "icmid_jr_pair:708": {
+    "id": "icmid_jr_pair:708",
     "source": "ICMID",
     "doc_id": "Kpelle_Zaoro_2015",
     "source_pdf": "Kpelle_Zaoro_2015.pdf",
@@ -17574,8 +17724,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:703": {
-    "id": "icmid_jr_pair:703",
+  "icmid_jr_pair:709": {
+    "id": "icmid_jr_pair:709",
     "source": "ICMID",
     "doc_id": "CoteDivoire_Nea_2021.pdf",
     "source_pdf": "CoteDivoire_Nea_2021.pdf.pdf",
@@ -17599,8 +17749,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:704": {
-    "id": "icmid_jr_pair:704",
+  "icmid_jr_pair:710": {
+    "id": "icmid_jr_pair:710",
     "source": "ICMID",
     "doc_id": "Daniel_Ndagala_2018.pdf",
     "source_pdf": "Daniel_Ndagala_2018.pdf.pdf",
@@ -17624,8 +17774,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:705": {
-    "id": "icmid_jr_pair:705",
+  "icmid_jr_pair:711": {
+    "id": "icmid_jr_pair:711",
     "source": "ICMID",
     "doc_id": "James_Boyd_Christensen_1963.pdf",
     "source_pdf": "James_Boyd_Christensen_1963.pdf.pdf",
@@ -17649,8 +17799,33 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:706": {
-    "id": "icmid_jr_pair:706",
+  "icmid_jr_pair:712": {
+    "id": "icmid_jr_pair:712",
+    "source": "ICMID",
+    "doc_id": "Tem_Facebook.pdf\n[for Kabre] Kabre_Adje_2019.pdf",
+    "source_pdf": "Tem_Facebook.pdf\n[for Kabre] Kabre_Adje_2019.pdf.pdf",
+    "source_url": "https://www.facebook.com/nayayodika/photos/la-parent%C3%A9-%C3%A0-plaisanterie-%EF%B8%8F-ce-que-cest-la-parent%C3%A9-%C3%A0-plaisanterie-est-une-pratiq/122123464010069638/\n\n[for Kabre] https://d1wqtxts1xzle7.cloudfront.net/60335073/RAPPORT_SYMPOSIUM_YAOUI_201820190819-84370-11quay1-libre.pdf?1566238223=&response-content-disposition=inline%3B+filename%3DPremiere_Edition_2018_PEUPLEMENT_DU_PAYS.pdf&Expires=1782720619&Signature=GVpe6LoIs1nv0Rp2DofX5jFbRd~I97OM6anE6eCcWLOOKRsa8r9igDHJqYjZj-X0cEBCF2Ib0mkzqWrnOy8RwQ3ivSkNpYT~cuyl6SaFMMB0DbublNbcA0szp8SXkTW2EWFNfzwMMjGLHCeuHaYUhhI1cmLJQBqDVISsfPV3X4wBuudK8FToCkd6DAbpkuzwPbTcQi3GfTeC3JiOdttiByJ0H99AO7XCycaaIFsUkihAaxMmeUXmM-3w8c0poG-mJlu9AEyUH1HWEuek5I64vyon5ASomvWaJIVInTkhGuQ--p-hHZFw1uiDXBftnpeR4IyLGXbBXABOUqTYqlajyw__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA#page=61",
+    "source_citation": "Facebook page Na Ya Yo Dika, 13 Nov 2024\n\n[for Kabre] Adjé, Isaac Alabi (dir.), Vincent Joseph Mama (ed. en chef), Nestor Labiyi, Aliou Fousseni, Abdou-Coudous Mamam & David Amoussouvi (eds.). Symposium Culturel de Yaoui : Peuplement du pays Shabè et occupation du site historique Etoo de Yaoui — Rapport Final, 1ère éd. Mars 2019. ISBN 978-99982-917-1-3. Dépôt légal n° 11199 du 10/04/2019, Bibliothèque Nationale du Bénin, 2ème trimestre",
+    "source_page": "[for Kabre] 96",
+    "ethnography_group": "",
+    "region": "West Africa",
+    "entity_a": "Kabre",
+    "entity_b": "TEM",
+    "entity_a_type": "",
+    "entity_b_type": "",
+    "scope_coded": "cross_group",
+    "reasoning": "",
+    "notes": "",
+    "quote": "Au Togo, il existe des ethnies qui se charrient entre elles. C’est l’exemple des #Tem et des #Mobas sur le terme\n“#Wawa” qui signifie “esclave”. Les deux s’appellent Wawa ; à se demander finalement qui est l’esclave de l’autre ?\nOu encore des #Akposso et des #Akebu au sujet de “#Alè” qui signifie “celui que j’envoie”.\n\nles Tém ont eu à conclure des alliances communautaires (« Kédya ») encore vivaces aujourd'hui avec les Moba et les Gourmantché vivant à Dapaong au nord du Togo et au sud du Burkina Faso d'une part et avec les Samirê au centre-est du Togo et au Bénin d'autre part, justifiant les railleries réciproques (bastêrê) entre eux et les groupes concernés. Ces alliances autorisent des railleries réciproques entre ces peuples.\n\n[for Kabre] \"Une nouvelle ère s‟ouvrit ainsi dans les relatons entre les communautés Boo, Baatonu\net Nago. La plaisanterie à taquinerie encore appelée cousinage, ou parenté à taquinerie\nn‟est pas l‟apanage des peuples Boo, Baatombu et Nago du Borgou. C‟est un\nphénomène socioculturel bien connu dans la plupart des sociétés de l‟Afrique de\nl‟ouest. Il s‟établit généralement entre les cousins issus des éléments mâles et des\néléments féminins d‟une même lignée. Le mariage est interdit entre ses cousins et\ncousines parce qu‟ils descendent d‟un même ancêtre. Il s‟établit également entre des\npeuples liés par un certains nombres de traditions, de phénomènes culturels. L‟histoire\nde ces peuples est généralement marquée par des événements heureux ou malheureux\nqu‟ils sont parvenus à gérer de façon consensuelle. On les appelle les peuples historico-\nethnique. C‟est le cas entre les Mossi et les Gulmantchéba du Burkina-Faso, entre les\nKabiè et les Kotokoli du Togo, entre les Djerma et les Boo-Baatonou. C‟est le cas\négalement entre les Boo et les Tchienga les Bokobaru du Nigéria.\"",
+    "relation_label": "",
+    "local_term": "",
+    "symmetry": "",
+    "relation_type": "",
+    "confidence": 0.0,
+    "joking_source": "icmid_jr_pair"
+  },
+  "icmid_jr_pair:713": {
+    "id": "icmid_jr_pair:713",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -17674,8 +17849,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:707": {
-    "id": "icmid_jr_pair:707",
+  "icmid_jr_pair:714": {
+    "id": "icmid_jr_pair:714",
     "source": "ICMID",
     "doc_id": "SAGARA_Stephen A Lucas_1974",
     "source_pdf": "SAGARA_Stephen A Lucas_1974.pdf",
@@ -17699,8 +17874,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:708": {
-    "id": "icmid_jr_pair:708",
+  "icmid_jr_pair:715": {
+    "id": "icmid_jr_pair:715",
     "source": "ICMID",
     "doc_id": "Kanuri_Cohen_73_NK",
     "source_pdf": "Kanuri_Cohen_73_NK.pdf",
@@ -17724,8 +17899,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:709": {
-    "id": "icmid_jr_pair:709",
+  "icmid_jr_pair:716": {
+    "id": "icmid_jr_pair:716",
     "source": "ICMID",
     "doc_id": "C_M_N_White_1958.pdf",
     "source_pdf": "C_M_N_White_1958.pdf.pdf",
@@ -17749,8 +17924,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:710": {
-    "id": "icmid_jr_pair:710",
+  "icmid_jr_pair:717": {
+    "id": "icmid_jr_pair:717",
     "source": "ICMID",
     "doc_id": "Maguzawa_Danfulani_1999.pdf",
     "source_pdf": "Maguzawa_Danfulani_1999.pdf.pdf",
@@ -17774,8 +17949,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:711": {
-    "id": "icmid_jr_pair:711",
+  "icmid_jr_pair:718": {
+    "id": "icmid_jr_pair:718",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -17799,8 +17974,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:712": {
-    "id": "icmid_jr_pair:712",
+  "icmid_jr_pair:719": {
+    "id": "icmid_jr_pair:719",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -17824,8 +17999,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:713": {
-    "id": "icmid_jr_pair:713",
+  "icmid_jr_pair:720": {
+    "id": "icmid_jr_pair:720",
     "source": "ICMID",
     "doc_id": "CoteDivoire_Nea_2021.pdf",
     "source_pdf": "CoteDivoire_Nea_2021.pdf.pdf",
@@ -17849,8 +18024,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:714": {
-    "id": "icmid_jr_pair:714",
+  "icmid_jr_pair:721": {
+    "id": "icmid_jr_pair:721",
     "source": "ICMID",
     "doc_id": "CoteDivoire_Nea_2021.pdf",
     "source_pdf": "CoteDivoire_Nea_2021.pdf.pdf",
@@ -17874,8 +18049,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:715": {
-    "id": "icmid_jr_pair:715",
+  "icmid_jr_pair:722": {
+    "id": "icmid_jr_pair:722",
     "source": "ICMID",
     "doc_id": "Vili_Wikipedia.pdf",
     "source_pdf": "Vili_Wikipedia.pdf.pdf",
@@ -17891,7 +18066,7 @@
     "scope_coded": "cross_group",
     "reasoning": "",
     "notes": "",
-    "quote": "Les Vili auraient vécu harmonieusement avec les\nYombé, les Lumbu, les Vungu, les Punu et les\n2\nKugni au sein du royaume de Loango . Avec ces\n3,2\npeuples, ils ont développé le Bundiku , une\nrelation de bon voisinage qui permet de prévenir\ndes conflits, notamment grâce aux plaisanteries.",
+    "quote": "Les Vili auraient vécu harmonieusement avec les Yombé, les Lumbu, les Vungu, les Punu et les Kugni au sein du royaume de Loango . Avec ces peuples, ils ont développé le Bundiku , une relation de bon voisinage qui permet de prévenir des conflits, notamment grâce aux plaisanteries.",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -17899,8 +18074,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:716": {
-    "id": "icmid_jr_pair:716",
+  "icmid_jr_pair:723": {
+    "id": "icmid_jr_pair:723",
     "source": "ICMID",
     "doc_id": "SAGARA_Stephen A Lucas_1974",
     "source_pdf": "SAGARA_Stephen A Lucas_1974.pdf",
@@ -17924,8 +18099,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:717": {
-    "id": "icmid_jr_pair:717",
+  "icmid_jr_pair:724": {
+    "id": "icmid_jr_pair:724",
     "source": "ICMID",
     "doc_id": "Kwa_Adelberger_1993",
     "source_pdf": "Kwa_Adelberger_1993.pdf",
@@ -17949,14 +18124,14 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:718": {
-    "id": "icmid_jr_pair:718",
+  "icmid_jr_pair:725": {
+    "id": "icmid_jr_pair:725",
     "source": "ICMID",
     "doc_id": "Brian_Siegel_2008.pdf",
     "source_pdf": "Brian_Siegel_2008.pdf.pdf",
     "source_url": "Brian Siegel, “Chipimpi, Vulgar Clans, and Lala-Lamba Ethnohistory,” History in Africa 35 (2008): 439–453.",
     "source_citation": "Brian Siegel, “Chipimpi, Vulgar Clans, and Lala-Lamba Ethnohistory,” History in Africa 35 (2008): 439–453.",
-    "source_page": "2026-01-09 00:00:00",
+    "source_page": "###########",
     "ethnography_group": "",
     "region": "East Africa",
     "entity_a": "LALA",
@@ -17974,8 +18149,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:719": {
-    "id": "icmid_jr_pair:719",
+  "icmid_jr_pair:726": {
+    "id": "icmid_jr_pair:726",
     "source": "ICMID",
     "doc_id": "LENJE_Mutale T. Mazimba_Ackson M. Kanduza_ 2024",
     "source_pdf": "LENJE_Mutale T. Mazimba_Ackson M. Kanduza_ 2024.pdf",
@@ -17999,33 +18174,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:720": {
-    "id": "icmid_jr_pair:720",
-    "source": "ICMID",
-    "doc_id": "Burkina_Nyamba_2001.html\n [for Tem] Tem_Facebook.pdf",
-    "source_pdf": "Burkina_Nyamba_2001.html\n [for Tem] Tem_Facebook.pdf.pdf",
-    "source_url": "https://journals.openedition.org/communication/5503?lang=en\n [for Tem] https://www.facebook.com/nayayodika/photos/la-parent%C3%A9-%C3%A0-plaisanterie-%EF%B8%8F-ce-que-cest-la-parent%C3%A9-%C3%A0-plaisanterie-est-une-pratiq/122123464010069638/",
-    "source_citation": "Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.\n [for Tem] Facebook page Na Ya Yo Dika, 13 Nov 2024",
-    "source_page": "",
-    "ethnography_group": "",
-    "region": "West Africa",
-    "entity_a": "LIPTAKO",
-    "entity_b": "Yarse",
-    "entity_a_type": "",
-    "entity_b_type": "",
-    "scope_coded": "cross_group",
-    "reasoning": "",
-    "notes": "",
-    "quote": "Tableau 1. Groupes alliés à plaisanteries\n [for Tem] Au Togo, il existe des ethnies qui se charrient entre elles. C’est l’exemple des #Tem et des #Mobas sur le terme\n “#Wawa” qui signifie “esclave”. Les deux s’appellent Wawa ; à se demander finalement qui est l’esclave de l’autre ?\n Ou encore des #Akposso et des #Akebu au sujet de “#Alè” qui signifie “celui que j’envoie”.\n \n les Tém ont eu à conclure des alliances communautaires (« Kédya ») encore vivaces aujourd'hui avec les Moba et les Gourmantché vivant à Dapaong au nord du Togo et au sud du Burkina Faso d'une part et avec les Samirê au centre-est du Togo et au Bénin d'autre part, justifiant les railleries réciproques (bastêrê) entre eux et les groupes concernés. Ces alliances autorisent des railleries réciproques entre ces peuples.",
-    "relation_label": "",
-    "local_term": "",
-    "symmetry": "",
-    "relation_type": "",
-    "confidence": 0.0,
-    "joking_source": "icmid_jr_pair"
-  },
-  "icmid_jr_pair:721": {
-    "id": "icmid_jr_pair:721",
+  "icmid_jr_pair:727": {
+    "id": "icmid_jr_pair:727",
     "source": "ICMID",
     "doc_id": "Edward_Alpers_1975.pdf",
     "source_pdf": "Edward_Alpers_1975.pdf.pdf",
@@ -18049,8 +18199,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:722": {
-    "id": "icmid_jr_pair:722",
+  "icmid_jr_pair:728": {
+    "id": "icmid_jr_pair:728",
     "source": "ICMID",
     "doc_id": "Edward_Alpers_1975.pdf",
     "source_pdf": "Edward_Alpers_1975.pdf.pdf",
@@ -18074,8 +18224,33 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:723": {
-    "id": "icmid_jr_pair:723",
+  "icmid_jr_pair:729": {
+    "id": "icmid_jr_pair:729",
+    "source": "ICMID",
+    "doc_id": "R_E_MOREAU_1944.pdf",
+    "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
+    "source_url": "https://doi.org/10.2307/1157006",
+    "source_citation": "Moreau, R. E., 1944, \"Joking Relationships in Tanganyika,\" Africa: Journal of the International African Institute",
+    "source_page": "387",
+    "ethnography_group": "",
+    "region": "East Africa",
+    "entity_a": "LOMWE",
+    "entity_b": "YAO",
+    "entity_a_type": "",
+    "entity_b_type": "",
+    "scope_coded": "cross_group",
+    "reasoning": "",
+    "notes": "",
+    "quote": "Yao with Ngoni, Langulu, and Potola (the last two in Southern Nyasaland).",
+    "relation_label": "",
+    "local_term": "",
+    "symmetry": "",
+    "relation_type": "",
+    "confidence": 0.0,
+    "joking_source": "icmid_jr_pair"
+  },
+  "icmid_jr_pair:730": {
+    "id": "icmid_jr_pair:730",
     "source": "ICMID",
     "doc_id": "",
     "source_pdf": "",
@@ -18099,8 +18274,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:724": {
-    "id": "icmid_jr_pair:724",
+  "icmid_jr_pair:731": {
+    "id": "icmid_jr_pair:731",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -18124,8 +18299,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:725": {
-    "id": "icmid_jr_pair:725",
+  "icmid_jr_pair:732": {
+    "id": "icmid_jr_pair:732",
     "source": "ICMID",
     "doc_id": "SAGARA_Stephen A Lucas_1974",
     "source_pdf": "SAGARA_Stephen A Lucas_1974.pdf",
@@ -18149,8 +18324,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:726": {
-    "id": "icmid_jr_pair:726",
+  "icmid_jr_pair:733": {
+    "id": "icmid_jr_pair:733",
     "source": "ICMID",
     "doc_id": "Vili_Wikipedia.pdf",
     "source_pdf": "Vili_Wikipedia.pdf.pdf",
@@ -18166,7 +18341,7 @@
     "scope_coded": "cross_group",
     "reasoning": "",
     "notes": "",
-    "quote": "Les Vili auraient vécu harmonieusement avec les\nYombé, les Lumbu, les Vungu, les Punu et les\n2\nKugni au sein du royaume de Loango . Avec ces\n3,2\npeuples, ils ont développé le Bundiku , une\nrelation de bon voisinage qui permet de prévenir\ndes conflits, notamment grâce aux plaisanteries.",
+    "quote": "Les Vili auraient vécu harmonieusement avec les Yombé, les Lumbu, les Vungu, les Punu et les Kugni au sein du royaume de Loango . Avec ces peuples, ils ont développé le Bundiku , une relation de bon voisinage qui permet de prévenir des conflits, notamment grâce aux plaisanteries.",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -18174,8 +18349,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:727": {
-    "id": "icmid_jr_pair:727",
+  "icmid_jr_pair:734": {
+    "id": "icmid_jr_pair:734",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -18199,8 +18374,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:728": {
-    "id": "icmid_jr_pair:728",
+  "icmid_jr_pair:735": {
+    "id": "icmid_jr_pair:735",
     "source": "ICMID",
     "doc_id": "LUO_Muperasoka Ssentongo_2015",
     "source_pdf": "LUO_Muperasoka Ssentongo_2015.pdf",
@@ -18224,8 +18399,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:729": {
-    "id": "icmid_jr_pair:729",
+  "icmid_jr_pair:736": {
+    "id": "icmid_jr_pair:736",
     "source": "ICMID",
     "doc_id": "",
     "source_pdf": "",
@@ -18249,8 +18424,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:730": {
-    "id": "icmid_jr_pair:730",
+  "icmid_jr_pair:737": {
+    "id": "icmid_jr_pair:737",
     "source": "ICMID",
     "doc_id": "CoteDivoire_Nea_2021.pdf",
     "source_pdf": "CoteDivoire_Nea_2021.pdf.pdf",
@@ -18274,8 +18449,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:731": {
-    "id": "icmid_jr_pair:731",
+  "icmid_jr_pair:738": {
+    "id": "icmid_jr_pair:738",
     "source": "ICMID",
     "doc_id": "Burkina_Nyamba_2001.html",
     "source_pdf": "Burkina_Nyamba_2001.html.pdf",
@@ -18299,8 +18474,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:732": {
-    "id": "icmid_jr_pair:732",
+  "icmid_jr_pair:739": {
+    "id": "icmid_jr_pair:739",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -18324,8 +18499,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:733": {
-    "id": "icmid_jr_pair:733",
+  "icmid_jr_pair:740": {
+    "id": "icmid_jr_pair:740",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -18349,8 +18524,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:734": {
-    "id": "icmid_jr_pair:734",
+  "icmid_jr_pair:741": {
+    "id": "icmid_jr_pair:741",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -18374,8 +18549,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:735": {
-    "id": "icmid_jr_pair:735",
+  "icmid_jr_pair:742": {
+    "id": "icmid_jr_pair:742",
     "source": "ICMID",
     "doc_id": "Luguru_Biedelman_1967_28_KS",
     "source_pdf": "Luguru_Biedelman_1967_28_KS.pdf",
@@ -18399,8 +18574,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:736": {
-    "id": "icmid_jr_pair:736",
+  "icmid_jr_pair:743": {
+    "id": "icmid_jr_pair:743",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -18424,8 +18599,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:737": {
-    "id": "icmid_jr_pair:737",
+  "icmid_jr_pair:744": {
+    "id": "icmid_jr_pair:744",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -18449,8 +18624,33 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:738": {
-    "id": "icmid_jr_pair:738",
+  "icmid_jr_pair:745": {
+    "id": "icmid_jr_pair:745",
+    "source": "ICMID",
+    "doc_id": "/Luguru_Biedelman_1967_28_KS",
+    "source_pdf": "Luguru_Biedelman_1967_28_KS.pdf",
+    "source_url": "",
+    "source_citation": "/Luguru_Biedelman_1967_28_KS",
+    "source_page": "",
+    "ethnography_group": "",
+    "region": "East Africa",
+    "entity_a": "Luguru",
+    "entity_b": "Zaramo",
+    "entity_a_type": "",
+    "entity_b_type": "",
+    "scope_coded": "cross_group",
+    "reasoning": "",
+    "notes": "",
+    "quote": "Joking relations exist between Luguru and certain tribal groups such as the Mbunga, Pogoro, Zaramo and Nyamwezi;",
+    "relation_label": "",
+    "local_term": "",
+    "symmetry": "",
+    "relation_type": "",
+    "confidence": 0.0,
+    "joking_source": "icmid_jr_pair"
+  },
+  "icmid_jr_pair:746": {
+    "id": "icmid_jr_pair:746",
     "source": "ICMID",
     "doc_id": "",
     "source_pdf": "",
@@ -18474,8 +18674,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:739": {
-    "id": "icmid_jr_pair:739",
+  "icmid_jr_pair:747": {
+    "id": "icmid_jr_pair:747",
     "source": "ICMID",
     "doc_id": "Lunda_Chidongo_2021",
     "source_pdf": "Lunda_Chidongo_2021.pdf",
@@ -18499,8 +18699,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:740": {
-    "id": "icmid_jr_pair:740",
+  "icmid_jr_pair:748": {
+    "id": "icmid_jr_pair:748",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -18524,8 +18724,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:741": {
-    "id": "icmid_jr_pair:741",
+  "icmid_jr_pair:749": {
+    "id": "icmid_jr_pair:749",
     "source": "ICMID",
     "doc_id": "Edward_Alpers_1975.pdf",
     "source_pdf": "Edward_Alpers_1975.pdf.pdf",
@@ -18549,8 +18749,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:742": {
-    "id": "icmid_jr_pair:742",
+  "icmid_jr_pair:750": {
+    "id": "icmid_jr_pair:750",
     "source": "ICMID",
     "doc_id": "Edward_Alpers_1975.pdf",
     "source_pdf": "Edward_Alpers_1975.pdf.pdf",
@@ -18574,33 +18774,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:743": {
-    "id": "icmid_jr_pair:743",
-    "source": "ICMID",
-    "doc_id": "Manga_Kohler_2017.pdf",
-    "source_pdf": "Manga_Kohler_2017.pdf.pdf",
-    "source_url": "https://scispace.com/pdf/from-nomadic-pastoralism-to-urban-migration-transformation-66h7k1fyzt.pdf",
-    "source_citation": "Köhler, Florian. From Nomadic Pastoralism to Urban Migration: Transformation Processes in a Group of Fulɓe Woɗaaɓe in Niger (Narrative Interviews and Complementary Material). Field Notes and Research Projects XX. Halle (Saale): Max Planck Institute for Social Anthropology, Department 'Integration and Conflict', 2017.",
-    "source_page": "69",
-    "ethnography_group": "",
-    "region": "West Africa",
-    "entity_a": "MANGA",
-    "entity_b": "Woɗaaɓe",
-    "entity_a_type": "",
-    "entity_b_type": "",
-    "scope_coded": "cross_group",
-    "reasoning": "Kaanuri are a part of Manga",
-    "notes": "Kaanuri are a part of Manga",
-    "quote": "This ritualized form of inter-group relationship is generally based on the\nparticular historic relations between the groups concerned. In the case of\nFulɓe and Kanuri, it seems to go back to the time of the Borno empire, when\npastoral Fulɓe groups first stayed for an extended period in close neighbourhood and exchange with the sedentary populations of Borno, i. e., with the\nancestors of the contemporary Kanuri population",
-    "relation_label": "",
-    "local_term": "",
-    "symmetry": "",
-    "relation_type": "",
-    "confidence": 0.0,
-    "joking_source": "icmid_jr_pair"
-  },
-  "icmid_jr_pair:744": {
-    "id": "icmid_jr_pair:744",
+  "icmid_jr_pair:751": {
+    "id": "icmid_jr_pair:751",
     "source": "ICMID",
     "doc_id": "Okiek_Kratz_1990_451_KS",
     "source_pdf": "Okiek_Kratz_1990_451_KS.pdf",
@@ -18624,8 +18799,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:745": {
-    "id": "icmid_jr_pair:745",
+  "icmid_jr_pair:752": {
+    "id": "icmid_jr_pair:752",
     "source": "ICMID",
     "doc_id": "Mbum_Moli_2017",
     "source_pdf": "Mbum_Moli_2017.pdf",
@@ -18641,7 +18816,7 @@
     "scope_coded": "cross_group",
     "reasoning": "",
     "notes": "",
-    "quote": "Donc, par ricochet, l’alliance  entre  Mbum  et  Vouté  s’étend  à  tous  ces  peuples",
+    "quote": "Donc, par ricochet, l’alliance entre Mbum et Vouté s’étend à tous ces peuples",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -18649,8 +18824,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:746": {
-    "id": "icmid_jr_pair:746",
+  "icmid_jr_pair:753": {
+    "id": "icmid_jr_pair:753",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -18674,8 +18849,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:747": {
-    "id": "icmid_jr_pair:747",
+  "icmid_jr_pair:754": {
+    "id": "icmid_jr_pair:754",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -18699,8 +18874,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:748": {
-    "id": "icmid_jr_pair:748",
+  "icmid_jr_pair:755": {
+    "id": "icmid_jr_pair:755",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -18724,8 +18899,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:749": {
-    "id": "icmid_jr_pair:749",
+  "icmid_jr_pair:756": {
+    "id": "icmid_jr_pair:756",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -18749,8 +18924,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:750": {
-    "id": "icmid_jr_pair:750",
+  "icmid_jr_pair:757": {
+    "id": "icmid_jr_pair:757",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -18774,8 +18949,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:751": {
-    "id": "icmid_jr_pair:751",
+  "icmid_jr_pair:758": {
+    "id": "icmid_jr_pair:758",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -18799,8 +18974,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:752": {
-    "id": "icmid_jr_pair:752",
+  "icmid_jr_pair:759": {
+    "id": "icmid_jr_pair:759",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -18824,8 +18999,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:753": {
-    "id": "icmid_jr_pair:753",
+  "icmid_jr_pair:760": {
+    "id": "icmid_jr_pair:760",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -18849,8 +19024,33 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:754": {
-    "id": "icmid_jr_pair:754",
+  "icmid_jr_pair:761": {
+    "id": "icmid_jr_pair:761",
+    "source": "ICMID",
+    "doc_id": "Anders_Hjort_1974.pdf",
+    "source_pdf": "Anders_Hjort_1974.pdf.pdf",
+    "source_url": "https://www.tandfonline.com/doi/pdf/10.1080/00141844.1974.9981078",
+    "source_citation": "Anders_Hjort_1974.pdf",
+    "source_page": "34",
+    "ethnography_group": "",
+    "region": "East Africa",
+    "entity_a": "MERU",
+    "entity_b": "TURKANA",
+    "entity_a_type": "",
+    "entity_b_type": "",
+    "scope_coded": "cross_group",
+    "reasoning": "Tigania is a subgroup of Meru",
+    "notes": "Tigania is a subgroup of Meru",
+    "quote": "Transactions with Turkana tribesmen, who have recently also started to consume miraa, are direct. Tigania and Turkana call each other \"brothers\" and have a common myth about their origin. This is often referred to in negotiations, implying a kind of joking relationship.",
+    "relation_label": "",
+    "local_term": "",
+    "symmetry": "",
+    "relation_type": "",
+    "confidence": 0.0,
+    "joking_source": "icmid_jr_pair"
+  },
+  "icmid_jr_pair:762": {
+    "id": "icmid_jr_pair:762",
     "source": "ICMID",
     "doc_id": "Tem_Facebook.pdf\n [for Konkomba] Konkomba_Kachim_2019",
     "source_pdf": "Tem_Facebook.pdf\n [for Konkomba] Konkomba_Kachim_2019.pdf",
@@ -18874,13 +19074,13 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:755": {
-    "id": "icmid_jr_pair:755",
+  "icmid_jr_pair:763": {
+    "id": "icmid_jr_pair:763",
     "source": "ICMID",
-    "doc_id": "Burkina_Nyamba_2001.html\n\nMossi_Skinner_195_NK.pdf",
-    "source_pdf": "Burkina_Nyamba_2001.html\n\nMossi_Skinner_195_NK.pdf.pdf",
-    "source_url": "https://journals.openedition.org/communication/5503?lang=en",
-    "source_citation": "Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.",
+    "doc_id": "Burkina_Nyamba_2001.html\n[For Dafi] Cotedivoire_Meke_2004.pdf",
+    "source_pdf": "Burkina_Nyamba_2001.html\n[For Dafi] Cotedivoire_Meke_2004.pdf.pdf",
+    "source_url": "https://journals.openedition.org/communication/5503?lang=en\n\nhttps://jaga.afrique-gouvernance.net/_docs/les_alliances_a_plaisanteries_comme_voie.pdf",
+    "source_citation": "Nyamba, André. 2001. \"Les relations de plaisanteries au Burkina Faso: Un mode communication pour la paix sociale.\" Communication 21 (1): 119–140. https://doi.org/10.4000/communication.5503.\n\nMeïté, Méké. 2004. \"Les alliances à plaisanteries comme voie...\" Éthiopiques 72.",
     "source_page": "",
     "ethnography_group": "",
     "region": "West Africa",
@@ -18891,7 +19091,7 @@
     "scope_coded": "cross_group",
     "reasoning": "",
     "notes": "",
-    "quote": "Tableau 1. Groupes alliés à plaisanteries\n\nThe Mossi\nattitude toward the Gourounsi men is conditioned by the fact that theinsert_drive_file196\nMossi were still expanding and absorbing the Gourounsi when the French\narrived. Mossi often jokingly refer to the Gourounsi as their ligidi (meaning\nmoney), implying their status as individuals to be sold as slaves. The",
+    "quote": "Tableau 1. Groupes alliés à plaisanteries\n\n[For Dafi] 1.3. Ailleurs dans la sous région... Mossi/Dafin",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -18899,8 +19099,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:756": {
-    "id": "icmid_jr_pair:756",
+  "icmid_jr_pair:764": {
+    "id": "icmid_jr_pair:764",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -18924,8 +19124,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:757": {
-    "id": "icmid_jr_pair:757",
+  "icmid_jr_pair:765": {
+    "id": "icmid_jr_pair:765",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -18949,8 +19149,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:758": {
-    "id": "icmid_jr_pair:758",
+  "icmid_jr_pair:766": {
+    "id": "icmid_jr_pair:766",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -18974,8 +19174,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:759": {
-    "id": "icmid_jr_pair:759",
+  "icmid_jr_pair:767": {
+    "id": "icmid_jr_pair:767",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -18999,8 +19199,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:760": {
-    "id": "icmid_jr_pair:760",
+  "icmid_jr_pair:768": {
+    "id": "icmid_jr_pair:768",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19024,8 +19224,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:761": {
-    "id": "icmid_jr_pair:761",
+  "icmid_jr_pair:769": {
+    "id": "icmid_jr_pair:769",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19049,8 +19249,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:762": {
-    "id": "icmid_jr_pair:762",
+  "icmid_jr_pair:770": {
+    "id": "icmid_jr_pair:770",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19074,8 +19274,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:763": {
-    "id": "icmid_jr_pair:763",
+  "icmid_jr_pair:771": {
+    "id": "icmid_jr_pair:771",
     "source": "ICMID",
     "doc_id": "CoteDivoire_Nea_2021.pdf",
     "source_pdf": "CoteDivoire_Nea_2021.pdf.pdf",
@@ -19099,8 +19299,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:764": {
-    "id": "icmid_jr_pair:764",
+  "icmid_jr_pair:772": {
+    "id": "icmid_jr_pair:772",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19124,8 +19324,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:765": {
-    "id": "icmid_jr_pair:765",
+  "icmid_jr_pair:773": {
+    "id": "icmid_jr_pair:773",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19149,8 +19349,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:766": {
-    "id": "icmid_jr_pair:766",
+  "icmid_jr_pair:774": {
+    "id": "icmid_jr_pair:774",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19174,8 +19374,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:767": {
-    "id": "icmid_jr_pair:767",
+  "icmid_jr_pair:775": {
+    "id": "icmid_jr_pair:775",
     "source": "ICMID",
     "doc_id": "SAGARA_Stephen A Lucas_1974",
     "source_pdf": "SAGARA_Stephen A Lucas_1974.pdf",
@@ -19199,8 +19399,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:768": {
-    "id": "icmid_jr_pair:768",
+  "icmid_jr_pair:776": {
+    "id": "icmid_jr_pair:776",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19224,8 +19424,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:769": {
-    "id": "icmid_jr_pair:769",
+  "icmid_jr_pair:777": {
+    "id": "icmid_jr_pair:777",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19249,8 +19449,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:770": {
-    "id": "icmid_jr_pair:770",
+  "icmid_jr_pair:778": {
+    "id": "icmid_jr_pair:778",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19274,8 +19474,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:771": {
-    "id": "icmid_jr_pair:771",
+  "icmid_jr_pair:779": {
+    "id": "icmid_jr_pair:779",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19299,8 +19499,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:772": {
-    "id": "icmid_jr_pair:772",
+  "icmid_jr_pair:780": {
+    "id": "icmid_jr_pair:780",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19324,8 +19524,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:773": {
-    "id": "icmid_jr_pair:773",
+  "icmid_jr_pair:781": {
+    "id": "icmid_jr_pair:781",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19349,8 +19549,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:774": {
-    "id": "icmid_jr_pair:774",
+  "icmid_jr_pair:782": {
+    "id": "icmid_jr_pair:782",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19374,8 +19574,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:775": {
-    "id": "icmid_jr_pair:775",
+  "icmid_jr_pair:783": {
+    "id": "icmid_jr_pair:783",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19399,8 +19599,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:776": {
-    "id": "icmid_jr_pair:776",
+  "icmid_jr_pair:784": {
+    "id": "icmid_jr_pair:784",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19424,8 +19624,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:777": {
-    "id": "icmid_jr_pair:777",
+  "icmid_jr_pair:785": {
+    "id": "icmid_jr_pair:785",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19449,8 +19649,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:778": {
-    "id": "icmid_jr_pair:778",
+  "icmid_jr_pair:786": {
+    "id": "icmid_jr_pair:786",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19474,8 +19674,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:779": {
-    "id": "icmid_jr_pair:779",
+  "icmid_jr_pair:787": {
+    "id": "icmid_jr_pair:787",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19499,8 +19699,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:780": {
-    "id": "icmid_jr_pair:780",
+  "icmid_jr_pair:788": {
+    "id": "icmid_jr_pair:788",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19524,8 +19724,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:781": {
-    "id": "icmid_jr_pair:781",
+  "icmid_jr_pair:789": {
+    "id": "icmid_jr_pair:789",
     "source": "ICMID",
     "doc_id": "SAGARA_Stephen A Lucas_1974",
     "source_pdf": "SAGARA_Stephen A Lucas_1974.pdf",
@@ -19549,8 +19749,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:782": {
-    "id": "icmid_jr_pair:782",
+  "icmid_jr_pair:790": {
+    "id": "icmid_jr_pair:790",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19574,8 +19774,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:783": {
-    "id": "icmid_jr_pair:783",
+  "icmid_jr_pair:791": {
+    "id": "icmid_jr_pair:791",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19599,8 +19799,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:784": {
-    "id": "icmid_jr_pair:784",
+  "icmid_jr_pair:792": {
+    "id": "icmid_jr_pair:792",
     "source": "ICMID",
     "doc_id": "Vili_Wikipedia.pdf",
     "source_pdf": "Vili_Wikipedia.pdf.pdf",
@@ -19616,7 +19816,7 @@
     "scope_coded": "cross_group",
     "reasoning": "",
     "notes": "",
-    "quote": "Les Vili auraient vécu harmonieusement avec les\nYombé, les Lumbu, les Vungu, les Punu et les\n2\nKugni au sein du royaume de Loango . Avec ces\n3,2\npeuples, ils ont développé le Bundiku , une\nrelation de bon voisinage qui permet de prévenir\ndes conflits, notamment grâce aux plaisanteries.",
+    "quote": "Les Vili auraient vécu harmonieusement avec les Yombé, les Lumbu, les Vungu, les Punu et les Kugni au sein du royaume de Loango . Avec ces peuples, ils ont développé le Bundiku , une relation de bon voisinage qui permet de prévenir des conflits, notamment grâce aux plaisanteries.",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -19624,8 +19824,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:785": {
-    "id": "icmid_jr_pair:785",
+  "icmid_jr_pair:793": {
+    "id": "icmid_jr_pair:793",
     "source": "ICMID",
     "doc_id": "Serer_Evans_2025\n [for Tukulor] Tukulor_Galvan_2006.pdf\n[for Balante] Balante_Badjie_2020.pdf",
     "source_pdf": "Serer_Evans_2025\n [for Tukulor] Tukulor_Galvan_2006.pdf\n[for Balante] Balante_Badjie_2020.pdf.pdf",
@@ -19649,8 +19849,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:786": {
-    "id": "icmid_jr_pair:786",
+  "icmid_jr_pair:794": {
+    "id": "icmid_jr_pair:794",
     "source": "ICMID",
     "doc_id": "Songhai_Cisse_2013\n [for Dogon] Bozo_Attino_2021",
     "source_pdf": "Songhai_Cisse_2013\n [for Dogon] Bozo_Attino_2021.pdf",
@@ -19660,7 +19860,7 @@
     "ethnography_group": "",
     "region": "West Africa",
     "entity_a": "SONGHAI",
-    "entity_b": "Tuareg",
+    "entity_b": "Udalan",
     "entity_a_type": "",
     "entity_b_type": "",
     "scope_coded": "cross_group",
@@ -19674,8 +19874,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:787": {
-    "id": "icmid_jr_pair:787",
+  "icmid_jr_pair:795": {
+    "id": "icmid_jr_pair:795",
     "source": "ICMID",
     "doc_id": "Bargu_Schottman_1995.pdf\n [for Songhai] Songhai_Cisse_2013",
     "source_pdf": "Bargu_Schottman_1995.pdf\n [for Songhai] Songhai_Cisse_2013.pdf",
@@ -19699,8 +19899,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:788": {
-    "id": "icmid_jr_pair:788",
+  "icmid_jr_pair:796": {
+    "id": "icmid_jr_pair:796",
     "source": "ICMID",
     "doc_id": "Madame_Paulme.pdf",
     "source_pdf": "Madame_Paulme.pdf.pdf",
@@ -19724,8 +19924,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:789": {
-    "id": "icmid_jr_pair:789",
+  "icmid_jr_pair:797": {
+    "id": "icmid_jr_pair:797",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19749,8 +19949,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:790": {
-    "id": "icmid_jr_pair:790",
+  "icmid_jr_pair:798": {
+    "id": "icmid_jr_pair:798",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19774,8 +19974,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:791": {
-    "id": "icmid_jr_pair:791",
+  "icmid_jr_pair:799": {
+    "id": "icmid_jr_pair:799",
     "source": "ICMID",
     "doc_id": "Burkina_Nyamba_2001.html",
     "source_pdf": "Burkina_Nyamba_2001.html.pdf",
@@ -19799,8 +19999,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:792": {
-    "id": "icmid_jr_pair:792",
+  "icmid_jr_pair:800": {
+    "id": "icmid_jr_pair:800",
     "source": "ICMID",
     "doc_id": "",
     "source_pdf": "",
@@ -19824,8 +20024,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:793": {
-    "id": "icmid_jr_pair:793",
+  "icmid_jr_pair:801": {
+    "id": "icmid_jr_pair:801",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",
@@ -19849,8 +20049,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:794": {
-    "id": "icmid_jr_pair:794",
+  "icmid_jr_pair:802": {
+    "id": "icmid_jr_pair:802",
     "source": "ICMID",
     "doc_id": "Waja_Ulrich_1990",
     "source_pdf": "Waja_Ulrich_1990.pdf",
@@ -19874,58 +20074,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:795": {
-    "id": "icmid_jr_pair:795",
-    "source": "ICMID",
-    "doc_id": "Anders_Hjort_1974.pdf",
-    "source_pdf": "Anders_Hjort_1974.pdf.pdf",
-    "source_url": "https://www.tandfonline.com/doi/pdf/10.1080/00141844.1974.9981078",
-    "source_citation": "Anders_Hjort_1974.pdf",
-    "source_page": "34",
-    "ethnography_group": "",
-    "region": "East Africa",
-    "entity_a": "TIGRINYA",
-    "entity_b": "TURKANA",
-    "entity_a_type": "",
-    "entity_b_type": "",
-    "scope_coded": "cross_group",
-    "reasoning": "",
-    "notes": "",
-    "quote": "Transactions with Turkana tribesmen, who have recently also started to consume miraa, are direct. Tigania and Turkana call each other \"brothers\" and have a common myth about their origin. This is often referred to in negotiations, implying a kind of joking relationship.",
-    "relation_label": "",
-    "local_term": "",
-    "symmetry": "",
-    "relation_type": "",
-    "confidence": 0.0,
-    "joking_source": "icmid_jr_pair"
-  },
-  "icmid_jr_pair:796": {
-    "id": "icmid_jr_pair:796",
-    "source": "ICMID",
-    "doc_id": "Vili_Wikipedia.pdf",
-    "source_pdf": "Vili_Wikipedia.pdf.pdf",
-    "source_url": "https://fr.wikipedia.org/wiki/Vili_(peuple)",
-    "source_citation": "Vili (peuple). (n.d.). In Wikipédia. Retrieved July 8, 2026, from https://fr.wikipedia.org/wiki/Vili_(peuple)",
-    "source_page": "1",
-    "ethnography_group": "",
-    "region": "West Africa",
-    "entity_a": "VILI",
-    "entity_b": "Vingu",
-    "entity_a_type": "",
-    "entity_b_type": "",
-    "scope_coded": "cross_group",
-    "reasoning": "",
-    "notes": "",
-    "quote": "Les Vili auraient vécu harmonieusement avec les\nYombé, les Lumbu, les Vungu, les Punu et les\n2\nKugni au sein du royaume de Loango . Avec ces\n3,2\npeuples, ils ont développé le Bundiku , une\nrelation de bon voisinage qui permet de prévenir\ndes conflits, notamment grâce aux plaisanteries.",
-    "relation_label": "",
-    "local_term": "",
-    "symmetry": "",
-    "relation_type": "",
-    "confidence": 0.0,
-    "joking_source": "icmid_jr_pair"
-  },
-  "icmid_jr_pair:797": {
-    "id": "icmid_jr_pair:797",
+  "icmid_jr_pair:803": {
+    "id": "icmid_jr_pair:803",
     "source": "ICMID",
     "doc_id": "Vili_Wikipedia.pdf",
     "source_pdf": "Vili_Wikipedia.pdf.pdf",
@@ -19941,7 +20091,7 @@
     "scope_coded": "cross_group",
     "reasoning": "",
     "notes": "",
-    "quote": "Les Vili auraient vécu harmonieusement avec les\nYombé, les Lumbu, les Vungu, les Punu et les\n2\nKugni au sein du royaume de Loango . Avec ces\n3,2\npeuples, ils ont développé le Bundiku , une\nrelation de bon voisinage qui permet de prévenir\ndes conflits, notamment grâce aux plaisanteries.",
+    "quote": "Les Vili auraient vécu harmonieusement avec les Yombé, les Lumbu, les Vungu, les Punu et les Kugni au sein du royaume de Loango . Avec ces peuples, ils ont développé le Bundiku , une relation de bon voisinage qui permet de prévenir des conflits, notamment grâce aux plaisanteries.",
     "relation_label": "",
     "local_term": "",
     "symmetry": "",
@@ -19949,8 +20099,8 @@
     "confidence": 0.0,
     "joking_source": "icmid_jr_pair"
   },
-  "icmid_jr_pair:798": {
-    "id": "icmid_jr_pair:798",
+  "icmid_jr_pair:804": {
+    "id": "icmid_jr_pair:804",
     "source": "ICMID",
     "doc_id": "R_E_MOREAU_1944.pdf",
     "source_pdf": "R_E_MOREAU_1944.pdf.pdf",

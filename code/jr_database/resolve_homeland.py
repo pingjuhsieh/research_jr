@@ -18,7 +18,7 @@ _VIS = _CODE / "visualization"
 if str(_VIS) not in sys.path:
     sys.path.insert(0, str(_VIS))
 
-from entity_index import build_lookup, load_index, lookup_row  # noqa: E402
+from entity_index import build_lookup, load_index, lookup_row, _icmid_index_sheet_exists  # noqa: E402
 from polygon_registry import (  # noqa: E402
     build_manual_alias_map,
     load_registry,
@@ -62,7 +62,10 @@ class HomelandHit:
 
 class HomelandResolver:
     def __init__(self) -> None:
-        self._index_lookup = build_lookup(load_index()) if ETHNIC_ENTITY_INDEX_XLSX.is_file() else {}
+        if ETHNIC_ENTITY_INDEX_XLSX.is_file() or _icmid_index_sheet_exists():
+            self._index_lookup = build_lookup(load_index())
+        else:
+            self._index_lookup = {}
         registry = load_registry() if POLYGON_GROUP_REGISTRY_XLSX.is_file() else pd.DataFrame()
         self._alias_map = build_manual_alias_map(registry) if not registry.empty else {}
         self._registry_by_id = {

@@ -40,6 +40,7 @@ from jr_database.resolve_homeland import HomelandResolver, get_resolver  # noqa:
 from jr_database.sources import _clean, _parse_joking_partners  # noqa: E402
 
 PAIR_SHEET = "JR_pair"
+PAIR_SHEET_ALIASES = ("JR_pair", "JR pair", "Sheet2_JR_pairs")
 _ILLEGAL_XLSX_RE = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f]")
 
 PAIR_COLS = (
@@ -294,14 +295,20 @@ def _row_pair_key(resolver: HomelandResolver, a: Any, b: Any) -> tuple[str, str]
 def load_existing_pairs(path: Path, sheet_name: str) -> pd.DataFrame:
     if not path.is_file():
         return pd.DataFrame(columns=list(PAIR_COLS))
-    try:
-        df = pd.read_excel(path, sheet_name=sheet_name)
-    except ValueError:
-        # legacy name
+    names = [sheet_name, *PAIR_SHEET_ALIASES]
+    seen: set[str] = set()
+    df = None
+    for name in names:
+        if name in seen:
+            continue
+        seen.add(name)
         try:
-            df = pd.read_excel(path, sheet_name="Sheet2_JR_pairs")
+            df = pd.read_excel(path, sheet_name=name)
+            break
         except ValueError:
-            return pd.DataFrame(columns=list(PAIR_COLS))
+            continue
+    if df is None:
+        return pd.DataFrame(columns=list(PAIR_COLS))
     df.columns = [str(c).strip() for c in df.columns]
     for c in PAIR_COLS:
         if c not in df.columns:
@@ -468,8 +475,8 @@ def _style_ws(ws) -> None:
 
 def write_pairs_into_workbook(pairs: pd.DataFrame, path: Path, sheet_name: str = PAIR_SHEET) -> None:
     wb = load_workbook(path)
-    # replace current + legacy pair sheets
-    for name in {sheet_name, "Sheet2_JR_pairs", "JR_pair"}:
+    # Replace canonical sheet and drop all legacy names (incl. spaced "JR pair").
+    for name in {sheet_name, *PAIR_SHEET_ALIASES}:
         if name in wb.sheetnames:
             del wb[name]
     ws = wb.create_sheet(sheet_name)

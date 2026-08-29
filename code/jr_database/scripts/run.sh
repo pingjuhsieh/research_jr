@@ -15,9 +15,9 @@ done
 
 echo "==> Build cross-group JR database…"
 if [[ "$NO_MAP" -eq 1 ]]; then
-  uv run python -B code/jr_database/build_cross_group.py "${APPLY[@]}" --no-map
+  uv run python -B code/jr_database/build_cross_group.py "${APPLY[@]:-}" --no-map
 else
-  uv run python -B code/jr_database/build_cross_group.py "${APPLY[@]}"
+  uv run python -B code/jr_database/build_cross_group.py "${APPLY[@]:-}"
 fi
 
 echo ""

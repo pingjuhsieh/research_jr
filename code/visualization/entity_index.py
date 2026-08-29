@@ -1,8 +1,7 @@
-"""Ethnic entity index — single source of truth (ethnic_entity_index.xlsx).
+"""Ethnic entity index — canonical store on ICMID- Africa.xlsx.
 
-Edit the xlsx directly to set polygon_source, polygon_id, parent_ethnic_group.
-prepare.py adds missing entity stubs only — it never guesses GIS matches.
-Unmatched rows → output/jr_database/unmatched_homelands.xlsx (legacy) for manual review.
+Primary edit target: sheet ``ethnic_entity_index`` on ``data/sources/ICMID- Africa.xlsx``.
+``data/lookup/ethnic_entity_index.xlsx`` is a mirror updated on save (apply-unmatched, etc.).
 """
 from __future__ import annotations
 
@@ -11,10 +10,14 @@ from pathlib import Path
 from typing import Any
 
 import pandas as pd
+from openpyxl import load_workbook
+from openpyxl.utils.dataframe import dataframe_to_rows
 
 from config import (
     BETWEEN_GROUP_SOURCE_XLSX,
     ETHNIC_ENTITY_INDEX_XLSX,
+    ICMID_INDEX_SHEET,
+    ICMID_MANUAL_XLSX,
     KEERTHANA_ETHNICS_XLSX,
     WITHIN_GROUP_XLSX,
 )
@@ -188,7 +191,30 @@ def compute_homeland_found(row: pd.Series | dict) -> bool:
     return src in VALID_POLYGON_SOURCES and bool(pid)
 
 
+def _icmid_index_sheet_exists() -> bool:
+    if not ICMID_MANUAL_XLSX.is_file():
+        return False
+    try:
+        return ICMID_INDEX_SHEET in pd.ExcelFile(ICMID_MANUAL_XLSX).sheet_names
+    except Exception:
+        return False
+
+
+def _write_index_to_icmid_workbook(out: pd.DataFrame) -> None:
+    if not ICMID_MANUAL_XLSX.is_file():
+        return
+    wb = load_workbook(ICMID_MANUAL_XLSX)
+    if ICMID_INDEX_SHEET in wb.sheetnames:
+        del wb[ICMID_INDEX_SHEET]
+    ws = wb.create_sheet(ICMID_INDEX_SHEET)
+    for row in dataframe_to_rows(out, index=False, header=True):
+        ws.append(row)
+    wb.save(ICMID_MANUAL_XLSX)
+
+
 def load_index(path: Path = ETHNIC_ENTITY_INDEX_XLSX) -> pd.DataFrame:
+    if _icmid_index_sheet_exists():
+        return normalize_dataframe(pd.read_excel(ICMID_MANUAL_XLSX, sheet_name=ICMID_INDEX_SHEET))
     if not path.is_file():
         return pd.DataFrame(columns=INDEX_COLUMNS)
     return normalize_dataframe(pd.read_excel(path))
@@ -201,6 +227,7 @@ def save_index(df: pd.DataFrame, path: Path = ETHNIC_ENTITY_INDEX_XLSX) -> None:
     for col in out.columns:
         if out[col].dtype == object:
             out[col] = out[col].map(_sanitize_for_excel)
+    _write_index_to_icmid_workbook(out)
     out.to_excel(path, index=False, sheet_name="entity_index")
 
 

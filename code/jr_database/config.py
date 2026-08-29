@@ -22,6 +22,8 @@ GIS_ROOT = DATA_ROOT / "gis"
 # Inputs
 KEERTHANA_CROSS_XLSX = SOURCES_ROOT / "keerthana_cross_group.xlsx"
 ICMID_MANUAL_XLSX = SOURCES_ROOT / "ICMID- Africa.xlsx"
+ICMID_INDEX_SHEET = "ethnic_entity_index"
+ICMID_UNMATCHED_SHEET = "Unmatched entities"
 ETHNIC_ENTITY_INDEX_XLSX = LOOKUP_ROOT / "ethnic_entity_index.xlsx"
 POLYGON_GROUP_REGISTRY_XLSX = LOOKUP_ROOT / "polygon_group_registry.xlsx"
 

@@ -27,6 +27,7 @@ for _p in (_CODE, _PIPELINE, _CODE / "visualization"):
         sys.path.insert(0, str(_p))
 
 from jr_database.build_cross_group import build_pair_table, build_unmatched  # noqa: E402
+from jr_database.lib.sync_icmid_unmatched import sync_icmid_unmatched_sheet  # noqa: E402
 from jr_database.config import (  # noqa: E402
     ICMID_MANUAL_XLSX,
     RA_WORKPACK_XLSX,
@@ -155,7 +156,8 @@ def _steps_df() -> pd.DataFrame:
         ),
         (
             "Long-term lookup",
-            "data/lookup/ethnic_entity_index.xlsx (written on apply; do not edit only the workpack).",
+            "data/sources/ICMID- Africa.xlsx → sheets ethnic_entity_index + Unmatched entities "
+            "(synced on build / export_ra_workpack).",
         ),
     ]
     return pd.DataFrame(rows, columns=["section", "detail"])
@@ -167,6 +169,9 @@ def build_pack(src: Path = ICMID_MANUAL_XLSX) -> dict[str, pd.DataFrame]:
     pairs = build_pair_table(assertions)
     unmatched = build_unmatched(pairs, assertions)
     print(f"  unmatched={len(unmatched)}")
+
+    kept, removed, added = sync_icmid_unmatched_sheet(unmatched)
+    print(f"  synced ICMID Unmatched entities: {kept} rows (-{removed} resolved, +{added} new)")
 
     print(f"Sheet2 one-sided from {src.name}…")
     sheet2 = load_sheet2(src)

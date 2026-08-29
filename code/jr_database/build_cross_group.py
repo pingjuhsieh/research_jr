@@ -46,11 +46,14 @@ from jr_database.config import (  # noqa: E402
     CROSS_GROUP_CSV,
     CROSS_GROUP_XLSX,
     ETHNIC_ENTITY_INDEX_XLSX,
+    ICMID_MANUAL_XLSX,
+    ICMID_UNMATCHED_SHEET,
     POLYGON_GROUP_REGISTRY_XLSX,
     RA_UNMATCHED_SHEET,
     RA_WORKPACK_XLSX,
     ensure_output_dirs,
 )
+from jr_database.lib.sync_icmid_unmatched import sync_icmid_unmatched_sheet  # noqa: E402
 from jr_database.resolve_homeland import VALID_HOMELAND, get_resolver  # noqa: E402
 from jr_database.sources import load_all_cross_assertions  # noqa: E402
 
@@ -453,6 +456,12 @@ def run_build() -> None:
     print(f"  unique pairs={len(pairs)}  homeland_complete={complete_n}")
 
     unmatched = build_unmatched(pairs, assertions)
+    kept, removed, added = sync_icmid_unmatched_sheet(unmatched)
+    if ICMID_MANUAL_XLSX.is_file():
+        print(
+            f"  synced ICMID {ICMID_UNMATCHED_SHEET!r}: "
+            f"{kept} rows (removed {removed} resolved, +{added} new)"
+        )
 
     pairs_out = pairs.drop(columns=["pair_key"], errors="ignore")
     with pd.ExcelWriter(CROSS_GROUP_XLSX, engine="openpyxl") as writer:
